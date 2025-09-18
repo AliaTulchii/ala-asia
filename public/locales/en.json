@@ -1,0 +1,31 @@
+{
+  "header": {
+    "home": "home",
+    "services": "services",
+    "about": "about us",
+    "contacts": "contacts",
+    "ru": "RU",
+    "en": "EN",
+    "kz": "KZ"
+  },
+  "footer": {
+    "title": "Let's start working together",
+    "form": {
+      "name": "N01° Name & Company",
+      "email": "N02° Email address",
+      "phone": "N03° Telephone number",
+      "text": "N04° How can GL HUMO help you?",
+      "button": "submit"
+    },
+    "title1": "connect",
+    "title2": "with us",
+    "legalSubtitle": "Legal address",
+    "legalText1": "Legal address",
+    "legalText2": "Uzbekistan, Tashkent, Mirzo-Ulugbek",
+    "legalText3": "district, Shakhrisabz MFY, Buyuk Ipak Yoli building 34",
+    "legalText4": "index 100000",
+    "postalSubtitle": "Postal address",
+    "rights": "©2025 All right reserved",
+    "policy": "Private policy"
+  }
+}

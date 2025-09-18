@@ -1,0 +1,331 @@
+.button__link {
+  position: relative;
+  height: 48px;
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    .button__box-left {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .button__box-right {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}
+
+.button__box {
+  position: absolute;
+  width: 215px;
+  height: 24px;
+  background-image: var(--btn-background);
+  transition: all 0.4s ease-in-out;
+
+  &-left {
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  &-right {
+    bottom: 0;
+    right: 0;
+    transform: translateX(0);
+  }
+}
+
+.button__text {
+  width: 200px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: var(--font-concreto);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+//phone button
+
+.phone-btn {
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid var(--content-primary);
+  border-radius: 20px;
+  gap: 8px;
+  cursor: pointer;
+
+  p {
+    font-family: var(--font-azeret);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--content-primary);
+  }
+
+  &:hover,
+  :focus {
+    background-color: var(--white);
+    color: var(--accent);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &--light {
+    border-color: var(--white);
+    color: var(--white);
+    -webkit-text-stroke: 0.2px var(--white);
+  }
+
+  &--dark,
+  &--policy {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+//menu-button
+
+.menu-button {
+  position: relative;
+  gap: 6px;
+  width: 36px;
+  height: 32px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 0;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__box-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    width: 32px;
+    height: 16px;
+    background-color: var(--white);
+  }
+
+  &__box-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(0);
+    width: 32px;
+    height: 16px;
+    background-color: var(--white);
+  }
+
+  &:focus {
+    &:focus {
+      .menu-button__box-left {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .menu-button__box-right {
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+  }
+
+  &__lines {
+    width: 16px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 32px;
+    z-index: 10;
+  }
+
+  &__bar {
+    height: 1.5px;
+    background-color: var(--accent);
+    transition: all 0.3s ease;
+  }
+
+  &__bar:nth-child(1),
+  &__bar:nth-child(2),
+  &__bar:nth-child(3),
+  &__bar:nth-child(4) {
+    display: inline-block;
+    width: 16px;
+  }
+
+  &--open &__bar:nth-child(1) {
+    background-color: var(--accent);
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 16px;
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  &--open &__bar:nth-child(2),
+  &--open &__bar:nth-child(3) {
+    opacity: 0;
+  }
+
+  &--open &__bar:nth-child(4) {
+    background-color: var(--accent);
+    position: absolute;
+    top: 19px;
+    left: 6px;
+    width: 16px;
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  &--open {
+    background-color: transparent;
+  }
+}
+
+.menu-button--policy {
+  .menu-button__box-left {
+    background-color: var(--bg-color);
+  }
+
+  .menu-button__box-right {
+    background-color: var(--bg-color);
+  }
+
+  .menu-button__bar {
+    background-color: var(--white);
+  }
+
+  &.menu-button--open .menu-button__bar:nth-child(1),
+  &.menu-button--open .menu-button__bar:nth-child(4) {
+    background-color: var(--white);
+  }
+}
+
+// form button
+
+.form-button {
+  position: relative;
+  width: 100%;
+  height: 132px;
+  transition: all 0.4s ease-in-out;
+
+  &__up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 66px;
+    border-top: 1px solid var(--mobile-menu-text);
+    border-left: 1px solid var(--mobile-menu-text);
+    border-right: 1px solid var(--mobile-menu-text);
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 95%;
+    height: 66px;
+    border-bottom: 1px solid var(--mobile-menu-text);
+    border-left: 1px solid var(--mobile-menu-text);
+    border-right: 1px solid var(--mobile-menu-text);
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__text {
+    width: 95%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-family: var(--font-gothic);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: all 0.4s ease-in-out;
+  }
+
+  @media screen and (max-width: 968px) {
+    height: 48px;
+
+    &__up {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 95%;
+      height: 24px;
+      background-color: var(--white);
+      transition: all 0.4s ease-in-out;
+    }
+
+    &__bottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 95%;
+      height: 24px;
+      background-color: var(--white);
+      transition: all 0.4s ease-in-out;
+    }
+
+    &__text {
+      color: var(--accent);
+      font-family: var(--font-concreto);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+  }
+
+  &:hover,
+  :focus {
+    .form-button__up,
+    .form-button__bottom {
+      transition: all 0.4s ease-in-out;
+    }
+
+    .form-button__up {
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--white);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .form-button__bottom {
+      right: 50%;
+      transform: translateX(50%);
+      background-color: var(--white);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .form-button__text {
+      color: var(--accent);
+      transition: color 0.4s ease-in-out;
+    }
+  }
+}

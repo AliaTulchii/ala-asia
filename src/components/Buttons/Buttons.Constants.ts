@@ -1,0 +1,1 @@
+export const PHONE_NUMBER_BUTTON = "+7 (707) 104 09 02";

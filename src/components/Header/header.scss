@@ -1,0 +1,152 @@
+.header {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 999;
+
+  &--light {
+    background-color: #023b9020;
+  }
+
+  &--dark {
+    background-color: var(--white-transparent);
+  }
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--content-primary);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+
+  @media screen and (max-width: 968px) {
+    display: none;
+  }
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.header__nav-link {
+  cursor: pointer;
+
+  &.active {
+    .header__text {
+      font-family: var(--font-geist);
+      font-weight: 600;
+    }
+    .header__text::after {
+      width: 100%;
+      height: 1px;
+      background-color: var(--content-primary);
+    }
+  }
+
+  &:hover {
+    .header__text::after {
+      width: 100%;
+    }
+  }
+}
+
+
+
+.header__text {
+  position: relative;
+  font-family: var(--font-geist);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--content-primary);
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: var(--content-primary);
+    transition: width 0.5s ease;
+  }
+
+  &--light {
+    color: var(--white);
+    -webkit-text-stroke: 0.3px var(--white);
+
+    &::after {
+      background-color: var(--white);
+    }
+  }
+
+  &--dark {
+    color: var(--content-primary);
+    &::after {
+      background-color: var(--accent);
+    }
+  }
+}
+
+
+
+.header__text--policy {
+  color: var(--accent);
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+
+//header pop-up
+
+.header__pop-up{
+  position:absolute;
+   top:80.5px;
+   left: 0;
+  width: 100%;
+  background-color: var(--background-primary);
+}
+
+
+//mobile
+
+.header__mobile-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+
+  @media screen and (min-width: 968px) {
+    display: none;
+  }
+}
+
+//logo
+
+.logo {
+  cursor: pointer;
+  width: 48px;
+  height: 40px;
+  margin: 24px 0 16px 0;
+}

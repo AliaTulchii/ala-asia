@@ -1,0 +1,139 @@
+.pop-up__line{
+    position: absolute;
+    top: 290px;
+    z-index: 5;
+    width: 100%;
+    height: 1px;
+    background-color: var(--background-line);
+
+}
+
+
+.pop-up__list{
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    gap: 24px;
+}
+
+.pop-up__item{
+    width: 330px;
+    height: 522px;
+    border-left: 1px solid var(--background-line);
+    border-right: 1px solid var(--background-line);
+    padding-top: 40px;
+    transition: all 0.3s ease-in-out;
+
+
+    &:hover, :focus{
+        background-color: var(--main-button);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        .pop-up__img{
+            opacity: 100%;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .pop-up__title{
+            color: var(--white);
+        }
+
+        .pop-up__text{
+            color: var(--white);
+        }
+    }
+
+}
+
+.pop-up__img{
+    width: 100%;
+    height: 218px;
+    margin-bottom: 56px;
+    opacity: 60%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pop-up__content{
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pop-up__wrapper{
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+}
+
+.pop-up__title{
+    font-family: var(--font-geist);
+font-weight: 500;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+color: var(--content-primary);
+}
+
+.pop-up__nav-link {
+    cursor: pointer;
+
+    &:not(:last-child){
+        margin-bottom: 12px;
+    }
+  
+    &:hover {
+        .pop-up__text {
+            font-family: var(--font-geist);
+            font-weight: 600;
+            color: var(--white);
+          }
+          .pop-up__text::after {
+            width: 100%;
+            height: 1px;
+            background-color: var(--white);
+          }
+    }
+  }
+  
+  
+  
+  .pop-up__text {
+    position: relative;
+    display: inline-block;
+    font-family: var(--font-delight);
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: -0.01em;
+color: var(--content-primary);
+  
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background-color: var(--white);
+      transition: width 0.5s ease;
+    }
+  
+    &--light {
+      color: var(--white);
+      -webkit-text-stroke: 0.3px var(--white);
+  
+      &::after {
+        background-color: var(--white);
+      }
+    }
+  
+    &--dark {
+      color: var(--content-primary);
+      &::after {
+        background-color: var(--accent);
+      }
+    }
+  }

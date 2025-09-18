@@ -1,0 +1,50 @@
+:root {
+  --container-width: 1440px;
+  --container-padding: 24px;
+
+//background
+--background-primary: #fafbff;
+--background-cards: #ebf0f6;
+--background-line: #ecedf2;
+
+//content
+--content-primary: #121B60;
+--content-secondary: #7176a0;
+--content: #ededed;
+
+//buttons
+--main-button: #0e41da;
+--tab-button: #b9cffe;
+
+//contact form
+--field-bg: #ebf0f6;
+--field-name-text: #121b60;
+--category-text-color: #7176a0;
+--success: #22c55e;
+--mistake: #ef4444;
+
+
+--gradient: linear-gradient(
+  180deg, 
+  rgb(244, 246, 251) 0%, 
+  rgba(191, 230, 255, 0.1) 100%
+);
+
+
+
+
+  --laptop-size: 1440px;
+  --mobile-size: 376px;
+
+  // Colors
+  --primary: #121B60;
+  --black: #0c0c0c;
+  --white: #fff;
+  --white-transparent: #ffffff27;
+
+
+  // Fonts
+  --font-geist: "Geist Mono", sans-serif;
+  --font-delight: "Delight", sans-serif;
+  --font-azeret: "Azeret Mono", sans-serif;
+}

@@ -1,0 +1,29 @@
+.section-pixel-background {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transform: translateX(0%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+}
+
+.section-row {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  border-color: var(--bg-color);
+
+  .section-block {
+    height: 160px;
+    width: 80px;
+    background-color: var(--bg-color);
+    border-color: var(--bg-color);
+    flex-shrink: 0;
+  }
+}
