@@ -7,7 +7,7 @@ import Home from "../../pages/Home/Home";
 // import Contact from "../../pages/Contact/Contact";
 // import NotFound from "../../pages/NotFound/NotFound";
 // import PrivacyPolicy from "../../pages/PrivatePolicy/PrivacyPolicy";
-import Stairs from "../Stairs/Stairs";
+// import Stairs from "../Stairs/Stairs";
 
 const AnimRoutes = () => {
   const location = useLocation();
@@ -17,9 +17,9 @@ const AnimRoutes = () => {
         <Route
           path="/"
           element={
-            <Stairs>
+            // <Stairs>
               <Home />
-            </Stairs>
+            // </Stairs>
           }
         />
         {/* <Route
