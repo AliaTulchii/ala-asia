@@ -9,7 +9,7 @@ i18n
     backend: {
       loadPath: "/locales/{{lng}}.json",
     },
-    fallbackLng: "kz",
+    fallbackLng: "ru",
     debug: false,
     interpolation: {
       escapeValue: false,
