@@ -31,8 +31,8 @@ const Header = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className={`header `}
     >
-      <div className="container">
-        <div className="header__container ">
+      <div className="header__container container">
+        <div className="header__wrapper ">
           <NavLink to="/" className="">
             <motion.img
               key={logoSrc}
@@ -48,7 +48,6 @@ const Header = () => {
           <nav className="header__nav">
             <ul className="header__list">
               {navItems.map((item) =>
-
                 item.type === "link" ? (
                   <NavLink
                     key={item.key}
@@ -91,9 +90,7 @@ const Header = () => {
                     </button>
 
                     <AnimatePresence>
-                      {servicesOpen && (
-                        <PopUp/>
-                      )}
+                      {servicesOpen && <PopUp />}
                     </AnimatePresence>
                   </div>
                 )

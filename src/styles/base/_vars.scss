@@ -15,6 +15,7 @@
 //buttons
 --main-button: #0e41da;
 --tab-button: #b9cffe;
+--accordion-color: #EBF0F6;
 
 //contact form
 --field-bg: #ebf0f6;
@@ -22,6 +23,12 @@
 --category-text-color: #7176a0;
 --success: #22c55e;
 --mistake: #ef4444;
+
+//text
+--footer-title: rgba(255, 255, 255, 0.5);
+
+//line
+  --line-color: rgba(255, 255, 255, 0.2);
 
 
 --gradient: linear-gradient(
@@ -47,4 +54,6 @@
   --font-geist: "Geist Mono", sans-serif;
   --font-delight: "Delight", sans-serif;
   --font-azeret: "Azeret Mono", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
 }

@@ -19,12 +19,16 @@
   }
 }
 
-.header__container {
+.header__container{
+  border-bottom: 1px solid var(--content-primary);
+}
+
+.header__wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--content-primary);
+  
 }
 
 .header__nav {

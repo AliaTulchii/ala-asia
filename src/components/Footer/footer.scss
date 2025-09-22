@@ -1,200 +1,196 @@
 .footer {
-  position: relative;
+  // position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   overflow: hidden;
-  background-color: var(--bg-color);
+  background-color: var(--main-button);
 }
 
-.footer__container {
+.footer__container{
   position: relative;
+  height: 502px;
+  
+}
+
+.footer__wrapper-first{
   display: flex;
-  flex-direction: column;
-  background-color: var(--white);
+  align-items: start;
+  padding-top:49px;
+  margin-bottom: 167px;
 }
 
-.video-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1400px;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 0;
+.footer__logo-link{
+  margin-right: 432px;
+  width: 64px;
+  height: 56px;
 }
 
-.footer__wrapper {
-  padding-top: 144px;
-  padding-bottom: 40px;
-  position: relative;
-
-  background-image: url("/assets/images/footer/globe.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 3;
-
-  @media screen and (max-width: 968px) {
-    background-image: url("/assets/images/footer/globe-mobile.png");
-    padding-top: 112px;
-  }
-}
-
-.footer__title {
-  margin-bottom: 41px;
-
-  @media screen and (max-width: 968px) {
-    margin-bottom: 48px;
-  }
-}
-
-.footer__info {
-  border-bottom: 1px solid var(--logistics-text);
-  padding-bottom: 24px;
-  margin-top: 145px;
+.footer__contact{
+  margin-right: 160px;
   display: flex;
-  flex-direction: row;
-
-  @media screen and (max-width: 968px) {
-    flex-direction: column;
-  }
-}
-
-.footer__info-box {
-  width: 365px;
-  margin-right: 150px;
-
-  @media screen and (max-width: 968px) {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-}
-
-.footer__info-title {
-  font-family: var(--font-gothic);
-  font-weight: 400;
-  font-size: 60px;
-  line-height: 110%;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  color: var(--white);
-
-  &--box {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.footer__info-icon {
-  width: 47px;
-  margin-left: 15px;
-}
-
-.footer__list {
-  margin-right: 112px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-
-  @media screen and (max-width: 968px) {
-    margin-bottom: 40px;
-  }
-}
-
-.footer__nav-link {
-  position: relative;
-  height: 30px;
-  cursor: pointer;
-
-  .footer__text {
-    display: inline-block;
-    font-family: var(--font-arimo);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-    color: var(--logistics-text);
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      width: 0;
-      background-color: var(--white);
-      transition: width 0.5s ease;
-    }
-    &:hover,
-    :focus {
-      color: var(--white);
-    }
-  }
-
-  &.active .footer__text {
-    color: var(--white);
-  }
-
-  &.active .footer__text::after,
-  &:hover .footer__text::after {
-    width: 100%;
-  }
-}
-
-.footer__address {
-  display: flex;
-  flex-direction: row;
   gap: 112px;
-
-  @media screen and (max-width: 968px) {
-    flex-direction: column;
-    gap: 40px;
-  }
 }
 
-.footer__address-title {
-  margin-bottom: 8px;
-  font-family: var(--font-concreto);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  color: var(--white);
+.footer__mail,
+.footer__tel{
+  font-family: var(--font-delight);
+font-weight: 700;
+font-size: 28px;
+line-height: 100%;
+color: var(--white);
 }
 
-.footer__address-text {
-  white-space: pre-line;
-  font-family: var(--font-arimo);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  color: var(--white);
-}
-
-.footer__rights {
-  margin-left: 75%;
-  margin-top: 33px;
+.footer__tel-box{
   display: flex;
-  gap: 64px;
-  font-family: var(--font-arimo);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  color: var(--logistics-text);
+  flex-direction: column;
+  gap: 24px;
+}
 
-  &-link {
-    color: var(--logistics-text);
-    cursor: pointer;
+.footer__btn{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all 0.3s ease-in-out;
 
-    &:hover,
-    :focus {
-      color: var(--white);
+  &:hover{
+    gap: 12px;
+    .footer__btn-text{
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+    }
+
+
+    .footer__btn-icon{
+      width: 35px;
+      height: 35px;
+  transition: all 0.3s ease-in-out;
+
     }
   }
+}
 
-  @media screen and (max-width: 968px) {
-    margin-left: 0;
-    justify-content: space-between;
-  }
+.footer__btn-text{
+  font-family: var(--font-delight);
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: var(--white);
+transition: all 0.3s ease-in-out;
+
+}
+
+.footer__btn-icon{
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.footer__wrapper-second{
+  display: flex;
+}
+
+.footer__rights{
+  margin-left: 24px;
+  margin-right: 354px;
+
+  font-family: var(--font-inter);
+font-weight: 500;
+font-size: 14px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__nav{
+  margin-right: 232px;
+  margin-bottom: 32px;
+}
+
+.footer__nav-title,
+.footer__address-title{
+  margin-bottom: 16px;
+  font-family: var(--font-inter);
+font-weight: 400;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+color: var(--footer-title);
+}
+
+.footer__item{
+  margin-bottom: 8px;
+}
+
+.footer__nav-link{
+  font-family: var(--font-delight);
+font-weight: 500;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: var(--footer-title);
+text-transform: capitalize;
+
+&:hover, :focus{
+  font-weight: 700;
+  color: var(--white);
+}
+
+&.active{
+  font-weight: 700;
+  color: var(--white);
+}
+}
+
+.footer__policy{
+  text-transform: none;
+}
+
+
+.footer__address{
+  width: 238px;
+  font-family: var(--font-delight);
+font-weight: 500;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: -0.01em;
+white-space: pre-line;
+color: var(--white);
+}
+
+
+.line-first, .line-second, .line-third, .line-fourth{
+  position: absolute;
+  top: 0;
+  background-color: var(--line-color);
+  width: 1px;
+  height: 100%;
+}
+
+.line-first{
+  left: 472px;
+}
+
+.line-second{
+  left: 496px;
+}
+
+.line-third{
+  left: 826px;
+}
+
+.line-fourth{
+  left: 850px;
+}
+
+.line-fifth{
+  position: absolute;
+  top: 248px;
+  left: 0;
+  background-color: var(--line-color);
+  width: 100%;
+  height: 1px;
 }

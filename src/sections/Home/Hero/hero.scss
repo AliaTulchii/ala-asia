@@ -1,0 +1,65 @@
+.hero{
+    position: relative;
+  height: 150vh;
+  overflow: hidden;
+padding-top: 140px;
+}
+
+.hero__container{
+    
+    position: relative;
+    opacity: 1;
+}
+
+.hero__title{
+    margin-bottom: 48px;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 64px;
+line-height: 110%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: var(--content-primary);
+white-space: pre-line;
+}
+
+.hero__wrapper{
+    position: absolute;
+    right: 10px;
+    top: 160px;
+    display: flex;
+    gap: 60px;
+}
+
+.hero__text{
+    width: 295px;
+    font-family: var(--font-delight);
+font-weight: 400;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: var(--content-primary);
+// white-space: pre-line;
+}
+
+.hero__link{
+    padding: 14.5px 45px;
+    border-radius: 20px;
+    background-color: var(--main-button);
+    font-family: var(--font-azeret);
+font-weight: 600;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: var(--background-primary);
+}
+
+
+.hero__image {
+    position: relative;
+    z-index: 1; // під текстом
+    img {
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+  }

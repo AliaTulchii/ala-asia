@@ -1,42 +1,70 @@
 import "./footer.scss";
 import { useTranslation } from "react-i18next";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useNavItems } from "../Header/Header.Constants";
-import SectionPixelBackground from "../PixelBackground/section/SectionPixelBackground";
+import { ARROW_UP_ICON, WHITE_LOGO } from "./Footer.Constant";
+// import SectionPixelBackground from "../PixelBackground/section/SectionPixelBackground";
 
 const Footer = () => {
   const { t } = useTranslation("footer");
   const navItems = useNavItems();
-  const location = useLocation();
+  // const location = useLocation();
 
-  const isPolicyPage = location.pathname === "/policy";
+  // const isPolicyPage = location.pathname === "/policy";
 
   return (
     <footer className="footer" id="contact">
       <div className="footer__container container">
-        <SectionPixelBackground />
+        {/* <SectionPixelBackground /> */}
 
-        <div className="footer__wrapper">
-          {!isPolicyPage && (
-            <h2 className="footer__title medium__title">{t("footer.title")}</h2>
-          )}
+        <div className="line line-first" />
+        <div className="line line-second" />
+        <div className="line line-third" />
+        <div className="line line-fourth" />
+        <div className="line line-fifth" />
 
+        <div className="footer__wrapper-first">
+          <NavLink to="/" className="footer__logo-link">
+            <img src={WHITE_LOGO} alt="logo" />
+          </NavLink>
 
-          <div className="footer__info">
-            <div className="footer__info-box">
-              <h2 className="footer__info-title">{t("footer.title1")}</h2>
-              <div className="footer__info-title--box">
-                <h2 className="footer__info-title">{t("footer.title2")}</h2>
-              </div>
+          <div className="footer__contact">
+            <p className="footer__mail">{t("footer.mail")}</p>
+
+            <div className="footer__tel-box">
+              <a href="tel:+7(707)1040902" className="footer__tel">
+                {t("footer.tel1")}
+              </a>
+              <a href="tel:+7(707)3008108" className="footer__tel">
+                {t("footer.tel2")}
+              </a>
             </div>
+          </div>
 
+          <button onClick={() => window.scrollTo(0, 0)} className="footer__btn">
+            <p className="footer__btn-text">{t("footer.btn")}</p>
+            <img
+              src={ARROW_UP_ICON}
+              alt="arrow up"
+              className="footer__btn-icon"
+            />
+          </button>
+        </div>
+
+        <div className="footer__wrapper-second">
+          <p className="footer__rights">{t("footer.rights")}</p>
+
+          <div>
             <nav className="footer__nav">
+              <h2 className="footer__nav-title">{t("footer.nav")}</h2>
               <ul className="footer__list">
                 {navItems.map((item) => (
-                  <li className="footer__item" key={item.number}>
+                  <li className="footer__item" key={item.key}>
                     <NavLink
-                      to={item.to}
-                      className="footer__nav-link"
+                      to={item.path}
+                      className={({ isActive }) =>
+                        `footer__nav-link ${isActive ? "active" : ""}`
+                      }
                       onClick={() => window.scrollTo(0, 0)}
                     >
                       <p className="footer__text">{item.text}</p>
@@ -46,36 +74,20 @@ const Footer = () => {
               </ul>
             </nav>
 
-            <div className="footer__address">
-              <div className="footer__address-box">
-                <h3 className="footer__address-title">
-                  {t("footer.legalSubtitle")}
-                </h3>
-                <p className="footer__address-text">{t("footer.legalText2")}</p>
-                <p className="footer__address-text">{t("footer.legalText3")}</p>
-                <p className="footer__address-text">{t("footer.legalText4")}</p>
-              </div>
-
-              <div className="footer__address-box">
-                <h3 className="footer__address-title">
-                  {t("footer.postalSubtitle")}
-                </h3>
-                <p className="footer__address-text">{t("footer.legalText2")}</p>
-                <p className="footer__address-text">{t("footer.legalText3")}</p>
-                <p className="footer__address-text">{t("footer.legalText4")}</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="footer__rights">
-            <p>{t("footer.rights")}</p>
             <NavLink
-              to="policy"
-              className="footer__rights-link"
+              to="/policy"
+              className="footer__nav-link"
               onClick={() => window.scrollTo(0, 0)}
             >
-              {t("footer.policy")}
+              <p className="footer__policy">{t("footer.policy")}</p>
             </NavLink>
+          </div>
+
+          <div>
+            <h2 className="footer__address-title">{t("footer.address")}</h2>
+            <address className="footer__address">
+              {t("footer.address1")}
+            </address>
           </div>
         </div>
       </div>

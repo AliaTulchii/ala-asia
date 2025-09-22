@@ -1,0 +1,10 @@
+export const LOGO1 = "/assets/images/home/partners/etimex.svg";
+export const LOGO2 = "/assets/images/home/partners/fuji.svg";
+export const LOGO3 = "/assets/images/home/partners/hempel.svg";
+export const LOGO4 = "/assets/images/home/partners/massa.svg";
+export const LOGO5 = "/assets/images/home/partners/paradyz.svg";
+export const LOGO6 = "/assets/images/home/partners/pyro.svg";
+export const LOGO7 = "/assets/images/home/partners/siemens.svg";
+export const LOGO8 = "/assets/images/home/partners/voortman.svg";
+export const LOGO9 = "/assets/images/home/partners/wamgroup.svg";
+export const LOGO10 = "/assets/images/home/partners/yaskawa.svg";
