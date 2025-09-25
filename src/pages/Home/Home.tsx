@@ -1,3 +1,5 @@
+import ContactForm from "../../sections/Home/ContactForm/ContactForm"
+import Convenient from "../../sections/Home/Convenient/Convenient"
 import Delivery from "../../sections/Home/Delivery/Delivery"
 import Hero from "../../sections/Home/Hero/Hero"
 import Logistic from "../../sections/Home/Logistic/Logistic"
@@ -12,7 +14,9 @@ const Home = () => {
       <Hero />
       <Delivery />
       <Partners />
-      <Logistic/>
+      <Logistic />
+      <Convenient />
+      <ContactForm />
     </div>
   )
 }

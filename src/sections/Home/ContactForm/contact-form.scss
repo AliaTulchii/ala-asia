@@ -1,0 +1,37 @@
+.contact-form{
+    margin-bottom: 160px;
+}
+
+
+.contact-form__container{
+    position: relative;
+}
+
+.contact-form__title{
+    width: 795px;
+    margin-bottom: 96px;
+    font-family: var(--font-delight);
+font-weight: 800;
+font-size: 48px;
+line-height: 100%;
+color: var(--content-primary);
+}
+
+.contact-form__line{
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    top: 125px;
+    background-color: var(--content-primary);
+}
+
+.contact-form__wrapper{
+    display: flex;
+}
+
+.contact-form__img{
+    width: 566px;
+    height: 681px;
+    margin-left: 56px;
+}

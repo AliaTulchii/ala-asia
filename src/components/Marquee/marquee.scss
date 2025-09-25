@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     width: 85.8%;
-    height: 88px;
+    height: 56px;
     overflow: hidden;
     margin-left: auto;
     border-left: 1px solid var(--content-primary);
@@ -29,8 +29,11 @@
   }
   
   .marquee-item {
-    margin: 0 10px;
-    flex-shrink: 0;
+    margin: 0 44px;
+    height: 52px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
     object-fit: contain;
   }
   

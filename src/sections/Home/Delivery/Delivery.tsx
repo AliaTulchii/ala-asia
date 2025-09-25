@@ -19,8 +19,7 @@ const Delivery = () => {
             <h2 className="delivery__title">{t("delivery.title")}</h2>
             <p className="delivery__text">{t("delivery.text")}</p>
           </div>
-          <div className="delivery__line" />
-
+          
           <div className="delivery__main">
             <div className="delivery__box delivery__box-first">
               <DeliveryCard

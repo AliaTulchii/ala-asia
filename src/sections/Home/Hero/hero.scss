@@ -1,8 +1,8 @@
 .hero{
     position: relative;
-  height: 150vh;
+  height: 165vh;
   overflow: hidden;
-padding-top: 140px;
+padding-top: 290px;
 }
 
 .hero__container{
@@ -12,10 +12,10 @@ padding-top: 140px;
 }
 
 .hero__title{
-    margin-bottom: 48px;
+    margin-bottom: 168px;
     font-family: var(--font-delight);
 font-weight: 700;
-font-size: 64px;
+font-size: 72px;
 line-height: 110%;
 letter-spacing: -0.02em;
 text-transform: uppercase;
@@ -25,8 +25,8 @@ white-space: pre-line;
 
 .hero__wrapper{
     position: absolute;
-    right: 10px;
-    top: 160px;
+    right: 24px;
+    top: 174px;
     display: flex;
     gap: 60px;
 }
@@ -57,9 +57,8 @@ color: var(--background-primary);
 
 .hero__image {
     position: relative;
-    z-index: 1; // під текстом
+    z-index: 1; 
     img {
       object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
   }

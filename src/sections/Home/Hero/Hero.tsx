@@ -16,7 +16,6 @@ const Hero = () => {
     useEffect(() => {
       if (!sectionRef.current || !imgRef.current) return;
 
-      // Початковий стан вже видно
       gsap.set(imgRef.current, {
         width: "650px",
         height: "450px",
@@ -28,7 +27,7 @@ const Hero = () => {
         yPercent: -0,
       });
 
-      // Анімація при скролі
+
       gsap.to(imgRef.current, {
         width: "100vw",
         height: "100vh",
@@ -37,9 +36,9 @@ const Hero = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "top+=600vh", // коротший діапазон анімації
+          end: "top+=1000vh", 
           scrub: true,
-          pin: false, // більше не блокуємо скрол повністю
+          pin: false,
         },
       });
     }, []);

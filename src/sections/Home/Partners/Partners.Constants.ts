@@ -1,10 +1,17 @@
-export const LOGO1 = "/assets/images/home/partners/etimex.svg";
-export const LOGO2 = "/assets/images/home/partners/fuji.svg";
-export const LOGO3 = "/assets/images/home/partners/hempel.svg";
-export const LOGO4 = "/assets/images/home/partners/massa.svg";
-export const LOGO5 = "/assets/images/home/partners/paradyz.svg";
-export const LOGO6 = "/assets/images/home/partners/pyro.svg";
-export const LOGO7 = "/assets/images/home/partners/siemens.svg";
-export const LOGO8 = "/assets/images/home/partners/voortman.svg";
-export const LOGO9 = "/assets/images/home/partners/wamgroup.svg";
-export const LOGO10 = "/assets/images/home/partners/yaskawa.svg";
+export const LOGO1 = "../../../../public/assets/images/home/partners/basf.png";
+export const LOGO2 = "../../../../public/assets/images/home/partners/dell.png";
+export const LOGO3 = "../../../../public/assets/images/home/partners/etimex.png";
+export const LOGO4 = "../../../../public/assets/images/home/partners/fuji.png";
+export const LOGO5 = "../../../../public/assets/images/home/partners/hempel.png";
+export const LOGO6 = "../../../../public/assets/images/home/partners/massa.png";
+export const LOGO7 = "../../../../public/assets/images/home/partners/paradyz.png";
+export const LOGO8 = "../../../../public/assets/images/home/partners/pg.png";
+export const LOGO9 = "../../../../public/assets/images/home/partners/pyro.png";
+export const LOGO10 = "../../../../public/assets/images/home/partners/siemens.png";
+export const LOGO11 = "../../../../public/assets/images/home/partners/stihl.png";
+export const LOGO12 = "../../../../public/assets/images/home/partners/voortman.png";
+export const LOGO13 = "../../../../public/assets/images/home/partners/wamgroup.png";
+export const LOGO14 = "../../../../public/assets/images/home/partners/yaskawa.png";
+
+
+

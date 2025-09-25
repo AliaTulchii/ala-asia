@@ -1,5 +1,39 @@
-.logistic{
-    padding-bottom: 160px;
+
+
+.logistic__container{
+    position: relative;
+    padding-bottom: 160px !important;
+    padding-top: 160px !important;
+}
+
+.logistic__line{
+    position: absolute;
+    top: 0;    
+    z-index: 1;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(101, 97, 97, 0.2);
+
+    &-first{
+        // left: 810px;
+        left: 32.7%;
+    }
+
+    &-second{
+//   left: 832px;
+left: 34.5%;
+
+    }
+
+    &-third{
+        // left: 1164px;
+        left: 57.4%;
+      }
+      
+      &-fourth{
+        // left: 1188px;
+        left:59%;
+      }
 }
 
 .logistic__title{

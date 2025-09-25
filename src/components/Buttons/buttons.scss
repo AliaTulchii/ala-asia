@@ -75,13 +75,28 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: var(--content-primary);
+    transition: all 0.2s ease-in-out;
   }
 
   &:hover,
   :focus {
-    background-color: var(--white);
-    color: var(--accent);
+    background-color: var(--content-primary);
     transition: all 0.2s ease-in-out;
+
+    p{
+    color: var(--white);
+    transition: all 0.2s ease-in-out;
+    }
+
+    .phone-icon{
+      transition: all 0.5s ease-in-out;
+      rect{
+        fill: var(--white);
+      }
+      path{
+        fill: var(--content-primary)
+      }
+    }
   }
 
   &--light {

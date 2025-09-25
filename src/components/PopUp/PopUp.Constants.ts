@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import img1 from '../../../public/assets/images/header/pop-up/img1.webp'
-import img2 from "../../../public/assets/images/header/pop-up/img2.webp";
-import img3 from "../../../public/assets/images/header/pop-up/img3.webp";
-import img4 from "../../../public/assets/images/header/pop-up/img4.webp";
+import img1 from '/assets/images/header/pop-up/img1.webp'
+import img2 from "/assets/images/header/pop-up/img2.webp";
+import img3 from "/assets/images/header/pop-up/img3.webp";
+import img4 from "/assets/images/header/pop-up/img4.webp";
 
 
 export type PopUpItem = {
