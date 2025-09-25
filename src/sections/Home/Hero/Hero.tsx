@@ -17,8 +17,10 @@ const Hero = () => {
       if (!sectionRef.current || !imgRef.current) return;
 
       gsap.set(imgRef.current, {
-        width: "650px",
-        height: "450px",
+        // width: "650px",
+        // height: "450px",
+        width: "0px",
+        height: "0px",
         borderRadius: "20px",
         position: "absolute",
         top: "100%",
