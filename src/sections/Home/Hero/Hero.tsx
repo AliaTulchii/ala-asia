@@ -11,24 +11,26 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
     const { t } = useTranslation("homeHero");
     const imgRef = useRef<HTMLImageElement | null>(null);
-    const sectionRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  
 
-    useEffect(() => {
-      if (!sectionRef.current || !imgRef.current) return;
+  useEffect(() => {
+    if (!sectionRef.current || !imgRef.current) return;
 
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1551px)", () => {
+      // 📌 Десктоп
       gsap.set(imgRef.current, {
         width: "172px",
         height: "65px",
-        // width: "0px",
-        // height: "0px",
         borderRadius: "20px",
         position: "absolute",
         top: "230px",
-        left: "490px",
+        left: "680px",
         xPercent: 0,
         yPercent: 0,
       });
-
 
       gsap.to(imgRef.current, {
         width: "100vw",
@@ -47,7 +49,79 @@ const Hero = () => {
           pin: false,
         },
       });
-    }, []);
+    });
+
+    mm.add("(max-width: 1550px)", () => {
+      // 📌 Мобільна / планшет
+      gsap.set(imgRef.current, {
+        width: "172px",
+        height: "65px",
+        borderRadius: "20px",
+        position: "absolute",
+        top: "230px",
+        left: "490px",
+        xPercent: 0,
+        yPercent: 0,
+      });
+
+      gsap.to(imgRef.current, {
+        width: "100vw",
+        height: "100vh",
+        borderRadius: 0,
+        top: 0,
+        left: "0%",
+        xPercent: 0,
+        yPercent: 30,
+        ease: "expo.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "top+=1000vh",
+          scrub: true,
+          pin: false,
+        },
+      });
+    });
+
+    return () => mm.revert(); // очищення при анмаунті
+  }, []);
+
+    // useEffect(() => {
+    //   if (!sectionRef.current || !imgRef.current) return;
+      
+
+    //   gsap.set(imgRef.current, {
+    //     width: "172px",
+    //     height: "65px",
+    //     // width: "0px",
+    //     // height: "0px",
+    //     borderRadius: "20px",
+    //     position: "absolute",
+    //     top: "230px",
+    //     left: "490px",
+    //     xPercent: 0,
+    //     yPercent: 0,
+    //   });
+
+
+    //   gsap.to(imgRef.current, {
+    //     width: "100vw",
+    //     height: "100vh",
+    //     borderRadius: 0,
+    //     top: 0,
+    //     left: "0%",
+    //     xPercent: 0,
+    //     yPercent: 50,
+    //     ease: "expo.out",
+    //     scrollTrigger: {
+    //       trigger: sectionRef.current,
+    //       start: "top top",
+    //       end: "top+=1000vh",
+    //       scrub: true,
+    //       pin: false,
+    //     },
+    //   });
+    // }, []);
 
 
   return (
