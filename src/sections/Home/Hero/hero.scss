@@ -1,44 +1,93 @@
 .hero{
-    position: relative;
-  height: 165vh;
+    // position: relative;
+  height: 150vh;
   overflow: hidden;
-padding-top: 290px;
+
 }
 
 .hero__container{
-    
+padding-top: 220px !important;
+    height: 100%;
     position: relative;
     opacity: 1;
 }
 
+.hero__line{
+    position: absolute;
+    top: 0;    
+    z-index: 2;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(18, 27, 96, 0.08);
+
+    &-first{
+        // left: 810px;
+        left: 32.7%;
+    }
+
+    &-second{
+//   left: 832px;
+left: 34.5%;
+
+    }
+
+    &-third{
+        // left: 1164px;
+        left: 57.4%;
+      }
+      
+      &-fourth{
+        // left: 1188px;
+        left:59%;
+      }
+}
+
+.hero__title-wrapper{
+    text-align: center;
+}
+
+.hero__title-box{
+    // position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
 .hero__title{
-    margin-bottom: 168px;
+    // position: relative;
     font-family: var(--font-delight);
-font-weight: 700;
-font-size: 72px;
+font-weight: 800;
+font-size: 82px;
 line-height: 110%;
 letter-spacing: -0.02em;
 text-transform: uppercase;
 color: var(--content-primary);
 white-space: pre-line;
+
+&-last{
+    margin-bottom: 24px;
+
+}
 }
 
 .hero__wrapper{
-    position: absolute;
-    right: 24px;
-    top: 174px;
+    // position: absolute;
+    
     display: flex;
-    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+   
 }
 
 .hero__text{
     width: 295px;
+    margin-bottom: 40px;
     font-family: var(--font-delight);
 font-weight: 400;
 font-size: 20px;
 line-height: 120%;
 letter-spacing: -0.01em;
 color: var(--content-primary);
+text-align: center;
 // white-space: pre-line;
 }
 
@@ -52,13 +101,26 @@ font-size: 16px;
 line-height: 120%;
 letter-spacing: -0.01em;
 color: var(--background-primary);
+transition: all 0.5s ease-in-out;
+
+
+&:hover,:focus{
+    background-color: var(--white);
+    color: var(--main-button);
+    border: 0.5px solid var(--main-button);
+    transition: all 0.5s ease-in-out;
+}
+
 }
 
 
 .hero__image {
-    position: relative;
-    z-index: 1; 
+    // margin: 0 !important;
+    width: 100vw;
+    // position: relative;
+    z-index: 10; 
     img {
+    z-index: 10; 
       object-fit: cover;
     }
   }

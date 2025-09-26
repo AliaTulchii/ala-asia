@@ -10,6 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
 import './form.scss'
+import CustomSelect from "./CustomSelect";
 
 const initialValues = {
   name: "",
@@ -169,7 +170,7 @@ const FormContact = () => {
                 </ErrorMessage>
               </div>
 
-              <div className="form__input-box">
+              {/* <div className="form__input-box">
                 <label htmlFor="topic" className="form__label">
                   <p className="form__number">04</p>
                   <p className="form__text">{t("contactForm.category")}</p>
@@ -217,7 +218,18 @@ const FormContact = () => {
                     </div>
                   )}
                 </ErrorMessage>
-              </div>
+              </div> */}
+              <CustomSelect
+                name="topic"
+                category={t("contactForm.category")}
+                placeholder={t("contactForm.choose")}
+                options={[
+                  { value: "materials", label: t("contactForm.materials") },
+                  { value: "equipment", label: t("contactForm.equipment") },
+                  { value: "raw", label: t("contactForm.raw") },
+                  { value: "logistic", label: t("contactForm.logistic") },
+                ]}
+              />
 
               <div className="form__input-box textarea">
                 <label htmlFor="message" className="form__label">
@@ -231,7 +243,7 @@ const FormContact = () => {
                   as="textarea"
                   name="message"
                   id="message"
-                  rows="4"
+                  rows="8"
                 />
                 <ErrorMessage name="message" component="div" className="error">
                   {(msg) => (
