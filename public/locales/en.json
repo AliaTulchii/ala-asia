@@ -1,26 +1,161 @@
 {
   "header": {
-    "home": "home",
-    "services": "services",
-    "about": "about us",
-    "contacts": "contacts",
+    "home": "Home",
+    "services": "Services",
+    "about": "About us",
+    "contacts": "Contacts",
     "ru": "RU",
     "en": "EN",
     "kz": "KZ"
   },
+  "popUp": {
+    "card1": {
+      "id": "01",
+      "title": "Building materials",
+      "text1": "Ceramic tiles",
+      "text2": "Glass and glass products",
+      "text3": "Roofing materials",
+      "text4": "Bricks"
+    },
+    "card2": {
+      "id": "02",
+      "title": "Equipment",
+      "text1": "Metallurgy",
+      "text2": "Energetics",
+      "text3": "Chemicals",
+      "text4": "Industrial automation"
+    },
+    "card3": {
+      "id": "03",
+      "title": "Raw materials",
+      "text1": "Additives for the food industry",
+      "text2": "Paints, dyes",
+      "text3": "Plastics",
+      "text4": "Additives for the production of cosmetics and household chemicals"
+    },
+    "card4": {
+      "id": "04",
+      "title": "Logistics",
+      "text1": "Railway transportation",
+      "text2": "Container shipping",
+      "text3": "Provision of wagons and containers for transportation",
+      "text4": "Transportation by road"
+    }
+  },
+  "homeHero": {
+    "title": "Import",
+    "title1": "of equipment,",
+    "title2": "raw materials, and construction materials \nto Kazakhstan",
+    "text": "Direct contracts·Turnkey logistics· \nCertification.",
+    "btn": "Request offer"
+  },
+  "delivery": {
+    "title": "What we supply",
+    "text": "Direct contracts with manufacturers in the EU, China, and the \nUAE. We organise selection, terms, delivery, and quality control \nthroughout Kazakhstan.",
+    "card1": {
+      "title": "Building materials",
+      "text": "Tiles, bricks, glass, roofing. Direct deliveries from warehouses and factories, customized to your specifications and budget."
+    },
+    "card2": {
+      "title": "Equipment",
+      "text": "Construction and warehouse equipment, generators, pumps, and professional tools. We’ll help with specifications and complete set."
+    },
+    "card3": {
+      "title": "Raw materials",
+      "text": "Chemical additives, paints and varnishes, plastics, cosmetic ingredients. COA (certificates of analysis)/certificates, regular supply."
+    },
+    "card4": {
+      "title": "Logistics",
+      "text": "Railway, container, and road transportation. Estimated timeframes and costs, coverage throughout Kazakhstan."
+    },
+    "btn": "Find out more"
+  },
+  "partners": {
+    "title": "Trusted by"
+  },
+  "logistic": {
+    "title": "Geography of supplies \nand logistics",
+    "text": "Import, wholesale, and logistics of materials, equipment, and raw materials from Europe, \nChina, and the UAE—with guaranteed quality and transparent terms."
+  },
+  "accordion": {
+    "item1": {
+      "id": "01",
+      "title": "ЕU",
+      "text1": "Equipment, instrumentation, building materials and machinery, chemical raw \nmaterials and additives, paints/varnishes, plastics, industrial automation. We \nsupply directly from manufacturers’ warehouses and factories—competitive \nprices and stable delivery times.",
+      "subtitle": "Delivery",
+      "text2": "auto • railway • containers.",
+      "text3": "All products sold by our company have passed quality testing and meet all necessary technical parameters.",
+      "btn": "Find out the terms"
+    },
+    "item2": {
+      "id": "02",
+      "title": "China",
+      "text1": "Modern manufacturers and competitive pricing. Short logistics lead times \nreduce the final price without compromising quality. We supply standard and \ncustom items according to specifications.",
+      "subtitle": "Delivery",
+      "text2": "auto • railway • containers.",
+      "text3": "All products sold by our company have passed quality testing and meet all necessary technical parameters.",
+      "btn": "Find out the terms"
+    },
+    "item3": {
+      "id": "03",
+      "title": "UAE",
+      "text1": "Electronics, household appliances, cosmetic ingredients, and auto parts \nthrough free economic zones—flexible terms and fast shipments.",
+      "subtitle": "Delivery",
+      "text2": "air freight and containers, combined schemes if necessary.",
+      "text3": "All products sold by our company have passed quality testing and meet all necessary technical parameters.",
+      "btn": "Find out the terms"
+    }
+  },
+  "convenient": {
+    "title": "Why is it convenient \nto work with us?",
+    "item1": {
+      "id": "01",
+      "title": "Direct contracts with the EU/China/UAE",
+      "text": "No intermediaries or extra markups; we fix terms and prices according to Incoterms, with transparent costs and no hidden fees."
+    },
+    "item2": {
+      "id": "02",
+      "title": "Full logistics",
+      "text": "Road, railway, and container services throughout Kazakhstan; multimodal routes, insurance, tracking, and door-to-door customs support."
+    },
+    "item3": {
+      "id": "03",
+      "title": "Guaranteed quality",
+      "text": "Certification, COA (Certificate of Analysis), technical compliance; batch inspection, factory data sheets, and lot number traceability."
+    },
+    "item4": {
+      "id": "04",
+      "title": "Practicality",
+      "text": "Selection according to your timeframe, volumes and budget, with quick commercial offers; equivalent to your specifications, packaging options/MOQ, and a regular delivery schedule."
+    }
+  },
+  "contactForm": {
+    "title": "Write to us and we'll find a manufacturer and logistics",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone number",
+    "category": "Service category",
+    "choose": "Select category",
+    "materials": "Construction materials",
+    "equipment": "Equipment",
+    "raw": "Raw materials",
+    "logistic": "Logistics",
+    "message": "Your message",
+    "btn": "Get a consultation"
+  },
   "footer": {
-    "mail": "aa@kazimport.kz",
+    "mail": "info@ala-asia.kz",
     "tel1": "+7 (707) 104 09 02",
     "tel2": "+7 (707) 300 81 08",
-    "text1": "Наверх",
+    "btn": "Back to top",
     "rights": "All rights reserved",
-    "nav": "Навигация",
-    "home": "Главная",
-    "services": "Услуги",
-    "about": "О нас",
-    "contacts": "Контакты",
-    "police": "Политика приватности",
-    "address": "Адрес",
-    "address1": "050034, Казахстан, . Алматы, Алмалинский р-н, Проспект Райымбека,дом 212/2."
+    "nav": "Navigation",
+    "home": "Home",
+    "services": "Services",
+    "about": "About us",
+    "contacts": "Contacts",
+    "policy": "Privacy policy",
+    "address": "Address",
+    "address1": "No. 14, Building 197, 273/5 Tole Bi Street, \nAlmaty, Almaly District, Postcode: \n050005, Republic of Kazakhstan"
   }
 }

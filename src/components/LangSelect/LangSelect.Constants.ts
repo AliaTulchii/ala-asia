@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import ru from '../../../public/assets/images/icons/ru.svg';
-import en from '../../../public/assets/images/icons/en.svg';
-import kz from '../../../public/assets/images/icons/kz.svg';
+import ru from '/assets/images/icons/ru.svg';
+import en from '/assets/images/icons/en.svg';
+import kz from '/assets/images/icons/kz.svg';
 
 
 export type LanguageCode = "ru" | "en" | "kz";
