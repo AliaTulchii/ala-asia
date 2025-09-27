@@ -10,8 +10,12 @@ const transition = {
   stiffness: 120,
 } as const;
 
-const PopUp = () => {
-    const popUpItems = usePopUpItems();
+interface PopUpProps {
+  onMouseLeave: () => void;
+}
+
+const PopUp:React.FC<PopUpProps> = ({ onMouseLeave }) => {
+  const popUpItems = usePopUpItems();
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9, y: 10 }}
@@ -19,14 +23,12 @@ const PopUp = () => {
       exit={{ opacity: 0, scale: 0.9, y: 10 }}
       transition={transition}
       className="header__pop-up"
-      >
-          <div className="pop-up__line"/>
+      onMouseLeave={onMouseLeave}
+    >
+      <div className="pop-up__line" />
       <ul className="pop-up__list">
         {popUpItems.map((item) => {
-          return (
-            
-                  <PopUpCard item={item}/>
-          );
+          return <PopUpCard item={item} />;
         })}
       </ul>
     </motion.div>

@@ -54,23 +54,56 @@ color: var(--white);
   transition: all 0.3s ease-in-out;
 
   &:hover{
-    gap: 12px;
+
     .footer__btn-text{
-  transition: all 0.3s ease-in-out;
-  font-size: 14px;
+      color: var(--white);
     }
+    .footer__btn-text::after {
+      width: 100%;
+      background-color: var(--white);
 
+    }
+    .up-icon{
+      fill: var(--white);
+      transition: all 0.5s ease-in-out;
+      circle{
+      transition: all 0.5s ease-in-out;
 
-    .footer__btn-icon{
-      width: 35px;
-      height: 35px;
-  transition: all 0.3s ease-in-out;
+        stroke: var(--white);
+      }
+      
+    
+      path{
+      transition: all 0.5s ease-in-out;
 
+        stroke: var(--content-primary);
+    
+      }
     }
   }
 }
 
+.up-icon{
+  fill: none;
+  transition: all 0.5s ease-in-out;
+
+  circle{
+    transition: all 0.5s ease-in-out;
+
+    stroke: var(--white);
+  }
+  
+
+  path{
+    transition: all 0.5s ease-in-out;
+
+    stroke: var(--white);
+
+  }
+}
+
 .footer__btn-text{
+  position: relative;
   font-family: var(--font-delight);
 font-weight: 400;
 font-size: 16px;
@@ -78,7 +111,16 @@ line-height: 120%;
 letter-spacing: -0.01em;
 color: var(--white);
 transition: all 0.3s ease-in-out;
-
+&::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: var(--white);
+  transition: width 0.5s ease;
+}
 }
 
 .footer__btn-icon{

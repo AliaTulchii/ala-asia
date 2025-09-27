@@ -27,7 +27,7 @@ const Hero = () => {
         borderRadius: "20px",
         position: "absolute",
         top: "230px",
-        left: "680px",
+        left: "695px",
         xPercent: 0,
         yPercent: 0,
       });
@@ -59,7 +59,7 @@ const Hero = () => {
         borderRadius: "20px",
         position: "absolute",
         top: "230px",
-        left: "490px",
+        left: "500px",
         xPercent: 0,
         yPercent: 0,
       });
@@ -97,8 +97,10 @@ const Hero = () => {
     //     // height: "0px",
     //     borderRadius: "20px",
     //     position: "absolute",
-    //     top: "230px",
-    //     left: "490px",
+    //     // top: "230px",
+    //     // left: "480px",
+    //     top: "24%",
+    //     left: "35%",
     //     xPercent: 0,
     //     yPercent: 0,
     //   });

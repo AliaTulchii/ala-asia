@@ -90,7 +90,9 @@ const Header = () => {
                     </button>
 
                     <AnimatePresence>
-                      {servicesOpen && <PopUp />}
+                      {servicesOpen && (
+                        <PopUp onMouseLeave={() => setServicesOpen(false)} />
+                      )}
                     </AnimatePresence>
                   </div>
                 )

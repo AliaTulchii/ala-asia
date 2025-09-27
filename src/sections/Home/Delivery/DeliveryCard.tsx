@@ -26,18 +26,20 @@ const DeliveryCard: React.FC<DeliveryCardProps> = ({
   };
 
   return (
-    <NavLink
-      to="/services"
-      className={`delivery-card__item ${cardStyle}`}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <img
-        src={img}
-        alt={`image of ${title}`}
-        className={`delivery-card__img ${imgStyle}`}
-      />
+    <div className={`delivery-card__item ${cardStyle}`}>
+      <NavLink
+        className="delivery-card__link"
+        to="/services"
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <img
+          src={img}
+          alt={`image of ${title}`}
+          className={`delivery-card__img ${imgStyle}`}
+        />
+      </NavLink>
       <div className="delivery-card__box">
         <h3 className="delivery-card__title">{title}</h3>
         {/* <NavLink to="/services" className="delivery-card__link">{btn}</NavLink> */}
@@ -48,14 +50,14 @@ const DeliveryCard: React.FC<DeliveryCardProps> = ({
         <div
           className="delivery-card__cursor-text"
           style={{
-            top: cursorPos.y + 10, 
+            top: cursorPos.y + 10,
             left: cursorPos.x + 10,
           }}
         >
           {btn}
         </div>
       )}
-    </NavLink>
+    </div>
   );
 };
 

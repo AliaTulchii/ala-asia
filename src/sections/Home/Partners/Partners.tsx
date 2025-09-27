@@ -8,10 +8,10 @@ const Partners = () => {
   return (
     <section className="partners">
       <div className="partners__container container">
-        {/* <div className="partners__line partners__line-first" />
+        <div className="partners__line partners__line-first" />
         <div className="partners__line partners__line-second" />
         <div className="partners__line partners__line-third" />
-        <div className="partners__line partners__line-fourth" /> */}
+        <div className="partners__line partners__line-fourth" />
 
         <div className="partners__content">
           <h2 className="partners__title">{t("partners.title")}</h2>

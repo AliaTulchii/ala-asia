@@ -1,8 +1,12 @@
 .hero{
     // position: relative;
-  height: 150vh;
+  height: 130vh;
   overflow: hidden;
 
+
+  @media screen and (min-width:1551px){
+  height: 150vh;
+  }
 }
 
 .hero__container{
@@ -10,6 +14,9 @@ padding-top: 220px !important;
     height: 100%;
     position: relative;
     opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero__line{
@@ -22,7 +29,7 @@ padding-top: 220px !important;
 
     &-first{
         // left: 810px;
-        left: 32.7%;
+        left: 32.8%;
     }
 
     &-second{
@@ -44,19 +51,24 @@ left: 34.5%;
 
 .hero__title-wrapper{
     text-align: center;
+    width: 1350px;
+    // display: flex;
+    // flex-direction: column;
+
 }
 
 .hero__title-box{
     // position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .hero__title{
     // position: relative;
     font-family: var(--font-delight);
 font-weight: 800;
-font-size: 82px;
+font-size: 78px;
 line-height: 110%;
 letter-spacing: -0.02em;
 text-transform: uppercase;

@@ -2,7 +2,8 @@ import "./footer.scss";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useNavItems } from "../Header/Header.Constants";
-import { ARROW_UP_ICON, WHITE_LOGO } from "./Footer.Constant";
+import {  WHITE_LOGO } from "./Footer.Constant";
+import CircleArrowUp from "../../icons/CircleArrowUp";
 // import SectionPixelBackground from "../PixelBackground/section/SectionPixelBackground";
 
 const Footer = () => {
@@ -43,11 +44,7 @@ const Footer = () => {
 
           <button onClick={() => window.scrollTo(0, 0)} className="footer__btn">
             <p className="footer__btn-text">{t("footer.btn")}</p>
-            <img
-              src={ARROW_UP_ICON}
-              alt="arrow up"
-              className="footer__btn-icon"
-            />
+            <CircleArrowUp/>
           </button>
         </div>
 

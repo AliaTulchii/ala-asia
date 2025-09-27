@@ -26,7 +26,7 @@ const Accordion: React.FC = () => {
               activeId === item.key ? "open" : ""
             }`}
           >
-            <h2 className="accordion__title">{item.title}</h2>
+            <h2 className="accordion__content-title">{item.title}</h2>
             <p className="accordion__text">{item.text1}</p>
             <h3 className="accordion__subtitle">{item.subtitle}</h3>
             <p className="accordion__text">{item.text2}</p>

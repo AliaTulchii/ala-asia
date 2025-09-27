@@ -1,4 +1,6 @@
-
+.delivery{
+    position: relative;
+}
 
 .delivery__container{
     height: 100%;
@@ -25,11 +27,12 @@
     z-index: 2;
     width: 1px;
     height: 100%;
-    background-color: rgba(101, 97, 97, 0.2);
+    background-color: rgba(18, 27, 96, 0.08);
+
 
     &-first{
         // left: 810px;
-        left: 32.7%;
+        left: 32.8%;
     }
 
     &-second{
@@ -72,7 +75,7 @@ color: var(--content-primary);
 }
 
 .delivery__text{
-    width: 565px;
+    // width: 565px;
     font-family: var(--font-delight);
 font-weight: 400;
 font-size: 21.5px;
@@ -140,6 +143,8 @@ width: 330px;
 }
 
 .delivery-card__title{
+    margin-left: 16px;
+
     font-family: var(--font-delight);
 font-weight: 600;
 font-size: 24px;
@@ -149,6 +154,8 @@ color: var(--content-primary);
 }
 
 .delivery-card__text{
+    margin-left: 16px;
+
     font-family: var(--font-delight);
 font-weight: 400;
 font-size: 16px;
@@ -157,16 +164,8 @@ color: var(--content-primary);
 }
 
 .delivery-card__link{
-    padding: 7px 16px;
-    border: 1px solid var(--content-primary);
-    border-radius: 20px;
-    font-family: var(--font-delight);
-font-weight: 600;
-font-size: 12px;
-line-height: 120%;
-letter-spacing: -0.01em;
-text-transform: uppercase;
-color: var(--content-primary);
+    cursor:url('../../../../public/assets/images/home/delivery/cursor.svg'), auto;
+
 }
 
 .delivery-card__cursor-text {

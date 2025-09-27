@@ -132,6 +132,9 @@ color: var(--content-primary);
     border-radius: 40px;
     padding: 29px 0;
     text-align: center;
+    transition: all 0.5s ease-in-out;
+  border: 1px solid var(--white);
+
 
     font-family: var(--font-geist);
 font-weight: 600;
@@ -139,6 +142,14 @@ font-size: 28px;
 line-height: 120%;
 letter-spacing: -0.01em;
 color: var(--white);
+
+&:hover, :focus{
+  background-color: var(--white);
+  color: var(--main-button);
+  border: 1px solid var(--main-button);
+  transition: all 0.5s ease-in-out;
+  
+}
   }
 
   //custom select
@@ -191,7 +202,7 @@ color: var(--white);
     }
   
     &__option {
-      padding: 10px;
+      padding: 10px 0 10px 16px;
       cursor: pointer;
       font-family: var(--font-delight);
 font-weight: 400;

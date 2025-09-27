@@ -8,15 +8,15 @@ const Convenient = () => {
   return (
     <section className="convenient">
       <div className="convenient__container container">
-        {/* <div className="convenient__line-vertical convenient__line-vertical-first" />
-        <div className="convenient__line-vertical convenient__line-vertical-second" />
         <div className="convenient__line-vertical convenient__line-vertical-third" />
-        <div className="convenient__line-vertical convenient__line-vertical-fourth" /> */}
+        <div className="convenient__line-vertical convenient__line-vertical-fourth" />
         <h2 className="convenient__title">{t("convenient.title")}</h2>
         <div className="convenient__line" />
         <ul className="convenient__list">
           {convenientItems.map((item) => (
             <li className="convenient__item" key={item.key}>
+              <div className="convenient__line-horizontal" />
+
               <p className="convenient__item-number">{item.key}</p>
               <img
                 src={item.img}

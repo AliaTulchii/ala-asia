@@ -12,15 +12,18 @@
     z-index: 1;
     width: 1px;
     height: 100%;
-    background-color: rgba(122, 118, 118, 0.2);
+    background-color: rgba(18, 27, 96, 0.08);
+
 
     &-first{
         // left: 810px;
+        height: 50%;
         left: 32.7%;
     }
 
     &-second{
 //   left: 832px;
+height: 50%;
 left: 34.5%;
 
     }

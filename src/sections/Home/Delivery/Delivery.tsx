@@ -7,19 +7,20 @@ const Delivery = () => {
     const { t } = useTranslation("delivery");
   return (
     <section className="delivery">
+      <div className="delivery__line delivery__line-fifth" />
+
       <div className="delivery__container container">
         <div className="delivery__line delivery__line-first" />
         <div className="delivery__line delivery__line-second" />
         <div className="delivery__line delivery__line-third" />
         <div className="delivery__line delivery__line-fourth" />
-        <div className="delivery__line delivery__line-fifth" />
 
         <div className="delivery__content">
           <div className="delivery__header">
             <h2 className="delivery__title">{t("delivery.title")}</h2>
             <p className="delivery__text">{t("delivery.text")}</p>
           </div>
-          
+
           <div className="delivery__main">
             <div className="delivery__box delivery__box-first">
               <DeliveryCard
