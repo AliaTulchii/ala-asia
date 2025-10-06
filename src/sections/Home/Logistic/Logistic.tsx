@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import Accordion from '../../../components/Accordion/Accordion';
 import './logistic.scss'
+import Accordion from '../../../components/Accordion/AccordionVertical/Accordion';
 
 const Logistic = () => {
     const { t } = useTranslation("logistic");

@@ -1,9 +1,18 @@
-.convenient__container{
+.convenient-home, .convenient-services{
+    position: relative;
+}
+
+.convenient-home__container{
     position: relative;
     padding-bottom: 160px !important;
 }
 
-.convenient__line-vertical{
+.convenient-services__container{
+    position: relative;
+    padding-bottom: 96px !important;
+}
+
+.convenient-home__line-vertical{
     position: absolute;
     top: 0;    
     z-index: 2;
@@ -22,7 +31,26 @@
       }
 }
 
-.convenient__title{
+ .convenient-services__line-vertical{
+    position: absolute;
+    top: 143px;    
+    z-index: 2;
+    width: 1px;
+    height: 92.2%;
+    background-color: rgba(18, 27, 96, 0.08);
+
+    &-third{
+        // left: 1164px;
+        left: 57.4%;
+      }
+      
+      &-fourth{
+        // left: 1188px;
+        left:59%;
+      }
+}
+
+.convenient-home__title, .convenient-services__title{
     position: relative;
     z-index: 3;
     width: 555px;
@@ -36,7 +64,7 @@ white-space: pre-line;
 color: var(--content-primary);
 }
 
-.convenient__line{
+.convenient-home__line, .convenient-services__line{
     position: absolute;
     left: 0;
     top: 144px;
@@ -45,14 +73,19 @@ color: var(--content-primary);
     background-color: var(--content-primary);
 }
 
-.convenient__item{
+.convenient-home__item, .convenient-services__item{
     position: relative;
     display: flex;
     // border-bottom: 1px solid rgba(18, 27, 96, 0.08);
     padding: 44px 0;
 }
 
-.convenient__line-horizontal{
+.convenient-home__item:not(:last-child), .convenient-services__item:not(:last-child){
+    border-bottom: 1px solid rgba(18, 27, 96, 0.08);
+
+}
+
+.convenient-home__line-horizontal, .convenient-services__line-horizontal{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -65,7 +98,7 @@ color: var(--content-primary);
 //     margin-bottom: 88px;
 // }
 
-.convenient__item-number{
+.convenient-home__item-number, .convenient-services__item-number{
     margin-right: 51px;
     font-family: var(--font-geist);
 font-weight: 400;
@@ -76,7 +109,7 @@ text-align: center;
 color: rgba(18, 27, 96, 0.6);
 }
 
-.convenient__item-img{
+.convenient-home__item-img, .convenient-services__item-img{
     position: relative;
     z-index: 3;
     margin-right: 96px;
@@ -84,11 +117,11 @@ color: rgba(18, 27, 96, 0.6);
 height: 288px;
 }
 
-.convenient__item-wrapper{
-    // width: 482px;
-}
+// .convenient__item-wrapper{
+//     // width: 482px;
+// }
 
-.convenient__item-title{
+.convenient-home__item-title, .convenient-services__item-title{
     margin-bottom: 24px;
     font-family: var(--font-delight);
 font-weight: 700;
@@ -97,7 +130,7 @@ white-space: pre-line;
 color: var(--content-primary);
 }
 
-.convenient__item-text{
+.convenient-home__item-text, .convenient-services__item-text{
     font-family: var(--font-delight);
 font-weight: 400;
 font-size: 16px;

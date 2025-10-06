@@ -15,6 +15,8 @@ const Footer = () => {
 
   return (
     <footer className="footer" id="contact">
+      <div className="line line-fifth" />
+
       <div className="footer__container container">
         {/* <SectionPixelBackground /> */}
 
@@ -22,7 +24,6 @@ const Footer = () => {
         <div className="line line-second" />
         <div className="line line-third" />
         <div className="line line-fourth" />
-        <div className="line line-fifth" />
 
         <div className="footer__wrapper-first">
           <NavLink to="/" className="footer__logo-link">
@@ -44,7 +45,7 @@ const Footer = () => {
 
           <button onClick={() => window.scrollTo(0, 0)} className="footer__btn">
             <p className="footer__btn-text">{t("footer.btn")}</p>
-            <CircleArrowUp/>
+            <CircleArrowUp />
           </button>
         </div>
 

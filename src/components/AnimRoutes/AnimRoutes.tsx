@@ -1,6 +1,8 @@
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "../../pages/Home/Home";
+import Services from "../../pages/Services/Services";
+import About from "../../pages/About/About";
 // import TransportType from "../../pages/TransportType/TransportType";
 // import Loads from "../../pages/Loads/Loads";
 // import About from "../../pages/About/About";
@@ -18,26 +20,20 @@ const AnimRoutes = () => {
           path="/"
           element={
             // <Stairs>
-              <Home />
+            <Home />
             // </Stairs>
           }
         />
-        {/* <Route
-          path="/transport"
+        <Route path="/services/:tab/:subtab?" element={<Services />} />
+        <Route path="/services" element={<Services />} />
+        <Route
+          path="/about"
           element={
-            <Stairs>
-              <TransportType />
-            </Stairs>
+            // <Stairs>
+              <About />
+            // </Stairs>
           }
-        /> */}
-        {/* <Route
-          path="/loads"
-          element={
-            <Stairs>
-              <Loads />
-            </Stairs>
-          }
-        /> */}
+        />
         {/* <Route
           path="/about"
           element={

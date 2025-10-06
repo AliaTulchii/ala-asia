@@ -1,21 +1,45 @@
-import { useTranslation } from 'react-i18next';
-import { Marquee, MarqueeContent, MarqueeFade, MarqueeItem } from '../../../components/Marquee/Marquee';
-import { LOGO1, LOGO10, LOGO11, LOGO12, LOGO13, LOGO14, LOGO2, LOGO3, LOGO4, LOGO5, LOGO6, LOGO7, LOGO8, LOGO9 } from './Partners.Constants';
-import './partners.scss'
-const Partners = () => {
-    const { t } = useTranslation("partners");
-  
-  return (
-    <section className="partners">
-      <div className="partners__container container">
-        <div className="partners__line partners__line-first" />
-        <div className="partners__line partners__line-second" />
-        <div className="partners__line partners__line-third" />
-        <div className="partners__line partners__line-fourth" />
+import { useTranslation } from "react-i18next";
+import {
+  Marquee,
+  MarqueeContent,
+  MarqueeFade,
+  MarqueeItem,
+} from "../../components/Marquee/Marquee";
+import {
+  LOGO1,
+  LOGO10,
+  LOGO11,
+  LOGO12,
+  LOGO13,
+  LOGO14,
+  LOGO2,
+  LOGO3,
+  LOGO4,
+  LOGO5,
+  LOGO6,
+  LOGO7,
+  LOGO8,
+  LOGO9,
+} from "./Partners.Constants";
+import "./partners.scss";
 
-        <div className="partners__content">
-          <h2 className="partners__title">{t("partners.title")}</h2>
-          <div className="partners__main-line" />
+interface PartnersProps {
+  className: string;
+}
+const Partners: React.FC<PartnersProps> = ({ className }) => {
+  const { t } = useTranslation("partners");
+
+  return (
+    <section className={`${className}`}>
+      <div className={`${className}__container container`}>
+        <div className={`${className}__line ${className}__line-first`} />
+        <div className={`${className}__line ${className}__line-second`} />
+        <div className={`${className}__line ${className}__line-third`} />
+        <div className={`${className}__line ${className}__line-fourth`} />
+
+        <div className={`${className}__content`}>
+          <h2 className={`${className}__title`}>{t("partners.title")}</h2>
+          <div className={`${className}__main-line`} />
 
           <Marquee>
             <MarqueeContent speed={50}>
@@ -69,6 +93,6 @@ const Partners = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Partners
+export default Partners;

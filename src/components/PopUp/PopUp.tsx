@@ -28,7 +28,7 @@ const PopUp:React.FC<PopUpProps> = ({ onMouseLeave }) => {
       <div className="pop-up__line" />
       <ul className="pop-up__list">
         {popUpItems.map((item) => {
-          return <PopUpCard item={item} />;
+          return <PopUpCard item={item} onMouseLeave={onMouseLeave} />;
         })}
       </ul>
     </motion.div>

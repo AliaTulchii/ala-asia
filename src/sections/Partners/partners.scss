@@ -1,13 +1,13 @@
-.partners{
+.partners-services, .partners-home{
     // padding-bottom: 160px;
     border-top: 1px solid var(--content-primary);
     border-bottom: 1px solid var(--content-primary);
 }
-.partners__container{
+.partners-home__container, .partners-services__container{
     position: relative;
 }
 
-.partners__line{
+.partners-home__line{
     position: absolute;
     top: 0;    
     z-index: 2;
@@ -38,14 +38,13 @@ left: 34.5%;
       }
 }
 
-.partners__content{
+.partners-home__content, .partners-services__content{
     padding: 24px 0;
     display: flex;
     align-items: center;
 }
 
-.partners__title{
-    
+.partners-home__title, .partners-services__title{    
     font-family: var(--font-azeret);
 font-weight: 600;
 font-size: 16px;

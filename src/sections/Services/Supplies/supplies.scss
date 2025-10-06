@@ -1,0 +1,262 @@
+.supplies{
+    position: relative;
+    padding-top: 140px ;
+    padding-bottom: 160px;
+}
+
+.supplies__line{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--content-primary);
+    top: 510px;
+}
+
+.supplies__title{
+    width: 1050px;
+    margin-bottom: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 64px;
+line-height: 110%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+text-align: center;
+color: var(--content-primary);
+}
+
+.supplies__text{
+    width: 518px;
+    margin-bottom: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-delight);
+font-weight: 400;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.01em;
+text-align: center;
+white-space: pre-line;
+color: var(--content-primary);
+}
+
+.supplies__tabs{
+    margin-bottom: 64px;
+display: flex;
+justify-content: center;
+gap: 48px;
+
+}
+
+.supplies__tab{
+    display: flex;
+    gap: 8px;
+    background-color: var(--tab-button);
+    border-radius: 40px;
+    transition: all 0.5s ease-in-out;
+
+
+    &--materials{
+        padding: 8px 88px;
+
+    }
+
+    &--equipment{
+        padding: 8px 81px;
+    }
+
+    &--raw{
+        padding: 8px 62px;
+    }
+
+    &--logistics{
+        padding: 8px 58.5px;
+
+    }
+
+    &:hover{
+        background-color: var(--tab-button-active);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.active{
+        background-color: var(--tab-button-active);
+    }
+}
+
+.supplies__tab-text{
+    font-family: var(--font-geist);
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+text-align: center;
+color: var(--content-primary);
+}
+
+.supplies__subtabs{
+    display: flex;
+    gap: 56px;
+    margin-bottom: 62px;
+}
+
+.supplies__content{
+    height: 614px;
+    
+}
+
+
+.supplies__subtab{
+    position: relative;
+    font-family: var(--font-delight);
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: -0.01em;
+color: var(--content-primary);
+transition: all 0.5s ease-in-out;
+
+
+&::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: var(--content-primary);
+    transition: width 0.5s ease;
+  }
+
+&.active{
+    transition: all 0.5s ease-in-out;
+
+    font-weight: 600;
+
+    &::after {      
+        width: 100%;
+        background-color: var(--content-primary);
+      }
+}
+
+&:hover{
+    transition: all 0.5s ease-in-out;
+
+    &::after {      
+        width: 100%;
+        background-color: var(--content-primary);
+      }
+}
+}
+
+.supplies__card{
+    display: flex;
+    gap: 40px;
+}
+
+.supplies__card-content{
+    width: 832px;
+    height: 614px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+      }
+    
+      /* трек (фон під скролом) */
+      &::-webkit-scrollbar-track {
+        background: #f0f0f0;
+      }
+    
+      /* сам повзунок */
+      &::-webkit-scrollbar-thumb {
+        background: var(--main-button);
+      }
+    
+      /* при ховері на повзунок */
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--content-primary);
+      }
+}
+
+.supplies__card-text{
+    width: 800px;
+    margin-bottom: 56px;
+    font-family: var(--font-delight);
+font-weight: 400;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: var(--content-primary);
+white-space: pre-line;
+}
+
+.supplies__card-title{
+    margin-bottom: 16px;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 32px;
+color: var(--content-primary);
+}
+
+.supplies__card-subtext{
+    width: 803px;
+  margin-bottom: 40px;
+    font-family: var(--font-delight);
+font-weight: 400;
+font-size: 18px;
+color: var(--content-primary);
+white-space: pre-line;
+
+
+}
+
+.subtext__glass{
+    margin-bottom: 0px;
+}
+
+.subtext__bold{
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.supplies__card-content-wrapper{
+    margin-bottom: 40px;
+}
+.supplies__card-link{
+    display: inline-block;
+    padding: 14.5px 48.5px;
+    border-radius: 20px;
+    background-color: var(--main-button);
+    font-family: var(--font-geist);
+font-weight: 600;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: var(--white);
+}
+
+.supplies__card-img{
+    width: 514px;
+    height: 614px;
+}
+
+.supplies__card-list {
+    list-style: disc;      // показує кружечки
+    padding-left: 20px; 
+    color: var(--content-primary)   // щоб маркери не злипалися з текстом
+  }
+  
+  .supplies__card-item {
+    list-style: inherit;   // наслідує стиль від ul
+    margin-bottom: 10px;   // відступ між пунктами
+  }
+
+  .supplies__card-item--additional{
+    margin-bottom: 0px;
+  }
+  
