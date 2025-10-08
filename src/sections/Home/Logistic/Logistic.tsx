@@ -2,21 +2,25 @@ import { useTranslation } from 'react-i18next';
 import './logistic.scss'
 import Accordion from '../../../components/Accordion/AccordionVertical/Accordion';
 
-const Logistic = () => {
-    const { t } = useTranslation("logistic");
+
+interface LogisticProps{
+  className: string;
+}
+const Logistic: React.FC<LogisticProps> = ({ className }) => {
+  const { t } = useTranslation("logistic");
   return (
-    <section className="logistic">
-      <div className="logistic__container container">
-        <div className="logistic__line logistic__line-first" />
-        <div className="logistic__line logistic__line-second" />
-        <div className="logistic__line logistic__line-third" />
-        <div className="logistic__line logistic__line-fourth" />
-        <h2 className="logistic__title">{t("logistic.title")}</h2>
-        <p className="logistic__text">{t("logistic.text")}</p>
+    <section className={`${className}`}>
+      <div className={`${className}__container container`}>
+        <div className={`${className}__line logistic__line-first`} />
+        <div className={`${className}__line logistic__line-second`} />
+        <div className={`${className}__line logistic__line-third`} />
+        <div className={`${className}__line logistic__line-fourth`} />
+        <h2 className={`${className}__title`}>{t("logistic.title")}</h2>
+        <p className={`${className}__text`}>{t("logistic.text")}</p>
         <Accordion />
       </div>
     </section>
   );
-}
+};
 
 export default Logistic

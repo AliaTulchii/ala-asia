@@ -1,12 +1,10 @@
-
-
-.logistic__container{
+.logistic-home__container,.logistic-about__container{
     position: relative;
     padding-bottom: 160px !important;
     padding-top: 160px !important;
 }
 
-.logistic__line{
+.logistic-home__line{
     position: absolute;
     top: 0;    
     z-index: 1;
@@ -39,7 +37,11 @@ left: 34.5%;
       }
 }
 
-.logistic__title{
+.logistic-about__line{
+display: none;
+}
+
+.logistic-home__title, .logistic-about__title{
     width: 676px;
     margin-left: auto;
     margin-right: auto;
@@ -54,7 +56,7 @@ white-space: pre-line;
 color: var(--content-primary);
 }
 
-.logistic__text{
+.logistic-home__text, .logistic-about__text{
     width: 772px;
     margin-left: auto;
     margin-right: auto;

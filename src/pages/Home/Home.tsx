@@ -11,7 +11,7 @@ const Home = () => {
       <Hero />
       <Delivery />
       <Partners className="partners-home" />
-      <Logistic/>
+      <Logistic className="logistic-home" />
       <Convenient className="convenient-home" />
       <ContactForm />
     </div>

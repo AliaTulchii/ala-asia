@@ -1,0 +1,63 @@
+.about-hero{
+    height: 780px;
+    background-image: url('/assets/images/about/men.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-hero__container{
+    height: 780px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about-hero__title{
+    margin-bottom: 16px;
+    font-family: var(--font-delight);
+font-weight: 800;
+font-size: 64px;
+line-height: 110%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+text-align: center;
+color: var(--white);
+}
+
+.about-hero__text{
+    margin-bottom: 32px;
+    font-family: var(--font-delight);
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.01em;
+text-align: center;
+color: var(--white);
+}
+
+.about-hero__btn{
+    background-color: var(--main-button);
+    border: 1px solid var(--main-button);
+    border-radius: 20px;
+    padding: 14.5px 34.5px;
+    font-family: var(--font-geist);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: var(--background-primary);
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background-color: var(--background-primary);
+        color: var(--main-button);
+        transition: all 0.3s ease-in-out;
+    }
+}

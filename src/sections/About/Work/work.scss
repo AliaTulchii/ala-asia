@@ -1,0 +1,128 @@
+.work__container{
+    position: relative;
+}
+
+.work__line{
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    background-color: rgba(18, 27, 96, 0.152);
+    // background-color: black;
+
+    &-first{
+        left: 708px;
+    }
+
+    &-second{
+        left: 731px;
+    }
+}
+
+.work__content{
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+    padding-top: 136px;
+    padding-bottom: 80px;
+
+}
+
+.work__item{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    &-reverse{
+        flex-direction: row-reverse;
+    }
+
+    
+}
+
+.work__item-last{
+    display: flex;
+    gap: 24px;
+
+    // height: 508px;
+}
+
+.work__left{
+    width: 50%;
+}
+
+.work__left-last{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.work__title{
+    margin-bottom: 32px;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: -0.01em;
+color: var(--content-primary);
+
+&-last{
+    margin-bottom: 12px;
+}
+}
+
+.work__subtitle{
+    margin-bottom: 16px;
+    font-family: var(--font-delight);
+font-weight: 600;
+font-size: 24px;
+line-height: 120%;
+letter-spacing: -0.01em;
+color: var(--content-primary);
+}
+
+.work__list-last{
+    display: flex;
+    gap: 34px;
+}
+
+.work__list-item{
+    display: flex;
+    align-items: center;
+}
+
+.work__list-item:not(:last-child){
+    margin-bottom: 16px;
+}
+
+.work__list-icon{
+    margin-right: 8px;
+}
+.work__text{
+    font-family: var(--font-delight);
+font-weight: 400;
+font-size: 16px;
+line-height: 130%;
+letter-spacing: -0.01em;
+color: var(--content-primary);
+white-space: pre-line;
+}
+
+.work__right{
+    width: 50%;
+    // width: 684px;
+    height: 389px;    
+}
+
+.work__right-last{
+    width: 50%;
+    height: 508px;
+    background-image: url(../../../../public/assets/images/about/man.webp);
+    background-size: cover;
+    // height: 508px;
+}
+
+.work__img{
+    width: 6/4px;
+}
