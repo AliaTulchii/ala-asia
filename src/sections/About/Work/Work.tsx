@@ -46,8 +46,8 @@ const Work = () => {
             </div>
           </div>
           <div className="work__item  work__item-reverse">
-            <div className="work__left">
-              <h2 className="work__title">{t("about.work.item2.title")}</h2>
+            <div className="work__left work__left-reverse">
+              <h2 className="work__title ">{t("about.work.item2.title")}</h2>
               <ul className="work__list">
                 <li className="work__list-item">
                   <img src={arrow} alt="arrow" className="work__list-icon" />

@@ -13,7 +13,7 @@
     height: 100%;
     width: 1px;
     top: 0;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
     // background-color: black;
 
     &-first{
@@ -31,7 +31,7 @@
     width: 100%;
     top: 305px;
     left: 0;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
 }
 
 .deliver__line-fourth{
@@ -40,7 +40,7 @@
     width: 100%;
     top: 458px;
     left: 0;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
 }
 
 .deliver__line-fifth{
@@ -49,21 +49,21 @@
     width: 100%;
     top: 612px;
     left: 0;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
 }.deliver__line-six{
     position: absolute;
     height: 1px;
     width: 100%;
     top: 767px;
     left: 0;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
 }.deliver__line-seventh{
     position: absolute;
     height: 1px;
     width: 100%;
     top: 921px;
     left: 0;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
 }
   
   .deliver__wrapper {
@@ -157,7 +157,7 @@ color: var(--content-primary);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(18, 27, 96, 0.152);
+    border-bottom: 1px solid rgba(18, 27, 96, 0.08);
   
     @media screen and (max-width: 968px) {
       flex-direction: column;
@@ -243,7 +243,7 @@ color: var(--content-primary);
     right: 144px;
     height: 100%;
     width: 1px;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
   }
 
   .deliver__line-right{
@@ -252,7 +252,7 @@ color: var(--content-primary);
     right: 168px;
     height: 100%;
     width: 1px;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
   }
   
   .deliver__content-text {

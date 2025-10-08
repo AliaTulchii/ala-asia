@@ -7,7 +7,7 @@
     height: 100%;
     width: 1px;
     top: 0;
-    background-color: rgba(18, 27, 96, 0.152);
+    background-color: rgba(18, 27, 96, 0.08);
     // background-color: black;
 
     &-first{
@@ -49,6 +49,10 @@
 
 .work__left{
     width: 50%;
+
+    &-reverse{
+        padding-left: 32px;
+    }
 }
 
 .work__left-last{
