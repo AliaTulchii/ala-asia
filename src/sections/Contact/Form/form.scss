@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 160px;
-    padding-bottom: 160px;
+    padding-top: 160px !important;
+    padding-bottom: 160px !important;
 }
 
 
@@ -18,3 +18,7 @@ text-align: center;
 color: var(--content-primary);
 white-space: pre-line;
 }
+
+// .form__wrapper{
+//     padding: 160px 0;
+// }

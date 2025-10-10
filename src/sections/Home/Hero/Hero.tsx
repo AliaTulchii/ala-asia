@@ -1,154 +1,55 @@
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-// import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import './hero.scss'
-// import { HERO_IMG } from "./Hero.Constants";
-
-gsap.registerPlugin(ScrollTrigger);
+import "./hero.scss";
+import { HERO_IMG } from "./Hero.Constants";
 
 const Hero = () => {
-    const { t } = useTranslation("homeHero");
-    // const imgRef = useRef<HTMLImageElement | null>(null);
-  // const sectionRef = useRef<HTMLDivElement | null>(null);
-  
+  const { t } = useTranslation("homeHero");
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
 
-  // useEffect(() => {
-  //   if (!sectionRef.current || !imgRef.current) return;
+  useEffect(() => {
+    const section = sectionRef.current;
+    const content = contentRef.current;
+    if (!section || !content) return;
 
-  //   const mm = gsap.matchMedia();
+    const recalc = () => {
+      const contentHeight = content.getBoundingClientRect().height;
+      section.style.setProperty("--content-height", `${contentHeight}px`);
+      // мінімальна висота секції = висота тексту + viewport
+      section.style.minHeight = `${contentHeight + window.innerHeight + 50}px`;
+    };
 
-  //   mm.add("(min-width: 1551px)", () => {
-  //     // 📌 Десктоп
-  //     gsap.set(imgRef.current, {
-  //       width: "172px",
-  //       height: "65px",
-  //       borderRadius: "20px",
-  //       position: "absolute",
-  //       top: "230px",
-  //       left: "695px",
-  //       xPercent: 0,
-  //       yPercent: 0,
-  //     });
+    recalc();
+    window.addEventListener("resize", recalc);
 
-  //     gsap.to(imgRef.current, {
-  //       width: "100vw",
-  //       height: "100vh",
-  //       borderRadius: 0,
-  //       top: 0,
-  //       left: "0%",
-  //       xPercent: 0,
-  //       yPercent: 50,
-  //       ease: "expo.out",
-  //       scrollTrigger: {
-  //         trigger: sectionRef.current,
-  //         start: "top top",
-  //         end: "top+=1000vh",
-  //         scrub: true,
-  //         pin: false,
-  //       },
-  //     });
-  //   });
+    const ro = new ResizeObserver(recalc);
+    ro.observe(content);
 
-  //   mm.add("(max-width: 1550px)", () => {
-  //     // 📌 Мобільна / планшет
-  //     gsap.set(imgRef.current, {
-  //       width: "172px",
-  //       height: "65px",
-  //       borderRadius: "20px",
-  //       position: "absolute",
-  //       top: "230px",
-  //       left: "500px",
-  //       xPercent: 0,
-  //       yPercent: 0,
-  //     });
-
-  //     gsap.to(imgRef.current, {
-  //       width: "100vw",
-  //       height: "100vh",
-  //       borderRadius: 0,
-  //       top: 0,
-  //       left: "0%",
-  //       xPercent: 0,
-  //       yPercent: 30,
-  //       ease: "expo.out",
-  //       scrollTrigger: {
-  //         trigger: sectionRef.current,
-  //         start: "top top",
-  //         end: "top+=1000vh",
-  //         scrub: true,
-  //         pin: false,
-  //       },
-  //     });
-  //   });
-
-  //   return () => mm.revert(); // очищення при анмаунті
-  // }, []);
-
-    // useEffect(() => {
-    //   if (!sectionRef.current || !imgRef.current) return;
-      
-
-    //   gsap.set(imgRef.current, {
-    //     width: "172px",
-    //     height: "65px",
-    //     // width: "0px",
-    //     // height: "0px",
-    //     borderRadius: "20px",
-    //     position: "absolute",
-    //     // top: "230px",
-    //     // left: "480px",
-    //     top: "24%",
-    //     left: "35%",
-    //     xPercent: 0,
-    //     yPercent: 0,
-    //   });
-
-
-    //   gsap.to(imgRef.current, {
-    //     width: "100vw",
-    //     height: "100vh",
-    //     borderRadius: 0,
-    //     top: 0,
-    //     left: "0%",
-    //     xPercent: 0,
-    //     yPercent: 50,
-    //     ease: "expo.out",
-    //     scrollTrigger: {
-    //       trigger: sectionRef.current,
-    //       start: "top top",
-    //       end: "top+=1000vh",
-    //       scrub: true,
-    //       pin: false,
-    //     },
-    //   });
-    // }, []);
-
+    return () => {
+      window.removeEventListener("resize", recalc);
+      ro.disconnect();
+    };
+  }, []);
 
   return (
-    <section className="hero" >
-      <div className="hero__container container">
-        
-        <div className="hero__line hero__line-first" />
-        <div className="hero__line hero__line-second" />
-        <div className="hero__line hero__line-third" />
-        <div className="hero__line hero__line-fourth" />
-        <div className="hero__title-wrapper">
-          <div className="hero__title-box">
-            <h1 className="hero__title">{t("homeHero.title")}</h1>
-            <h1 className="hero__title">{t("homeHero.title1")}</h1>
-          </div>
-          <h1 className="hero__title hero__title-last">
-            {t("homeHero.title2")}
-          </h1>
-        </div>
-
+    <section className="hero container" ref={sectionRef}>
+      {/* Текст */}
+      <div className="hero__content " ref={contentRef}>
+        <h1 className="hero__title">{t("homeHero.title")}</h1>
         <div className="hero__wrapper">
           <p className="hero__text">{t("homeHero.text")}</p>
-          <NavLink to="/contacts" className="hero__link">
+          <NavLink className="hero__link" to="/contacts">
             {t("homeHero.btn")}
           </NavLink>
+        </div>
+      </div>
+
+      {/* Картинка */}
+      <div className="hero__image-outer">
+        <div className="hero__image-inner">
+          <img src={HERO_IMG} alt="hero" />
         </div>
       </div>
     </section>
