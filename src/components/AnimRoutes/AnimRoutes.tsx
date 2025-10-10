@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "../../pages/Home/Home";
 import Services from "../../pages/Services/Services";
 import About from "../../pages/About/About";
+import Contact from "../../pages/Contact/Contact";
 // import TransportType from "../../pages/TransportType/TransportType";
 // import Loads from "../../pages/Loads/Loads";
 // import About from "../../pages/About/About";
@@ -34,22 +35,15 @@ const AnimRoutes = () => {
             // </Stairs>
           }
         />
-        {/* <Route
-          path="/about"
-          element={
-            <Stairs>
-              <About />
-            </Stairs>
-          }
-        /> */}
-        {/* <Route
+        
+        <Route
           path="/contact"
           element={
-            <Stairs>
+            // <Stairs>
               <Contact />
-            </Stairs>
+            // </Stairs>
           }
-        /> */}
+        />
         {/* <Route
           path="/policy"
           element={

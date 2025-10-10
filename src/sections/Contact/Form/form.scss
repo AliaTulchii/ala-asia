@@ -1,0 +1,20 @@
+.form__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+
+.form__title{
+    margin-bottom: 48px;
+    font-family: var(--font-delight);
+font-weight: 800;
+font-size: 48px;
+line-height: 100%;
+text-align: center;
+color: var(--content-primary);
+white-space: pre-line;
+}

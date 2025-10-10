@@ -1,0 +1,15 @@
+.map__container{
+    position: relative;
+    height: 580px;
+}
+
+.map__overlay{
+    position: absolute;
+    top: 0;
+    // left: 0;
+    z-index: 2;
+width: 96.7%;
+height: 100%;
+// opacity: 0;
+background-color: #121b6029;
+}
