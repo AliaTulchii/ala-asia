@@ -65,7 +65,7 @@ const Supplies = () => {
       subtab || (subTabs[tab] && subTabs[tab][0].id) || undefined;
   return (
     <section className="supplies">
-      <div className="supplies__line" />
+      {/* <div className="supplies__line" /> */}
       <div className="container">
         <h1 className="supplies__title">{t("supplies.title")}</h1>
         <p className="supplies__text">{t("supplies.text")}</p>
@@ -86,7 +86,7 @@ const Supplies = () => {
           ))}
         </div>
 
-        <div className="supplies__subtabs">
+        <div className="supplies__subtabs ">
           {subTabs[tab]?.map((s) => (
             <button
               key={s.id}
@@ -878,7 +878,7 @@ const Supplies = () => {
 
                 <ul className="supplies__card-list">
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       {t("supplies.tab4.subTabs.subTab3.text5")}
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab3.title4")}
@@ -887,7 +887,7 @@ const Supplies = () => {
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab3.title5")}
                       </span>
@@ -895,7 +895,7 @@ const Supplies = () => {
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab3.title6")}
                       </span>
@@ -903,14 +903,14 @@ const Supplies = () => {
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab3.title7")}
                       </span>
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab3.title8")}
                       </span>
@@ -918,14 +918,14 @@ const Supplies = () => {
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab3.title9")}
                       </span>
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text ">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab3.title10")}
                       </span>
@@ -972,7 +972,7 @@ const Supplies = () => {
 
                 <ul className="supplies__card-list">
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab4.title3")}
                       </span>
@@ -980,7 +980,7 @@ const Supplies = () => {
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab4.title4")}
                       </span>
@@ -988,7 +988,7 @@ const Supplies = () => {
                     </p>
                   </li>
                   <li className="supplies__card-item supplies__card-item--additional">
-                    <p className="supplies__card-text">
+                    <p className="supplies__card-text subtext__glass">
                       <span className="supplies__card-subtext subtext__bold">
                         {t("supplies.tab4.subTabs.subTab4.title5")}
                       </span>
@@ -1004,7 +1004,6 @@ const Supplies = () => {
                   {t("supplies.tab4.subTabs.subTab3.text4")}
                 </p>
 
-                
                 <p className="supplies__card-subtext subtext__glass">
                   {t("supplies.tab4.subTabs.subTab4.title6")}
                 </p>

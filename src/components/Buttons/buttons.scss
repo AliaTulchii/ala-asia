@@ -79,39 +79,39 @@
   }
 
   &:hover,
-  :focus {
+  &:focus {
     background-color: var(--content-primary);
-    transition: all 0.2s ease-in-out;
 
-    p{
-    color: var(--white);
-    transition: all 0.2s ease-in-out;
+    p {
+      color: var(--white);
     }
 
-    .phone-icon{
-      transition: all 0.5s ease-in-out;
-      rect{
-        fill: var(--white);
-      }
-      path{
-        fill: var(--content-primary)
-      }
+    .phone-icon {
+      rect { fill: var(--white); }
+      path { fill: var(--content-primary); }
     }
   }
 
-  &--light {
-    border-color: var(--white);
-    color: var(--white);
-    -webkit-text-stroke: 0.2px var(--white);
+
+
+  &--dark {
+    border-color: var(--content-primary);
+
+    p {
+      color: var(--content-primary);
+    }
   }
 
-  &--dark,
-  &--policy {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
+ 
 }
 
+.phone-btn.phone-btn--policy  {
+  border-color: var(--white);
+}
+
+.phone-btn.phone-btn--policy p {
+  color: var(--white);
+}
 //menu-button
 
 .menu-button {

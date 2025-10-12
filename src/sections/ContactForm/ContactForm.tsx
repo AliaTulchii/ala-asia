@@ -10,6 +10,8 @@ const ContactForm = () => {
       <div className="contact-form__line" />
 
       <div className="contact-form__container container">
+        <div className="contact-form__line-vertical contact-form__line-vertical-third" />
+        <div className="contact-form__line-vertical contact-form__line-vertical-fourth" />
         <h2 className="contact-form__title">{t("contactForm.title")}</h2>
         <div className="contact-form__wrapper">
           <FormContact />

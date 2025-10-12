@@ -1,5 +1,10 @@
-.partners-services, .partners-home{
-    // padding-bottom: 160px;
+.partners-home{
+    border-top: 1px solid var(--content-primary);
+    border-bottom: 1px solid var(--content-primary);
+}
+
+.partners-services{
+    margin-bottom: 100px;
     border-top: 1px solid var(--content-primary);
     border-bottom: 1px solid var(--content-primary);
 }

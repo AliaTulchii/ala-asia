@@ -45,10 +45,11 @@ color: var(--content-primary);
 
 .supplies__tabs{
     margin-bottom: 64px;
+    padding-bottom: 32px;
 display: flex;
 justify-content: center;
 gap: 48px;
-
+border-bottom: 1px solid var(--content-primary);
 }
 
 .supplies__tab{
@@ -111,6 +112,7 @@ color: var(--content-primary);
 
 
 .supplies__subtab{
+    padding-bottom: 4px;
     position: relative;
     font-family: var(--font-delight);
 font-weight: 400;
@@ -231,6 +233,7 @@ white-space: pre-line;
     display: inline-block;
     padding: 14.5px 48.5px;
     border-radius: 20px;
+    border: 1px solid var(--main-button);
     background-color: var(--main-button);
     font-family: var(--font-geist);
 font-weight: 600;
@@ -238,6 +241,13 @@ font-size: 16px;
 line-height: 120%;
 letter-spacing: -0.01em;
 color: var(--white);
+transition: all 0.3s ease-in-out;
+
+&:hover{
+background-color: var(--background-primary);
+color: var(--main-button);
+transition: all 0.3s ease-in-out;
+}
 }
 
 .supplies__card-img{

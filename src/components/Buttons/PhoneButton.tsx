@@ -6,13 +6,16 @@ const PhoneButton = ({ themeColor } : {themeColor?: "light" | "dark" | "policy"}
   return (
     <a
       href="tel:+77071040902"
-      className={`phone-btn phone-btn--${themeColor}`}
+      className={`phone-btn  ${
+        themeColor === "light"
+          ? "phone-btn--light"
+          : themeColor === "policy"
+          ? "phone-btn--policy"
+          : "phone-btn--dark"
+      }`}
     >
       <PhoneIcon style="phone-icon" />
-      <p>
-        {PHONE_NUMBER_BUTTON}
-      </p>
-      
+      <p className="phone-btn__text">{PHONE_NUMBER_BUTTON}</p>
     </a>
   );
 };

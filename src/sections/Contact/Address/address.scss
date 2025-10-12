@@ -74,6 +74,10 @@ line-height: 110%;
 letter-spacing: -0.01em;
 color: var(--content-primary);
 white-space: pre-line;
+
+&--phone{
+    font-weight: 700;
+}
 }
 
 .address__text:not(:last-child){

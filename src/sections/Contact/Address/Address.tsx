@@ -17,10 +17,10 @@ const Address = () => {
               <h3 className="address__subtitle">
                 {t("contact.address.item1.subtitle")}
               </h3>
-              <p className="address__text">
+              <p className="address__text address__text--phone">
                 {t("contact.address.item1.phone1")}
               </p>
-              <p className="address__text">
+              <p className="address__text address__text--phone">
                 {t("contact.address.item1.phone2")}
               </p>
             </div>
@@ -39,7 +39,7 @@ const Address = () => {
             <h3 className="address__subtitle">
               {t("contact.address.item2.subtitle")}
             </h3>
-            <p className="address__text">
+            <p className="address__text ">
               {t("contact.address.item2.address")}
             </p>
           </li>

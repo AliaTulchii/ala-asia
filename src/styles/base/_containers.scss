@@ -6,8 +6,13 @@
   width: 100%;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 968px) { 
   :root {
     --container-padding: 16px;
   }
+
+  .container{
+    max-width: var(--container-width-mobile);
+  }
+   
 }

@@ -15,10 +15,10 @@ const Hero = () => {
     if (!section || !content) return;
 
     const recalc = () => {
-      const contentHeight = content.getBoundingClientRect().height;
-      section.style.setProperty("--content-height", `${contentHeight}px`);
+      // const contentHeight = content.getBoundingClientRect().height;
+      // section.style.setProperty("--content-height", `${contentHeight}px`);
       // мінімальна висота секції = висота тексту + viewport
-      section.style.minHeight = `${contentHeight + window.innerHeight + 50}px`;
+      // section.style.minHeight = `${contentHeight + window.innerHeight}px`;
     };
 
     recalc();
@@ -34,16 +34,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero container" ref={sectionRef}>
-      {/* Текст */}
+    <section className="hero " ref={sectionRef}>
+      
       <div className="hero__content " ref={contentRef}>
-        <h1 className="hero__title">{t("homeHero.title")}</h1>
+        <div className="container">
+<h1 className="hero__title">{t("homeHero.title")}</h1>
         <div className="hero__wrapper">
           <p className="hero__text">{t("homeHero.text")}</p>
           <NavLink className="hero__link" to="/contacts">
             {t("homeHero.btn")}
           </NavLink>
         </div>
+        </div>
+        
       </div>
 
       {/* Картинка */}

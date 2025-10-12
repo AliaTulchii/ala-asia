@@ -4,32 +4,50 @@ import LanguageSelect from "../LangSelect/LangSelect";
 import PhoneButton from "../Buttons/PhoneButton";
 import MobileMenuButton from "../Buttons/MobileMenuButton";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PixelBackground from "../PixelBackground/mobile-menu/PixelBackground";
 import { useNavItems } from "./Header.Constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import PopUp from "../PopUp/PopUp";
 
+type HeaderProps = {
+  themeColor?: "light" | "dark";
+};
 
 
-
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({ themeColor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const navItems = useNavItems();
   const location = useLocation();
+  const isLightPage = ["/about", "/contact"].includes(location.pathname);
+  const logoSrc = isLightPage
+    ? "/assets/images/logo/logo.svg"
+    : themeColor === "light"
+    ? "/assets/images/logo/logo-white.svg"
+      : "/assets/images/logo/logo.svg";
+      const [isScrolled, setIsScrolled] = useState(false);
 
-  const isPolicyPage = location.pathname === "/policy";
-  const logoSrc = isPolicyPage
-    ? "/assets/images/logo/logo-white.png"
-    : "/assets/images/logo/logo.svg";
+      useEffect(() => {
+        const handleScroll = () => {
+          setIsScrolled(window.scrollY > 50); // коли прокрутили більше ніж 50px
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+  
+    
 
   return (
     <motion.header
       initial={false}
+      animate={themeColor}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className={`header `}
+      className={`header ${
+        themeColor === "light" ? "header--light" : "header--dark"
+      } ${isScrolled ? "scrolled" : ""}`}
     >
       <div className="header__container container">
         <div className="header__wrapper ">
@@ -60,7 +78,7 @@ const Header = () => {
                     <div className="header__nav-box">
                       <p
                         className={`header__text ${
-                          isPolicyPage
+                          isLightPage
                             ? "header__text--light"
                             : "header__text--dark"
                         }`}
@@ -71,14 +89,16 @@ const Header = () => {
                   </NavLink>
                 ) : (
                   <div key={item.key} className="header__nav-link">
-                    <button
-                      onClick={() => setServicesOpen((prev) => !prev)}
+                    <NavLink
+                      onMouseEnter={() => setServicesOpen((prev) => !prev)}
+                      to="/services"
                       className="header__nav-link"
+                      onClick={() => window.scrollTo(0, 0)}
                     >
                       <div className="header__nav-box">
                         <p
                           className={`header__text ${
-                            isPolicyPage
+                            isLightPage
                               ? "header__text--light"
                               : "header__text--dark"
                           }`}
@@ -87,7 +107,7 @@ const Header = () => {
                           <ChevronDown className="lang-select__icon" />
                         </p>
                       </div>
-                    </button>
+                    </NavLink>
 
                     <AnimatePresence>
                       {servicesOpen && (
@@ -99,8 +119,10 @@ const Header = () => {
               )}
             </ul>
             <div className="header__btns">
-              <LanguageSelect />
-              <PhoneButton />
+              <LanguageSelect
+                themeColor={isLightPage ? "policy" : themeColor}
+              />
+              <PhoneButton themeColor={isLightPage ? "policy" : themeColor} />
             </div>
           </nav>
         </div>
@@ -108,10 +130,9 @@ const Header = () => {
         <div className="header__mobile-btns">
           <LanguageSelect />
           <MobileMenuButton
-            onClick={() => {
-              setMenuOpen(true);
-            }}
-            isPolicyPage={isPolicyPage}
+            // onClick={() => {
+            //   setMenuOpen(true);
+            // }}
           />
           <PixelBackground isOpen={menuOpen} />
           <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />

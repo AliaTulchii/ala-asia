@@ -2,45 +2,42 @@
         padding: 24px 0;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
     
         &.active {
-          background: var(--white);
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-          border-bottom: 1px solid var(--content-primary);
-          border-top: 1px solid var(--content-primary);
-
-          .accordion-horizontal__header-title{
+          background: var(--main-button);
+          border-bottom: 1px solid var(--background-primary);
+          border-top: 1px solid var(--background-primary);
+          transition: all 0.3s ease-in-out;
+      
+          .accordion-horizontal__header-title {
             font-weight: 600;
+          }
         }
-        }
-
+      
         &:hover {
-            // background: var(--tab-button);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            border-bottom: 1px solid var(--content-primary);
-            border-top: 1px solid var(--content-primary);
-  
-            .accordion-horizontal__header-title{
-              font-weight: 600;
-              font-size: 26px;
-              transition: all 0.2s ease-in-out;
-            }
-
-          .accordion-horizontal__header-btn {            
-            background-color: var(--main-button);
-            transition: all 0.5s ease-in-out;
-
-        
-            
-            .plus-icon{
-                path{
-                    fill: var(--white);
-              transition: all 0.5s ease-in-out;
-
-                }
+          border-bottom: 1px solid var(--background-primary);
+          border-top: 1px solid var(--background-primary);
+          transition: all 0.3s ease-in-out;
+      
+          .accordion-horizontal__header-title {
+            font-size: 26px;
+            transition: all 0.3s ease-in-out;
+          }
+      
+          .accordion-horizontal__header-btn {
+            background-color: var(--background-primary);
+            transition: all 0.3s ease-in-out;
+      
+            .plus-icon {
+              path {
+                fill: var(--content-primary);
+                transition: all 0.3s ease-in-out;
+              }
             }
           }
-          }
+        }
 }
 
 .accordion-horizontal__header {
@@ -63,7 +60,7 @@ line-height: 120%;
 letter-spacing: -0.01em;
 text-transform: uppercase;
 text-align: center;
-color: var(--number);
+color: rgba(255, 255, 255, 0.6);;
 }
 
 .accordion-horizontal__header-title{
@@ -72,7 +69,7 @@ color: var(--number);
     font-size: 24px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: var(--content-primary);
+    color: var(--background-primary);
     transition: all 0.2s ease-in-out;
 }
 
@@ -86,18 +83,18 @@ color: var(--number);
     transition: transform 0.3s ease;
     width: 40px;
     height: 40px;
-    background-color: var(--tab-button);
+    background-color: var(--background-primary);
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
 
 
     &.open {
       transform: rotate(90deg);
-    background-color: var(--main-button);
+    background-color: var(--background-primary);
 
     .plus-icon{
         path{
-            fill: var(--white);
+            fill: var(--content-primary);
             transition: all 0.3s ease-in-out;
         }
     }
@@ -114,7 +111,7 @@ color: var(--number);
 font-weight: 400;
 font-size: 16px;
 line-height: 130%;
-color: var(--content-primary);
+color: var(--background-primary);
 white-space: pre-line;
   }
 
@@ -136,7 +133,7 @@ margin-bottom: 18px;
 font-weight: 600;
 font-size: 16px;
 line-height: 130%;
-color: var(--content-primary);
+color: var(--background-primary);
 }
 
 .accordion-horizontal__content-item-sublist{
@@ -152,7 +149,7 @@ color: var(--content-primary);
 .accordion-horizontal__content-item-sublist li{
   list-style-type:disc;
   margin-left: 24px;
-  color: var(--content-primary);
+  color: var(--background-primary);
 }
 
 .accordion-horizontal__content-item-subitem-text{
@@ -160,5 +157,5 @@ color: var(--content-primary);
 font-weight: 400;
 font-size: 16px;
 line-height: 130%;
-color: var(--content-primary);
+color: var(--background-primary);
 }

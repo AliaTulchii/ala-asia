@@ -8,33 +8,51 @@
   text-align: left;
   color: var(--accent);
   -webkit-text-stroke: 0.2px var(--accent);
+}
 
-  &__btn {
-   
-      
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px;
-    background-color: transparent;
-    font-family: var(--font-geist);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 120%;
-    // text-align: right;    
-    color: var(--content-primary);
+.lang-select__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  background-color: transparent;
+  font-family: var(--font-geist);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--content-primary);
 
-
-    
+  &--light {
+    color: var(--white); // колір для кнопки
   }
 
-  &__icon {
+  &--policy {
+    color: var(--white); // колір для кнопки на сторінках policy/about/contact
+  }
+
+  &--dark {
+    color: var(--content-primary); // базовий темний
+  }
+
+  // дочірні елементи
+  &--light .lang-select__btn-lang,
+  &--policy .lang-select__btn-lang {
+    color: var(--white);
+  }
+
+  &--light .lang-select__icon,
+  &--policy .lang-select__icon {
+    color: var(--white);
+  }
+}
+
+  .lang-select__icon {
     width: 14px;
     height: 14px;
     color: var(--content-primary);
   }
 
-  &__dropdown {
+  .lang-select__dropdown {
     position: absolute;
     left: 0;
     z-index: 1000;
@@ -64,7 +82,6 @@
 
       &--light {
         color: var(--white);
-        -webkit-text-stroke: 0.2px var(--white);
       }
 
       &--dark {
@@ -81,7 +98,6 @@
       }
     }
   }
-}
 
 
 .lang-select--open{
@@ -103,7 +119,5 @@
     
   }
 
-  // .lang-select__dropdown{
 
-  // }
 }
