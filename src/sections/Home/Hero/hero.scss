@@ -2,35 +2,52 @@
     position: relative;
     --content-height: 0px;
     overflow: visible;
-    height: 160vh;
-    // min-height: calc(var(--content-height) + 100vh + 50px);
+    height: 150vh;
+
+    @media screen and (max-width: 969px){
+    height: 150vh;
+    }
   }
   
   .hero__container {
-    padding-top: 120px ;
     position: relative;
     width: 100%;
   }
   
-  /* Текст залипає зверху */
+
   .hero__content {
     padding-top: 150px;
     padding-bottom: 120px;
     position: sticky;
     top: 0;
     z-index: 3;
-    // padding: 150px 0 90px;
     background: transparent;
+
+    @media screen and (max-width: 969px){
+      padding-top: 120px;
+      padding-bottom: 0px;
+    }
   }
   
-  /* Wrapper для тексту та кнопки */
+
   .hero__wrapper {
     position: absolute;
-    top: 70%;
+    top: 92%;
     right: 24px;
     transform: translateY(-50%);
     display: flex;
     gap: 40px;
+
+    @media screen and (max-width: 969px){
+      margin-bottom: 40px;
+      position: static;
+    top: auto;
+    right: auto;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    }
   }
   
   .hero__text {
@@ -40,6 +57,10 @@
     font-size: 20px;
     line-height: 1.2;
     color: var(--content-primary);
+
+    @media screen and (max-width: 969px){
+      text-align: center;
+    }
   }
   
   .hero__link {
@@ -51,18 +72,22 @@
     font-weight: 600;
     font-size: 16px;
     color: var(--white);
+
+    @media screen and (max-width: 969px){
+    padding: 14.5px 48px;
+    }
   }
   
-  /* Картинка */
+
   .hero__image {
     position: relative;
-    margin-top: 50px; // відстань між текстом і картинкою
-    height: calc(100vh + var(--content-height)); // контейнер достатньо високий
+    margin-top: 50px;
+    height: calc(100vh + var(--content-height)); 
   }
   
   .hero__image-inner {
     position: sticky;
-    top: var(--content-height); // коли верх картинки досягає низу тексту
+    top: var(--content-height); 
     height: 100vh;
     z-index: 10;
   }
@@ -72,6 +97,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
+
+    @media screen and (max-width: 969px){
+      width: 100%;
+    height: auto;
+    }
   }
   
   .hero__title {
@@ -82,27 +112,26 @@
     text-transform: uppercase;
     color: var(--content-primary);
     white-space: pre-line;
+
+    @media screen and (max-width: 969px){
+      display: none;
+    }
+
+    &-mobile{
+    width: 348px;
+      margin-bottom: 16px;
+      font-family: var(--font-delight);
+font-weight: 600;
+font-size: 27px;
+line-height: 110%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+text-align: center;
+color: var(--content-primary);
+    white-space: pre-line;
+      @media screen and (min-width: 968px){
+        display: none;
+      }
+    }
   }
-  
-  /* Адаптив */
-//   @media (max-width: 1024px) {
-//     .hero__content {
-//       padding: 80px 0 150px;
-//     }
-  
-//     .hero__wrapper {
-//       flex-direction: column;
-//       gap: 20px;
-//       top: 50%;
-//       right: 24px;
-//     }
-  
-//     .hero__text {
-//       width: 100%;
-//     }
-  
-//     .hero__image {
-//       margin-top: 30px;
-//     }
-//   }
   

@@ -3,6 +3,11 @@
     background-image: url('/assets/images/about/men.webp');
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (max-width: 968px){
+        height: 844px;
+        background-image: url('../../../../public/assets/images/about/men-mob.jpg');
+    }
 }
 
 .about-hero__container{
@@ -10,6 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 968px){
+        height: 844px;
+    }
 }
 
 .about-hero__content{
@@ -29,6 +38,11 @@ letter-spacing: -0.02em;
 text-transform: uppercase;
 text-align: center;
 color: var(--white);
+
+@media screen and (max-width:968px){
+    margin-bottom: 24px;
+font-size: 40px;
+}
 }
 
 .about-hero__text{
@@ -40,6 +54,27 @@ line-height: 120%;
 letter-spacing: -0.01em;
 text-align: center;
 color: var(--white);
+
+@media screen and (max-width:968px){
+    display: none;
+    width: 100%;
+font-size: 18px;
+}
+}
+
+.about-hero__text-mobile{
+    margin-bottom: 32px;
+    font-family: var(--font-delight);
+font-weight: 600;
+font-size: 17px;
+line-height: 120%;
+letter-spacing: -0.01em;
+text-align: center;
+color: var(--white);
+
+@media screen and (min-width:969px){
+    display: none;
+}
 }
 
 .about-hero__btn{

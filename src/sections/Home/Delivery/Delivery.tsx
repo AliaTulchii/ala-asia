@@ -19,6 +19,7 @@ const Delivery = () => {
           <div className="delivery__header">
             <h2 className="delivery__title">{t("delivery.title")}</h2>
             <p className="delivery__text">{t("delivery.text")}</p>
+            <p className="delivery__text-mobile">{t("delivery.textMob")}</p>
           </div>
 
           <div className="delivery__main">

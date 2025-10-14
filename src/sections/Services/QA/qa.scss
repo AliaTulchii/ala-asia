@@ -1,7 +1,17 @@
 .qa{
+    @media screen and (max-width:968px) {
+        padding-bottom: 104px;
+    }
+}
+
+.qa__wrapper{
     padding-top: 60px;
-    padding-bottom: 160px;
+    // padding-bottom: 160px;
     background-color: var(--main-button);
+
+    @media screen and (max-width:968px) {
+        padding-bottom: 44px;
+    }
 }
 
 .qa__title{
@@ -15,4 +25,9 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--background-primary);
+
+
+    @media screen and (max-width:968px) {
+font-size: 28px;
+    }
 }

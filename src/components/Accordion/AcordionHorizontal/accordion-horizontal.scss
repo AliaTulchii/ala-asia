@@ -2,8 +2,8 @@
         padding: 24px 0;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
+        border-bottom: 1px solid rgba(189, 192, 216, 0.2);
+        border-top: 1px solid rgba(189, 192, 216, 0.2);
     
         &.active {
           background: var(--main-button);
@@ -12,7 +12,8 @@
           transition: all 0.3s ease-in-out;
       
           .accordion-horizontal__header-title {
-            font-weight: 600;
+            font-weight: 500;
+            // font-size: 18px;
           }
         }
       
@@ -21,10 +22,10 @@
           border-top: 1px solid var(--background-primary);
           transition: all 0.3s ease-in-out;
       
-          .accordion-horizontal__header-title {
-            font-size: 26px;
-            transition: all 0.3s ease-in-out;
-          }
+          // .accordion-horizontal__header-title {
+          //   font-size: 26px;
+          //   transition: all 0.3s ease-in-out;
+          // }
       
           .accordion-horizontal__header-btn {
             background-color: var(--background-primary);
@@ -45,11 +46,16 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    @media screen and (max-width: 968px){
+      align-items: start;
+    }
   }
 
 .accordion-horizontal__header-content{
     display:flex;
     gap: 24px;
+
+    
 }
 
 .accordion-horizontal__header-text{
@@ -60,7 +66,9 @@ line-height: 120%;
 letter-spacing: -0.01em;
 text-transform: uppercase;
 text-align: center;
-color: rgba(255, 255, 255, 0.6);;
+color: rgba(255, 255, 255, 0.6);
+
+
 }
 
 .accordion-horizontal__header-title{
@@ -71,6 +79,14 @@ color: rgba(255, 255, 255, 0.6);;
     letter-spacing: -0.01em;
     color: var(--background-primary);
     transition: all 0.2s ease-in-out;
+
+    @media screen and (max-width: 525px){
+
+font-size: 20px;
+width: 265px;
+    }
+
+    
 }
 
 .accordion-horizontal__header-btn {
@@ -88,6 +104,7 @@ color: rgba(255, 255, 255, 0.6);;
     transition: all 0.3s ease-in-out;
 
 
+
     &.open {
       transform: rotate(90deg);
     background-color: var(--background-primary);
@@ -99,6 +116,17 @@ color: rgba(255, 255, 255, 0.6);;
         }
     }
     }
+
+    @media screen and (max-width:968px){
+    //   width: 30px;
+    // height: 30px;
+
+    .plus-icon{
+      // width: 18px;
+      // height: 18px;
+  }
+    }
+
   }
 
   .accordion-horizontal__content-wrapper{
@@ -113,6 +141,7 @@ font-size: 16px;
 line-height: 130%;
 color: var(--background-primary);
 white-space: pre-line;
+
   }
 
 .accordion-horizontal__content-text--bold{

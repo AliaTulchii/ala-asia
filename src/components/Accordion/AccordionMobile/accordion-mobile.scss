@@ -1,0 +1,120 @@
+.accordion-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @media screen and (min-width:969px){
+        display: none;
+    }
+  
+    .accordion-mobile__item {
+      background: var(--accordion-color);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    // padding: 0 16px;
+
+
+
+      &.active{
+        background-color: var(--main-button);
+
+        .accordion-mobile__header{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .accordion-mobile__number, .accordion-mobile__title{
+            color: var(--background-primary);
+            
+        }
+      }
+    }
+  
+    .accordion-mobile__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto 16px;
+      padding-top: 32px;
+      padding-bottom: 16px;
+      cursor: pointer;
+  
+      .accordion-mobile__number {
+        font-family: var(--font-geist);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--content-primary);
+      }
+  
+      .accordion-mobile__title {
+        
+        font-family: var(--font-delight);
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--content-primary);
+      }
+    }
+  
+    .accordion-mobile__content {
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background: var(--main-button);
+      color: var(--white);
+      padding: 0 16px ;
+    }
+  
+    .accordion-mobile__item.active .accordion-mobile__content {
+      padding-top: 24px;
+    }
+
+    .accordion-mobile__content-title{
+        margin-bottom: 24px;
+        font-family: var(--font-delight);
+font-weight: 700;
+font-size: 32px;
+color: var(--white);
+    }
+  
+    .accordion-mobile__subtitle {
+      font-family: var(--font-delight);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  
+    .accordion-mobile__text {
+        margin-bottom: 40px;
+        font-family: var(--font-delight);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--background-primary);
+
+        &-last{
+            margin-bottom: 16px;
+        }
+    }
+  
+    .accordion-mobile__btn {
+      display: inline-block;
+      margin-bottom: 32px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: var(--white);
+      color: var(--content-primary);
+      font-family: var(--font-geist);
+font-weight: 600;
+font-size: 16px;
+line-height: 120%;
+letter-spacing: -0.01em;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background: var(--content-primary);
+        color: var(--white);
+      }
+    }
+  }
+  

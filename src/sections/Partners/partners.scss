@@ -23,23 +23,35 @@
 
     &-first{
         // left: 810px;
-        left: 32.8%;
+        left: 32.2%;
+
+        @media screen and (max-width: 968px){
+            display: none;
+        }
     }
 
     &-second{
 //   left: 832px;
-left: 34.5%;
-
+left: 34%;
+@media screen and (max-width: 968px){
+    display: none;
+}
     }
 
     &-third{
         // left: 1164px;
-        left: 57.4%;
+        left: 57.6%;
+        @media screen and (max-width: 968px){
+            display: none;
+        }
       }
       
       &-fourth{
         // left: 1188px;
-        left:59%;
+        left:59.3%;
+        @media screen and (max-width: 968px){
+            display: none;
+        }
       }
 }
 
@@ -56,6 +68,10 @@ font-size: 16px;
 line-height: 110%;
 text-transform: uppercase;
 color: var(--content-primary);
+
+@media screen and (max-width:968px){
+    font-size: 14px;
+}
 }
 
 // .partners__main-line{

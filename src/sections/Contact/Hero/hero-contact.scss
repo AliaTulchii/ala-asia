@@ -2,6 +2,11 @@
     height: 790px;
     background-image: url(/assets/images/contact/men.webp);
     background-size: cover;
+
+    @media screen and (max-width: 968px){
+        height: 844px;
+    background-image: url(../../../../public/assets/images/home/contact/greeting-mob.webp);
+    }
 }
 
 .hero-contact__container{
@@ -23,6 +28,27 @@ text-transform: uppercase;
 text-align: center;
 white-space: pre-line;
 color: var(--white);
+
+@media screen and (max-width: 968px){
+display: none;
+}
+}
+
+.hero-contact__title-mob{
+    margin-bottom: 24px;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 33px;
+line-height: 110%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+text-align: center;
+white-space: pre-line;
+color: var(--white);
+
+@media screen and (min-width: 969px){
+display: none;
+}
 }
 
 .hero-contact__text{
@@ -33,4 +59,8 @@ line-height: 120%;
 letter-spacing: -0.01em;
 text-align: center;
 color: var(--white);
+
+@media screen and (max-width: 968px){
+font-size: 19px;
+}
 }

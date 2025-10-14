@@ -86,6 +86,8 @@ const Footer = () => {
             <address className="footer__address">
               {t("footer.address1")}
             </address>
+
+            <p className="footer__rights-mobile">{t("footer.rights")}</p>
           </div>
         </div>
       </div>

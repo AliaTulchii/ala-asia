@@ -4,9 +4,14 @@ import { NavLink } from "react-router-dom";
 import './deliver.scss'
 
 import img1 from "/assets/images/home/delivery/blocks.webp";
+import img1Mob from "/assets/images/home/delivery/blocks-mob.webp";
 import img2 from "/assets/images/home/delivery/machine.webp";
+import img2Mob from "/assets/images/home/delivery/machine-mob.webp";
 import img3 from "/assets/images/home/delivery/storage.webp";
+import img3Mob from "/assets/images/home/delivery/storage-mob.webp";
 import img4 from "/assets/images/home/delivery/trucks.webp";
+import img4Mob from "/assets/images/home/delivery/trucks-mob.webp";
+
 
 const Deliver = () => {
   const { t } = useTranslation("about");
@@ -43,6 +48,7 @@ const Deliver = () => {
       title: t("about.delivery.item1.title"),
       text: t("about.delivery.item1.text"),
       image: img1,
+      imageMob: img1Mob,
       direct: "/services/materials/bricks",
       btn: t("about.delivery.item1.btn"),
     },
@@ -52,6 +58,7 @@ const Deliver = () => {
       title: t("about.delivery.item2.title"),
       text: t("about.delivery.item2.text"),
       image: img2,
+      imageMob: img2Mob,
       direct: "/services/equipment/automation",
       btn: t("about.delivery.item1.btn"),
     },
@@ -61,6 +68,7 @@ const Deliver = () => {
       title: t("about.delivery.item3.title"),
       text: t("about.delivery.item3.text"),
       image: img3,
+      imageMob: img3Mob,
       direct: "/services/raw/cosmetic",
       btn: t("about.delivery.item1.btn"),
     },
@@ -70,6 +78,7 @@ const Deliver = () => {
       title: t("about.delivery.item4.title"),
       text: t("about.delivery.item4.text"),
       image: img4,
+      imageMob: img4Mob,
       direct: "/services/logistics/transportation",
       btn: t("about.delivery.item1.btn"),
     },
@@ -88,7 +97,7 @@ const Deliver = () => {
         <div className="deliver__line deliver__line-second" />
         <h2 className="deliver__title">{t("about.delivery.title")}</h2>
         <div>
-          {data.map(({ id, title, text, image, direct, btn }) => (
+          {data.map(({ id, title, text, image, imageMob, direct, btn }) => (
             <div
               key={id}
               data-id={id}
@@ -109,12 +118,15 @@ const Deliver = () => {
 
               <div className="deliver__content">
                 <div className="deliver__content-left">
-                  <p className="deliver__number">0{id}</p>
-                  {/* <img
-                    className="services__img-mobile"
-                    src={image}
-                    alt={title}
-                  /> */}
+                  <div className="deliver__content-box">
+                    <p className="deliver__number">0{id}</p>
+                    <img
+                      className="deliver__img-mobile"
+                      src={imageMob}
+                      alt={title}
+                    />
+                  </div>
+
                   <h3 className="deliver__content-title">{title}</h3>
                 </div>
 

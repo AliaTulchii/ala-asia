@@ -6,7 +6,7 @@ const QA = () => {
     const { t } = useTranslation("qa");
   return (
     <section className='qa'>
-        <div className=''>
+        <div className='qa__wrapper'>
             <h2 className="qa__title container">
                 {t("qa.title")}
               </h2>

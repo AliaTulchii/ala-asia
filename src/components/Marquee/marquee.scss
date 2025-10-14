@@ -16,6 +16,10 @@
     height: 100%;
     width: 160px;
     pointer-events: none;
+
+    @media screen and (max-width:968px){
+    width: 40px;
+    }
   }
   
   .fade-left {

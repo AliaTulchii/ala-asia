@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import "./hero.scss";
-import { HERO_IMG } from "./Hero.Constants";
+import { HERO_IMG, HERO_IMG_MOB } from "./Hero.Constants";
 
 const Hero = () => {
   const { t } = useTranslation("homeHero");
@@ -35,24 +35,34 @@ const Hero = () => {
 
   return (
     <section className="hero " ref={sectionRef}>
-      
       <div className="hero__content " ref={contentRef}>
-        <div className="container">
-<h1 className="hero__title">{t("homeHero.title")}</h1>
-        <div className="hero__wrapper">
-          <p className="hero__text">{t("homeHero.text")}</p>
-          <NavLink className="hero__link" to="/contacts">
-            {t("homeHero.btn")}
-          </NavLink>
+        <div className="hero__container container">
+          <h1 className="hero__title">{t("homeHero.title")}</h1>
+          <h1 className="hero__title-mobile">{t("homeHero.titleMob")}</h1>
+          <div className="hero__wrapper">
+            <p className="hero__text">{t("homeHero.text")}</p>
+            <NavLink className="hero__link" to="/contacts">
+              {t("homeHero.btn")}
+            </NavLink>
+          </div>
         </div>
-        </div>
-        
       </div>
 
-      {/* Картинка */}
+
       <div className="hero__image-outer">
         <div className="hero__image-inner">
-          <img src={HERO_IMG} alt="hero" />
+          <picture>
+            <source
+              media="(max-width: 968px)"
+              srcSet={`${HERO_IMG_MOB} 1x, ${HERO_IMG_MOB} 2x`}
+              type="image/jpg"
+            />
+            <source
+              srcSet={`${HERO_IMG} 1x, ${HERO_IMG} 2x`}
+              type="image/jpg"
+            />
+            <img src={HERO_IMG} alt="hero" />
+          </picture>
         </div>
       </div>
     </section>

@@ -1,6 +1,10 @@
 .address__container{
     position: relative;
     padding-top: 160px !important;
+
+    @media screen and (max-width: 968px){
+    padding-top: 104px !important;
+    }
 }
 
 .address__line{
@@ -12,18 +16,30 @@
 
     &-first{
         left:448px;
+        @media screen and (max-width:968px){
+            display: none;
+        }
     }
 
     &-second{
         left: 472px;
+        @media screen and (max-width:968px){
+            display: none;
+        }
     }
 
     &-third{
         right: 472px;
+        @media screen and (max-width:968px){
+            display: none;
+        }
     }
 
     &-fourth{
         right: 448px;
+        @media screen and (max-width:968px){
+            display: none;
+        }
     }
 }
 
@@ -35,23 +51,45 @@ font-size: 48px;
 line-height: 110%;
 letter-spacing: -0.01em;
 color: var(--content-primary);
+
+@media screen and (max-width: 968px){
+    
+font-size: 32px;
+}
 }
 
 .address__list{
     padding-bottom: 80px;
     display: flex;
+
+    @media screen and (max-width:968px){
+        flex-direction: column;
+        padding-bottom: 64px;
+    }
 }
 
 .address__item-first{
     margin-right: 302px;
+    @media screen and (max-width:968px){
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
 }
 
 .address__item-second{
     margin-right: 164px;
+    @media screen and (max-width:968px){
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
 }
 
 .address__wrapper:not(:last-child){
     margin-bottom: 48px;
+
+    @media screen and (max-width: 968px){
+        margin-bottom: 40px;
+    }
 }
 
 .address__subtitle{
@@ -63,6 +101,10 @@ line-height: 110%;
 letter-spacing: -0.01em;
 text-transform: uppercase;
 color: var(--number);
+
+@media screen and (max-width: 968px){
+font-size: 16px;
+}
 }
 
 
@@ -77,6 +119,10 @@ white-space: pre-line;
 
 &--phone{
     font-weight: 700;
+}
+
+@media screen and (max-width: 968px){
+font-size: 20px;
 }
 }
 

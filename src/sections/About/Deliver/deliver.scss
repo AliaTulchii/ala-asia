@@ -6,6 +6,10 @@
   .deliver__container{
     position: relative;
     padding-top: 160px !important;
+
+    @media screen and (max-width: 968px){
+      padding-top: 4px !important;
+    }
   }
 
   .deliver__line{
@@ -18,10 +22,16 @@
 
     &-first{
         left: 708px;
+        @media screen and (max-width: 968px){
+          display: none;
+        }
     }
 
     &-second{
         left: 731px;
+        @media screen and (max-width: 968px){
+          display: none;
+        }
     }
 }
 
@@ -32,6 +42,13 @@
     top: 305px;
     left: 0;
     background-color: rgba(18, 27, 96, 0.08);
+
+    @media screen and (max-width: 968px){
+      // display: none;
+    background-color: var(--content-primary);
+    top: 3%;
+
+    }
 }
 
 .deliver__line-fourth{
@@ -41,6 +58,9 @@
     top: 458px;
     left: 0;
     background-color: rgba(18, 27, 96, 0.08);
+    @media screen and (max-width: 968px){
+      display: none;
+    }
 }
 
 .deliver__line-fifth{
@@ -50,20 +70,31 @@
     top: 612px;
     left: 0;
     background-color: rgba(18, 27, 96, 0.08);
-}.deliver__line-six{
+    @media screen and (max-width: 968px){
+      display: none;
+    }
+}
+.deliver__line-six{
     position: absolute;
     height: 1px;
     width: 100%;
     top: 767px;
     left: 0;
     background-color: rgba(18, 27, 96, 0.08);
-}.deliver__line-seventh{
+    @media screen and (max-width: 968px){
+      display: none;
+    }
+}
+.deliver__line-seventh{
     position: absolute;
     height: 1px;
     width: 100%;
     top: 921px;
     left: 0;
     background-color: rgba(18, 27, 96, 0.08);
+    @media screen and (max-width: 968px){
+      display: none;
+    }
 }
   
   .deliver__wrapper {
@@ -139,7 +170,9 @@ text-align: center;
 color: var(--content-primary);
   
     @media screen and (max-width: 968px) {
-      font-size: 32px;
+      margin-bottom: 43px;
+font-weight: 700;
+font-size: 28px;
     }
   }
   
@@ -157,11 +190,15 @@ color: var(--content-primary);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(18, 27, 96, 0.08);
   
     @media screen and (max-width: 968px) {
+      width: 100%;
+      height: auto;
       flex-direction: column;
       padding: 40px 0;
+    // border-bottom:none;
+    border-bottom: 1px solid rgba(18, 27, 96, 0.2);
+
     }
   }
   
@@ -177,7 +214,16 @@ color: var(--content-primary);
     @media screen and (max-width: 968px) {
       width: 100%;
       flex-direction: column;
+      padding: 0;
     }
+  }
+
+  .deliver__content-box{
+    @media screen and (max-width: 968px) {
+      display: flex;
+      margin-bottom: 24px;
+    }
+    
   }
   
   .deliver__number {
@@ -193,6 +239,7 @@ text-align: center;
 color: var(--number);
   
     @media screen and (max-width: 968px) {
+      margin-right: 8px;
       margin-bottom: 16px;
     }
   }
@@ -201,10 +248,9 @@ color: var(--number);
     display: none;
     @media screen and (max-width: 968px) {
       display: block;
-      margin-bottom: 24px;
-      border-radius: 12px;
-      width: 358px;
-      height: 364px;
+      // margin-bottom: 24px;
+      width: 92%;
+      height: 160px;
     }
   }
   
@@ -220,6 +266,7 @@ color: var(--content-primary);
       margin-bottom: 16px;
       width: 100%;
       font-size: 24px;
+      margin-left: 30px;
     }
   }
   
@@ -234,6 +281,10 @@ color: var(--content-primary);
   
     @media screen and (max-width: 968px) {
       width: 100%;
+      margin-left: 30px;
+      padding: 0;
+      flex-direction: column;
+      // align-items: ;
     }
   }
 
@@ -244,6 +295,10 @@ color: var(--content-primary);
     height: 100%;
     width: 1px;
     background-color: rgba(18, 27, 96, 0.08);
+
+    @media screen and (max-width: 968px){
+      display: none;
+    }
   }
 
   .deliver__line-right{
@@ -253,6 +308,9 @@ color: var(--content-primary);
     height: 100%;
     width: 1px;
     background-color: rgba(18, 27, 96, 0.08);
+    @media screen and (max-width: 968px){
+      display: none;
+    }
   }
   
   .deliver__content-text {
@@ -267,13 +325,13 @@ white-space: pre-line;
       margin-bottom: 32px;
       font-size: 16px;
       line-height: 150%;
+      white-space:unset;
     }
   }
   
 
   .deliver__link{
     padding: 8px 16px;
-
     font-family: var(--font-geist);
 font-weight: 400;
 font-size: 16px;
@@ -289,7 +347,11 @@ transition: all 0.3s ease-in-out;
 background-color: var(--background-primary);
 color: var(--main-button);
 transition: all 0.3s ease-in-out;
+}
 
+@media screen and (max-width: 968px ) {
+  padding: 8px 114px;
+  text-align: center;
 }
   }
   

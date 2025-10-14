@@ -7,6 +7,7 @@ const HeroContact = () => {
     <section className="hero-contact">
       <div className="hero-contact__container container">
         <h1 className="hero-contact__title">{t("contact.hero.title")}</h1>
+        <h1 className="hero-contact__title-mob">{t("contact.hero.titleMob")}</h1>
         <p className="hero-contact__text">{t("contact.hero.text")}</p>
       </div>
     </section>

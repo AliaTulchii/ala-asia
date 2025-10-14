@@ -42,7 +42,7 @@ const DeliveryCard: React.FC<DeliveryCardProps> = ({
       </NavLink>
       <div className="delivery-card__box">
         <h3 className="delivery-card__title">{title}</h3>
-        {/* <NavLink to="/services" className="delivery-card__link">{btn}</NavLink> */}
+        <NavLink to="/services" className="delivery-card__link-mobile">{btn}</NavLink>
       </div>
 
       <p className="delivery-card__text">{text}</p>

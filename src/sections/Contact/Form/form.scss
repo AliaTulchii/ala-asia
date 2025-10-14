@@ -1,3 +1,16 @@
+.form{
+    position: relative;
+}
+
+.form__line{
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 20%;
+    background-color: var(--content-primary);
+}
+
+
 .form__container{
     display: flex;
     flex-direction: column;
@@ -5,6 +18,11 @@
     align-items: center;
     padding-top: 160px !important;
     padding-bottom: 160px !important;
+
+    @media screen and (max-width: 968px){
+        padding-top: 104px !important;
+    padding-bottom: 104px !important;
+    }
 }
 
 
@@ -17,6 +35,28 @@ line-height: 100%;
 text-align: center;
 color: var(--content-primary);
 white-space: pre-line;
+
+@media screen and (max-width: 968px){
+display: none;
+}
+}
+
+.form__title-mob{
+    margin-bottom: 64px;
+    font-family: var(--font-delight);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: start;
+    letter-spacing: -0.02em;
+color: var(--content-primary);
+white-space: pre-line;
+
+@media screen and (min-width: 969px){
+display: none;
+// white-space: unset;
+}
 }
 
 // .form__wrapper{

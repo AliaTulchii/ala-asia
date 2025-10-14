@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 import img1 from "/assets/images/about/trucks.webp";
+import img1Mob from "/assets/images/about/trucks-mob.webp";
+
 import img2 from "/assets/images/about/store.webp";
+import img2Mob from "/assets/images/about/store-mob.webp";
+
 // import img3 from "/assets/images/about/man.webp";
 import arrow from "/assets/images/icons/arrow-right.svg"
 import "./work.scss"
@@ -42,7 +46,15 @@ const Work = () => {
               </ul>
             </div>
             <div className="work__right">
-              <img src={img1} alt="trucks" className="work__img" />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${img1Mob} 1x, ${img1Mob} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${img1} 1x, ${img1} 2x`} type="image/jpg" />
+                <img src={img1} alt="trucks" className="work__img" />
+              </picture>
             </div>
           </div>
           <div className="work__item  work__item-reverse">
@@ -71,7 +83,15 @@ const Work = () => {
               </ul>
             </div>
             <div className="work__right">
-              <img src={img2} alt="store" className="work__img" />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${img2Mob} 1x, ${img2Mob} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${img2} 1x, ${img2} 2x`} type="image/jpg" />
+                <img src={img2} alt="trucks" className="work__img" />
+              </picture>
             </div>
           </div>
 

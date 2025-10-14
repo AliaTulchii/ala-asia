@@ -2,6 +2,11 @@
     position: relative;
     padding-top: 140px ;
     padding-bottom: 160px;
+
+    @media screen and (max-width: 968px){
+        padding-top: 120px ;
+    padding-bottom: 104px;
+    }
 }
 
 .supplies__line{
@@ -10,6 +15,8 @@
     height: 1px;
     background-color: var(--content-primary);
     top: 510px;
+
+    
 }
 
 .supplies__title{
@@ -26,6 +33,11 @@ letter-spacing: -0.02em;
 text-transform: uppercase;
 text-align: center;
 color: var(--content-primary);
+
+@media screen and (max-width: 968px){
+    width: 100%;
+font-size: 28px;
+}
 }
 
 .supplies__text{
@@ -41,16 +53,37 @@ letter-spacing: -0.01em;
 text-align: center;
 white-space: pre-line;
 color: var(--content-primary);
+
+@media screen and (max-width: 968px){
+    width: 100%;
+font-size: 18px;
+margin-bottom: 48px;
+}
 }
 
-.supplies__tabs{
+.supplies__tabs {
     margin-bottom: 64px;
     padding-bottom: 32px;
-display: flex;
-justify-content: center;
-gap: 48px;
-border-bottom: 1px solid var(--content-primary);
-}
+    display: flex;
+    justify-content: flex-start; /* важливо для скролу */
+    gap: 48px;
+    border-bottom: 1px solid var(--content-primary);
+  
+    /* базовий скрол для всіх, або в медіа: */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* iOS плавний скрол */
+    touch-action: pan-x; /* дозволяє горизонтальний жест */
+    scrollbar-width: none; /* firefox */
+    &::-webkit-scrollbar { display: none; } /* webkit */
+  
+    @media screen and (max-width: 968px) {
+      gap: 16px;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+  }
 
 .supplies__tab{
     display: flex;
@@ -63,19 +96,31 @@ border-bottom: 1px solid var(--content-primary);
     &--materials{
         padding: 8px 88px;
 
+        @media screen and (max-width:968px){
+        padding: 14.5px 28.5px;
+        }
+
     }
 
     &--equipment{
         padding: 8px 81px;
+        @media screen and (max-width:968px){
+            padding: 14.5px 32.5px;
+            }
     }
 
     &--raw{
         padding: 8px 62px;
+        @media screen and (max-width:968px){
+            padding: 14.5px 32.5px;
+            }
     }
 
     &--logistics{
         padding: 8px 58.5px;
-
+        @media screen and (max-width:968px){
+            padding: 14.5px 32.5px;
+            }
     }
 
     &:hover{
@@ -97,17 +142,38 @@ letter-spacing: -0.01em;
 text-transform: uppercase;
 text-align: center;
 color: var(--content-primary);
+
+@media screen and (max-width: 968px){
+font-size: 14px;
+white-space: nowrap;
+}
 }
 
 .supplies__subtabs{
     display: flex;
+    justify-content: flex-start;
     gap: 56px;
     margin-bottom: 62px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* iOS плавний скрол */
+    touch-action: pan-x; /* дозволяє горизонтальний жест */
+    scrollbar-width: none; /* firefox */
+    &::-webkit-scrollbar { display: none; } /* webkit */
+
+    @media screen and (max-width: 968px){
+        gap: 32px;
+        margin-bottom: 36px;
+    }
 }
 
 .supplies__content{
     height: 614px;
-    
+    @media screen and (max-width: 968px){
+        height: auto;
+    }
 }
 
 
@@ -122,6 +188,9 @@ letter-spacing: -0.01em;
 color: var(--content-primary);
 transition: all 0.5s ease-in-out;
 
+@media screen and (max-width: 968px){
+    white-space:nowrap;
+}
 
 &::after {
     content: "";
@@ -158,12 +227,23 @@ transition: all 0.5s ease-in-out;
 .supplies__card{
     display: flex;
     gap: 40px;
+
+    @media screen and (max-width: 968px){
+        flex-direction: column-reverse;
+    }
 }
 
 .supplies__card-content{
     width: 832px;
     height: 614px;
     overflow-y: scroll;
+
+    @media screen and (max-width: 968px){
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
 
     &::-webkit-scrollbar {
         width: 8px;
@@ -195,6 +275,11 @@ line-height: 120%;
 letter-spacing: -0.01em;
 color: var(--content-primary);
 white-space: pre-line;
+
+@media screen and (max-width: 968px){
+    width: 358px;
+font-size: 18px;
+}
 }
 
 .supplies__card-title{
@@ -203,6 +288,10 @@ white-space: pre-line;
 font-weight: 700;
 font-size: 32px;
 color: var(--content-primary);
+
+@media screen and (max-width: 968px){
+font-size: 28px;
+}
 }
 
 .supplies__card-subtext{
@@ -214,7 +303,10 @@ font-size: 18px;
 color: var(--content-primary);
 white-space: pre-line;
 
-
+@media screen and (max-width: 968px){
+    width: 358px;
+font-size: 16px;
+}
 }
 
 .subtext__glass{
@@ -253,6 +345,11 @@ transition: all 0.3s ease-in-out;
 .supplies__card-img{
     width: 514px;
     height: 614px;
+
+    @media screen and (max-width: 968px){
+        width: 100%;
+    height: 204px;
+    }
 }
 
 .supplies__card-list {

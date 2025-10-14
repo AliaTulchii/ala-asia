@@ -2,6 +2,11 @@
     position: relative;
     padding-bottom: 160px !important;
     padding-top: 160px !important;
+
+    @media screen and (max-width: 968px){
+        padding-bottom: 104px !important;
+    padding-top: 104px !important;
+    }
 }
 
 .logistic-home__line{
@@ -13,27 +18,40 @@
     background-color: rgba(18, 27, 96, 0.08);
 
 
+    
     &-first{
         // left: 810px;
         height: 50%;
-        left: 32.7%;
+        left: 32.2%;
+
+        @media screen and (max-width: 968px){
+            display: none;
+        }
     }
 
     &-second{
 //   left: 832px;
 height: 50%;
-left: 34.5%;
-
+left: 34%;
+@media screen and (max-width: 968px){
+    display: none;
+}
     }
 
     &-third{
         // left: 1164px;
-        left: 57.4%;
+        left: 57.6%;
+        @media screen and (max-width: 968px){
+            display: none;
+        }
       }
       
       &-fourth{
         // left: 1188px;
-        left:59%;
+        left:59.3%;
+        @media screen and (max-width: 968px){
+            display: none;
+        }
       }
 }
 
@@ -54,7 +72,36 @@ text-transform: uppercase;
 text-align: center;
 white-space: pre-line;
 color: var(--content-primary);
+
+@media screen and (max-width:968px){
+    display: none;
 }
+}
+
+
+.logistic-home__title-mobile, .logistic-about__title-mobile{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+margin-bottom: 16px;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 28px;
+line-height: 110%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+text-align: center;
+white-space: pre-line;
+color: var(--content-primary);
+    
+
+
+
+@media screen and (min-width:969px){
+    display: none;
+}
+}
+
 
 .logistic-home__text, .logistic-about__text{
     width: 772px;
@@ -69,4 +116,10 @@ letter-spacing: -0.01em;
 text-align: center;
 white-space: pre-line;
 color: var(--content-primary);
+
+@media screen and (max-width: 968px){
+    width: 100%;
+    margin-bottom: 40px;
+font-size: 18px;
+}
 }

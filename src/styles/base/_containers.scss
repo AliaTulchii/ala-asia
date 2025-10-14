@@ -1,18 +1,33 @@
 .container {
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-
-  max-width: var(--container-width);
+  max-width: calc(var(--container-width) - 48px);
   width: 100%;
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 968px) { 
-  :root {
-    --container-padding: 16px;
+@media (max-width: 968px) {
+  .container {
+    max-width: calc(100% - 32px);
   }
+}
 
-  .container{
-    max-width: var(--container-width-mobile);
-  }
+// .container {
+//   margin: 0 auto;
+//   padding: 0 var(--container-padding);
+
+//   max-width: var(--container-width);
+//   width: 100%;
+// }
+
+// @media screen and (max-width: 968px) { 
+//   :root {
+//     --container-padding: 16px;
+//   }
+
+//   .container{
+//     max-width: var(--container-width-mobile);
+//     margin: 0 auto;
+//   padding: 0 var(--container-padding);
+//   width: 100%;
+//   }
    
-}
+// }
