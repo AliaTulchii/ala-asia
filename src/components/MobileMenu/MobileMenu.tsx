@@ -1,11 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import "./mobile-menu.scss";
-import logoWhite from "/assets/images/logo/logo.svg";
-import { useState } from "react";
+import logoWhite from "../../../public/assets/images/logo/logo-white.svg";
+import { useState} from "react";
 import LanguageSelect from "../LangSelect/LangSelect";
 import MobileMenuButton from "../Buttons/MobileMenuButton";
 import { NavLink } from "react-router-dom";
-import { MOBILE_MENU_LINKS } from "./MobileMenu.Constants";
+import { useTranslation } from "react-i18next";
+import { useMobileMenuItems } from "./MobileMenu.Constants";
+import MobileMenuSelect from "../MobileMenuSelect/MobileMenuSelect";
 
 const menuVariants = {
   hidden: { opacity: 0 },
@@ -23,6 +25,8 @@ const MobileMenu = ({
   themeColor?: "light" | "dark";
 }) => {
   const [activeSection, setActiveSection] = useState("");
+  const navItems = useMobileMenuItems();
+  const {t} = useTranslation("contact")
 
   const handleLinkClick = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -53,39 +57,52 @@ const MobileMenu = ({
           </div>
 
           <ul className="mobile-menu__list container">
-            {MOBILE_MENU_LINKS.map((item, index) => (
+            {navItems.map((item, index) => (
               <li key={index} className="mobile-menu__item">
-                <NavLink
-                  to={item.to}
-                  onClick={() => {
-                    handleLinkClick(item.to);
-                    onClose();
-                  }}
-                  className={`mobile-menu__link ${
-                    activeSection === item.to ? "active" : ""
-                  }`}
-                >
-                  <div className="mobile-menu__text-box">
-                    <p className="mobile-menu__number">N{item.id}°</p>
+                {item.type === "select" ? (
+                  <MobileMenuSelect
+                    
+                    classText="mobile-menu__text"
+                    label={item.text}
+                    options={item.options || []}
+                    onSelect={(path) => {
+                      handleLinkClick(path);
+                      onClose();
+                    }}
+                  />
+                ) : (
+                  <NavLink
+                    to={item.path}
+                    onClick={() => {
+                      handleLinkClick(item.path);
+                      onClose();
+                    }}
+                    className={`mobile-menu__link ${
+                      activeSection === item.path ? "active" : ""
+                    }`}
+                  >
                     <p className="mobile-menu__text">{item.text}</p>
-                  </div>
-                </NavLink>
+                  </NavLink>
+                )}
               </li>
             ))}
           </ul>
 
           <div className="mobile-menu__contacts-wrapper">
+            <h2 className="mobile-menu__phone-title">
+              {t("contact.address.item1.email")}
+            </h2>
             <div className="mobile-menu__phone-box">
-              <h2 className="mobile-menu__phone-title">Phone number</h2>
-              <p className="mobile-menu__phone-text">+998 (91) 7 842 843</p>
-              <p className="mobile-menu__phone-text">+998 (90) 0 190 140</p>
-            </div>
-            <div className="mobile-menu__email-box">
-              <h2 className="mobile-menu__phone-title">Email address</h2>
-              <p className="mobile-menu__phone-text">info@gl-hamkori.uz</p>
+              <p className="mobile-menu__phone-text">
+                {t("contact.address.item1.phone1")}
+              </p>
+              <p className="mobile-menu__phone-text">
+                {t("contact.address.item1.phone2")}
+              </p>
             </div>
           </div>
 
+          <h2 className="mobile-menu__title">ALA Asia</h2>
         </motion.nav>
       )}
     </AnimatePresence>

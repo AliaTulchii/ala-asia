@@ -11,6 +11,7 @@ const MobileMenuButton = ({
   isPolicyPage?: boolean;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -25,14 +26,14 @@ const MobileMenuButton = ({
       onClick={handleClick}
       aria-label="Toggle menu"
     >
-      <div className="menu-button__box  menu-button__box-left" />
+     
       <div className="menu-button__lines">
         <span className="menu-button__bar"></span>
         <span className="menu-button__bar"></span>
         <span className="menu-button__bar"></span>
         <span className="menu-button__bar"></span>
       </div>
-      <div className="menu-button__box  menu-button__box-right" />
+      
     </button>
   );
 };

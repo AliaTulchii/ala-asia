@@ -5,7 +5,7 @@ import PhoneButton from "../Buttons/PhoneButton";
 import MobileMenuButton from "../Buttons/MobileMenuButton";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { useEffect, useState } from "react";
-import PixelBackground from "../PixelBackground/mobile-menu/PixelBackground";
+// import PixelBackground from "../PixelBackground/mobile-menu/PixelBackground";
 import { useNavItems } from "./Header.Constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -130,11 +130,11 @@ const Header: React.FC<HeaderProps> = ({ themeColor }) => {
         <div className="header__mobile-btns">
           <LanguageSelect />
           <MobileMenuButton
-            // onClick={() => {
-            //   setMenuOpen(true);
-            // }}
+            onClick={() => {
+              setMenuOpen(true);
+            }}
           />
-          <PixelBackground isOpen={menuOpen} />
+          {/* <PixelBackground isOpen={menuOpen} /> */}
           <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
         </div>
       </div>
