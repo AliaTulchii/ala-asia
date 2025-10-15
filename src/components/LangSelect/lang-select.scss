@@ -8,6 +8,11 @@
   text-align: left;
   color: var(--accent);
   -webkit-text-stroke: 0.2px var(--accent);
+
+  @media screen and (max-width:968px){
+    padding: 4px 0;
+    width: 40px;
+  }
 }
 
 .lang-select__btn {

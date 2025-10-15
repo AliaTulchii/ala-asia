@@ -128,7 +128,7 @@ const Header: React.FC<HeaderProps> = ({ themeColor }) => {
         </div>
 
         <div className="header__mobile-btns">
-          <LanguageSelect />
+          <LanguageSelect themeColor={isLightPage ? "policy" : themeColor} />
           <MobileMenuButton
             onClick={() => {
               setMenuOpen(true);

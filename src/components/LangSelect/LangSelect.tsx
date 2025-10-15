@@ -11,7 +11,8 @@ interface LanguageSelectProps {
 }
 
 const LanguageSelect: React.FC<LanguageSelectProps> = ({
-  themeColor
+  themeColor,
+  styles
 }) => {
   const { i18n } = useTranslation("header");
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,7 @@ const LanguageSelect: React.FC<LanguageSelectProps> = ({
             : themeColor === "policy"
             ? "lang-select__btn--policy"
             : "lang-select__btn--dark"
-        } ${isOpen ? "lang-select__btn--open" : ""}`}
+        } ${isOpen ? "lang-select__btn--open" : ""} ${styles}`}
       >
         <span className="lang-select__btn-lang">{currentLang.toUpperCase()}</span>
         <ChevronDown className="lang-select__icon" />
