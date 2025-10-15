@@ -13,7 +13,7 @@ const Services = () => {
       <Convenient className="convenient-services" />
       <Partners className="partners-services" />
       <QA />
-      <ContactForm />
+      <ContactForm className="contact-form-services" />
     </div>
   );
 };

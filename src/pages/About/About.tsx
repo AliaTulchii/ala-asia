@@ -11,10 +11,10 @@ const About = () => {
     <div>
       <AboutHero />
       <Work />
-      <Partners className="partners-services" />
+      <Partners className="partners-about" />
       <Deliver />
       <Logistic className="logistic-about" />
-      <ContactForm />
+      <ContactForm className="contact-form-about"/>
     </div>
   );
 }

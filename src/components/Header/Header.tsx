@@ -22,23 +22,25 @@ const Header: React.FC<HeaderProps> = ({ themeColor }) => {
   const navItems = useNavItems();
   const location = useLocation();
   const isLightPage = ["/about", "/contact"].includes(location.pathname);
+  // const logoSrc = isLightPage
+  //   ? "/assets/images/logo/logo.svg"
+  //   : themeColor === "light"
+  //   ? "/assets/images/logo/logo-white.svg"
+  //     : "/assets/images/logo/logo.svg";
+
   const logoSrc = isLightPage
-    ? "/assets/images/logo/logo.svg"
-    : themeColor === "light"
     ? "/assets/images/logo/logo-white.svg"
-      : "/assets/images/logo/logo.svg";
-      const [isScrolled, setIsScrolled] = useState(false);
+    : "/assets/images/logo/logo.svg"; 
+  const [isScrolled, setIsScrolled] = useState(false);
 
-      useEffect(() => {
-        const handleScroll = () => {
-          setIsScrolled(window.scrollY > 50); // коли прокрутили більше ніж 50px
-        };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // коли прокрутили більше ніж 50px
+    };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-      }, []);
-  
-    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.header

@@ -26,7 +26,7 @@
 
     &-third{
         // left: 1164px;
-        left: 57.4%;
+        left: 57.6%;
         @media screen and (max-width: 968px){
             display: none;
         }
@@ -34,7 +34,7 @@
       
       &-fourth{
         // left: 1188px;
-        left:59%;
+        left:59.3%;
         @media screen and (max-width: 968px){
             display: none;
         }
@@ -139,7 +139,7 @@ letter-spacing: -0.02em;
 // }
 
 .convenient-home__item-header, .convenient-services__item-header{
-    width: 50%;
+    width: 55%;
      display: flex;
     @media screen and (max-width: 968px){
         width: 100%;
@@ -149,7 +149,7 @@ letter-spacing: -0.02em;
 }
 
 .convenient-home__item-wrapper, .convenient-services__item-wrapper{
-    width: 50%;
+    width: 40%;
     @media screen and (max-width: 968px){
         width: 100%;
     }
@@ -172,6 +172,7 @@ color: rgba(18, 27, 96, 0.6);
 }
 
 .convenient-home__item-img, .convenient-services__item-img{
+    // display: block;
     position: relative;
     z-index: 3;
     // margin-right: 96px;

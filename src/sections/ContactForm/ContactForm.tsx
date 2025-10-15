@@ -1,14 +1,17 @@
 import FormContact from "../../components/Form/Form";
 import { useTranslation } from "react-i18next";
 import "./contact-form.scss";
-import greeting from "/assets/images/home/contact/greeting.webp";
+import greeting from "/assets/images/home/contact/greeting-desc.webp";
 import greetingMob from "/assets/images/home/contact/greeting-mob.webp";
 
+interface ContactFormProps{
+  className: string;
+}
 
-const ContactForm = () => {
+const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
   const { t } = useTranslation("contactForm");
   return (
-    <section className="contact-form">
+    <section className={`contact-form ${className}`}>
       <div className="contact-form__line" />
 
       <div className="contact-form__container container">

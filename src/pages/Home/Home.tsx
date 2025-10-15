@@ -13,7 +13,7 @@ const Home = () => {
       <Partners className="partners-home" />
       <Logistic className="logistic-home" />
       <Convenient className="convenient-home" />
-      <ContactForm />
+      <ContactForm className=""/>
     </div>
   );
 };

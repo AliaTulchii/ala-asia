@@ -186,6 +186,7 @@ color: var(--white);
     display: inline-block;
     padding: 8px 16px;
     // margin-top: auto;
+    border: 1px solid var(--white);
     background-color: var(--white);
     border-radius: 20px;
     font-family: var(--font-geist);
@@ -198,8 +199,8 @@ transition: all 0.3s ease-in-out;
 
 &:hover{
   color: var(--white);
-  background-color: var(--content-primary);
 transition: all 0.3s ease-in-out;
+background-color: transparent;
 }
   }
 
