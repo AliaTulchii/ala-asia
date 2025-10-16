@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import DeliveryCard from "./DeliveryCard";
-import { CARD_IMG1, CARD_IMG2, CARD_IMG3, CARD_IMG4 } from "./Delivery.Constants";
+import { CARD_IMG1, CARD_IMG2, CARD_IMG3, CARD_IMG4, CARD_LINK1, CARD_LINK2, CARD_LINK3, CARD_LINK4 } from "./Delivery.Constants";
 import './delivery.scss'
 
 const Delivery = () => {
@@ -29,6 +29,7 @@ const Delivery = () => {
                 text={t("delivery.card1.text")}
                 btn={t("delivery.btn")}
                 img={CARD_IMG1}
+                link={CARD_LINK1}
                 cardStyle="delivery-card__first"
                 imgStyle="delivery-card__img-first"
               />
@@ -37,6 +38,7 @@ const Delivery = () => {
                 text={t("delivery.card2.text")}
                 btn={t("delivery.btn")}
                 img={CARD_IMG2}
+                link={CARD_LINK2}
                 cardStyle="delivery-card__second"
                 imgStyle="delivery-card__img-second"
               />
@@ -47,6 +49,7 @@ const Delivery = () => {
                 text={t("delivery.card3.text")}
                 btn={t("delivery.btn")}
                 img={CARD_IMG3}
+                link={CARD_LINK3}
                 cardStyle="delivery-card__third"
                 imgStyle="delivery-card__img-third"
               />
@@ -55,6 +58,7 @@ const Delivery = () => {
                 text={t("delivery.card4.text")}
                 btn={t("delivery.btn")}
                 img={CARD_IMG4}
+                link={CARD_LINK4}
                 cardStyle="delivery-card__fourth"
                 imgStyle="delivery-card__img-fourth"
               />

@@ -7,14 +7,16 @@ interface DeliveryCardProps{
     btn: string;
     img: string;
     imgStyle: string;
-    cardStyle: string;
+  cardStyle: string;
+  link: string;
 }
 
 const DeliveryCard: React.FC<DeliveryCardProps> = ({
   title,
   text,
   btn,
-    img,
+  img,
+    link,
     cardStyle,
   imgStyle
 }) => {
@@ -29,10 +31,11 @@ const DeliveryCard: React.FC<DeliveryCardProps> = ({
     <div className={`delivery-card__item ${cardStyle}`}>
       <NavLink
         className="delivery-card__link"
-        to="/services"
+        to={link}
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={() => window.scrollTo(0, 0)}
       >
         <img
           src={img}
@@ -42,7 +45,13 @@ const DeliveryCard: React.FC<DeliveryCardProps> = ({
       </NavLink>
       <div className="delivery-card__box">
         <h3 className="delivery-card__title">{title}</h3>
-        <NavLink to="/services" className="delivery-card__link-mobile">{btn}</NavLink>
+        <NavLink
+          to={link}
+          className="delivery-card__link-mobile"
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          {btn}
+        </NavLink>
       </div>
 
       <p className="delivery-card__text">{text}</p>
