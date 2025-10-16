@@ -24,6 +24,19 @@
         }
     }
 
+    .contact-form__line{
+        position: absolute;
+        height: 0.5px;
+        width: 100%;
+        left: 0;
+        top: 275px;
+        background-color: var(--content-primary);
+    
+    @media screen and (max-width:968px){
+        top: 38%;
+    }
+    }
+
 
     .contact-form__line-vertical{   
     

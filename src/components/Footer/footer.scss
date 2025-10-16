@@ -44,7 +44,7 @@
 .footer__contact{
   margin-right: 160px;
   display: flex;
-  gap: 128px;
+  gap: 98px;
 
   @media screen and (max-width:968px){
     flex-direction: column;
@@ -55,6 +55,7 @@
 
 .footer__mail,
 .footer__tel{
+  width: 246px;
   font-family: var(--font-delight);
 font-weight: 700;
 font-size: 28px;
@@ -134,12 +135,14 @@ font-size: 24px;
 }
 
 .footer__btn-text{
+  width: 82px;
   position: relative;
   font-family: var(--font-delight);
 font-weight: 400;
 font-size: 16px;
 line-height: 120%;
 letter-spacing: -0.01em;
+text-align: end;
 color: var(--white);
 transition: all 0.3s ease-in-out;
 &::after {
@@ -170,7 +173,7 @@ transition: all 0.3s ease-in-out;
 }
 
 .footer__rights{
-  // margin-left: 24px;
+  width: 201px;
   margin-right: 304px;
 
   font-family: var(--font-inter);
@@ -200,6 +203,7 @@ color: rgba(255, 255, 255, 0.6);
 }
 
 .footer__nav{
+  width: 122px;
   margin-right: 232px;
   margin-bottom: 32px;
 
