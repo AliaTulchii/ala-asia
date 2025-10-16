@@ -51,11 +51,12 @@
   }
   
   .hero__text {
-    width: 320px;
+    width: 290px;
     font-family: var(--font-delight);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.2;
+    // text-align: end;
     color: var(--content-primary);
 
     @media screen and (max-width: 969px){
@@ -107,7 +108,7 @@
   .hero__title {
     font-family: var(--font-delight);
     font-weight: 600;
-    font-size: 60px;
+    font-size: 58px;
     line-height: 1.1;
     text-transform: uppercase;
     color: var(--content-primary);
