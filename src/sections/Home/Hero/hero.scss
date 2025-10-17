@@ -5,7 +5,8 @@
     height: 150vh;
 
     @media screen and (max-width: 969px){
-    height: 115vh;
+      height: auto; // ❌ замість 115vh
+      min-height: var(--content-height, 110vh);
     }
   }
   
@@ -91,6 +92,8 @@
     top: var(--content-height); 
     height: 100vh;
     z-index: 10;
+
+   
   }
   
   .hero__image-inner img {
