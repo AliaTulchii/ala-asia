@@ -89,7 +89,7 @@ const Hero = () => {
             <source
               media="(max-width: 968px)"
               srcSet={`${HERO_IMG_MOB} 1x, ${HERO_IMG_MOB} 2x`}
-              type="image/jpg"
+              type="image/png"
             />
             <source
               srcSet={`${HERO_IMG} 1x, ${HERO_IMG} 2x`}
