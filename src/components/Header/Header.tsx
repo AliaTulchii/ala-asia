@@ -135,6 +135,7 @@ const Header: React.FC<HeaderProps> = ({ themeColor }) => {
             onClick={() => {
               setMenuOpen(true);
             }}
+            isLightPage={isLightPage}
           />
           {/* <PixelBackground isOpen={menuOpen} /> */}
           <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />

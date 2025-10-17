@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, NavLink } from "react-router-dom";
 import './supplies.scss'
-import { IMG1, IMG10, IMG11, IMG12, IMG13, IMG14, IMG15, IMG16, IMG2, IMG3, IMG4, IMG5, IMG6, IMG7, IMG8, IMG9 } from "./Supplies.Constants";
+import { IMG1, IMG10, IMG10_MOB, IMG11, IMG11_MOB, IMG12, IMG12_MOB, IMG13, IMG14, IMG14_MOB, IMG15, IMG15_MOB, IMG16, IMG16_MOB, IMG1_MOB, IMG2, IMG2_MOB, IMG3, IMG3_MOB, IMG4, IMG4_MOB, IMG5, IMG5_MOB, IMG6, IMG6_MOB, IMG7, IMG7_MOB, IMG8, IMG8_MOB, IMG9, IMG9_MOB } from "./Supplies.Constants";
 
 const Supplies = () => {
     const { t } = useTranslation("popUp,supplies");
@@ -117,11 +117,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG1}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG1_MOB} 1x, ${IMG1_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG1} 1x, ${IMG1} 2x`} type="image/jpg" />
+                <img
+                  src={IMG1}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "glass" && (
@@ -173,11 +181,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG2}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG2_MOB} 1x, ${IMG2_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG2} 1x, ${IMG2} 2x`} type="image/jpg" />
+                <img
+                  src={IMG2}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "roof" && (
@@ -228,11 +244,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG3}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG3_MOB} 1x, ${IMG3_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG3} 1x, ${IMG3} 2x`} type="image/jpg" />
+                <img
+                  src={IMG3}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "bricks" && (
@@ -263,11 +287,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG4}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG4_MOB} 1x, ${IMG4_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG4} 1x, ${IMG4} 2x`} type="image/jpg" />
+                <img
+                  src={IMG4}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "metallurgy" && (
@@ -291,11 +323,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG5}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG5_MOB} 1x, ${IMG5_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG5} 1x, ${IMG5} 2x`} type="image/jpg" />
+                <img
+                  src={IMG5}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "energetics" && (
@@ -335,11 +375,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG6}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG6_MOB} 1x, ${IMG6_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG6} 1x, ${IMG6} 2x`} type="image/jpg" />
+                <img
+                  src={IMG6}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
 
@@ -420,11 +468,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG7}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG7_MOB} 1x, ${IMG7_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG7} 1x, ${IMG7} 2x`} type="image/jpg" />
+                <img
+                  src={IMG7}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "chemicals" && (
@@ -480,11 +536,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG8}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG8_MOB} 1x, ${IMG8_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG8} 1x, ${IMG8} 2x`} type="image/jpg" />
+                <img
+                  src={IMG8}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "food" && (
@@ -548,11 +612,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG9}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG9_MOB} 1x, ${IMG9_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG9} 1x, ${IMG9} 2x`} type="image/jpg" />
+                <img
+                  src={IMG9}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
 
@@ -613,11 +685,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG10}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG10_MOB} 1x, ${IMG10_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG10} 1x, ${IMG10} 2x`} type="image/jpg" />
+                <img
+                  src={IMG10}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "plastic" && (
@@ -657,11 +737,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG11}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG11_MOB} 1x, ${IMG11_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG11} 1x, ${IMG11} 2x`} type="image/jpg" />
+                <img
+                  src={IMG11}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "cosmetic" && (
@@ -704,11 +792,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG12}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG12_MOB} 1x, ${IMG12_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG12} 1x, ${IMG12} 2x`} type="image/jpg" />
+                <img
+                  src={IMG12}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "railway" && (
@@ -844,11 +940,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG14}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG14_MOB} 1x, ${IMG14_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG14} 1x, ${IMG14} 2x`} type="image/jpg" />
+                <img
+                  src={IMG14}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "provision" && (
@@ -941,11 +1045,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG15}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG15_MOB} 1x, ${IMG15_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG15} 1x, ${IMG15} 2x`} type="image/jpg" />
+                <img
+                  src={IMG15}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
           {activeSubTab === "transportation" && (
@@ -1022,11 +1134,19 @@ const Supplies = () => {
                   {t("supplies.tab1.subTabs.subTab1.btn")}
                 </NavLink>
               </div>
-              <img
-                src={IMG16}
-                alt="image of tab category"
-                className="supplies__card-img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 968px)"
+                  srcSet={`${IMG16_MOB} 1x, ${IMG16_MOB} 2x`}
+                  type="image/jpg"
+                />
+                <source srcSet={`${IMG16} 1x, ${IMG16} 2x`} type="image/jpg" />
+                <img
+                  src={IMG16}
+                  alt="image of tab category"
+                  className="supplies__card-img"
+                />
+              </picture>
             </div>
           )}
         </div>

@@ -4,14 +4,13 @@ import "./buttons.scss";
 const MobileMenuButton = ({
   onClick,
   styles,
-  isPolicyPage,
+  isLightPage,
 }: {
   onClick?: () => void;
   styles?: string;
-  isPolicyPage?: boolean;
+  isLightPage?: boolean;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -21,19 +20,17 @@ const MobileMenuButton = ({
   return (
     <button
       className={`menu-button ${styles} ${
-        isPolicyPage ? "menu-button--policy" : ""
+        isLightPage ? "menu-button--policy" : ""
       }`}
       onClick={handleClick}
       aria-label="Toggle menu"
     >
-     
       <div className="menu-button__lines">
         <span className="menu-button__bar"></span>
         <span className="menu-button__bar"></span>
         <span className="menu-button__bar"></span>
         <span className="menu-button__bar"></span>
       </div>
-      
     </button>
   );
 };
