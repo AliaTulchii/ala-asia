@@ -9,50 +9,16 @@ const Hero = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
 
-  // useEffect(() => {
-  //   const section = sectionRef.current;
-  //   const content = contentRef.current;
-  //   if (!section || !content) return;
-
-  //   const recalc = () => {
-  //     // const contentHeight = content.getBoundingClientRect().height;
-  //     // section.style.setProperty("--content-height", `${contentHeight}px`);
-  //     // мінімальна висота секції = висота тексту + viewport
-  //     // section.style.minHeight = `${contentHeight + window.innerHeight}px`;
-  //   };
-
-  //   recalc();
-  //   window.addEventListener("resize", recalc);
-
-  //   const ro = new ResizeObserver(recalc);
-  //   ro.observe(content);
-
-  //   return () => {
-  //     window.removeEventListener("resize", recalc);
-  //     ro.disconnect();
-  //   };
-  // }, []);
-
   useEffect(() => {
     const section = sectionRef.current;
     const content = contentRef.current;
     if (!section || !content) return;
 
     const recalc = () => {
-      const isMobile = window.innerWidth <= 969;
-
-      if (isMobile) {
-        const contentHeight = content.getBoundingClientRect().height;
-        // Висота секції = висота контенту + півекрана (для плавного наїзду)
-        section.style.setProperty("--content-height", `${contentHeight}px`);
-        section.style.minHeight = `${
-          contentHeight + window.innerHeight * 0.5
-        }px`;
-      } else {
-        // Для десктопу залишаємо стандартну висоту
-        section.style.removeProperty("min-height");
-        section.style.removeProperty("--content-height");
-      }
+      // const contentHeight = content.getBoundingClientRect().height;
+      // section.style.setProperty("--content-height", `${contentHeight}px`);
+      // мінімальна висота секції = висота тексту + viewport
+      // section.style.minHeight = `${contentHeight + window.innerHeight}px`;
     };
 
     recalc();
@@ -66,7 +32,7 @@ const Hero = () => {
       ro.disconnect();
     };
   }, []);
-  
+
   return (
     <section className="hero " ref={sectionRef}>
       <div className="hero__content " ref={contentRef}>
@@ -89,7 +55,7 @@ const Hero = () => {
             <source
               media="(max-width: 968px)"
               srcSet={`${HERO_IMG_MOB} 1x, ${HERO_IMG_MOB} 2x`}
-              type="image/png"
+              type="image/jpg"
             />
             <source
               srcSet={`${HERO_IMG} 1x, ${HERO_IMG} 2x`}

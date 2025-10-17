@@ -5,8 +5,7 @@
     height: 150vh;
 
     @media screen and (max-width: 969px){
-      height: auto; // ❌ замість 115vh
-      min-height: var(--content-height, 110vh);
+      height: 950px; // ❌ замість 115vh
     }
   }
   
