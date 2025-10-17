@@ -5,7 +5,7 @@ import './buttons.scss'
 const PhoneButton = ({ themeColor } : {themeColor?: "light" | "dark" | "policy"}) => {
   return (
     <a
-      href="tel:+77071040902"
+      href="tel:+7(708)5029704"
       className={`phone-btn  ${
         themeColor === "light"
           ? "phone-btn--light"

@@ -34,12 +34,13 @@ const Footer = () => {
             <p className="footer__mail">{t("footer.mail")}</p>
 
             <div className="footer__tel-box">
+              <a href="tel:+7(708)5029704" className="footer__tel">
+                {t("footer.tel2")}
+              </a>
               <a href="tel:+7(707)1040902" className="footer__tel">
                 {t("footer.tel1")}
               </a>
-              <a href="tel:+7(707)3008108" className="footer__tel">
-                {t("footer.tel2")}
-              </a>
+             
             </div>
           </div>
 

@@ -31,7 +31,11 @@ const Accordion: React.FC = () => {
             <h3 className="accordion__subtitle">{item.subtitle}</h3>
             <p className="accordion__text">{item.text2}</p>
             <p className="accordion__text accordion__text-last">{item.text3}</p>
-            <NavLink to={item.path} className="accordion__btn">
+            <NavLink
+              to={item.path}
+              className="accordion__btn"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               {item.btn}
             </NavLink>
           </div>

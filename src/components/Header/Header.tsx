@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ themeColor }) => {
     >
       <div className="header__container container">
         <div className="header__wrapper ">
-          <NavLink to="/" className="">
+          <NavLink to="/" className="" onClick={() => window.scrollTo(0, 0)}>
             <motion.img
               key={logoSrc}
               src={logoSrc}

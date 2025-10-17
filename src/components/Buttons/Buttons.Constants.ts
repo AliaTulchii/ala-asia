@@ -1,1 +1,1 @@
-export const PHONE_NUMBER_BUTTON = "+7 (707) 104 09 02";
+export const PHONE_NUMBER_BUTTON = "+7 (708) 502 97 04";
