@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import "./mobile-menu.scss";
 import logoWhite from "../../../public/assets/images/logo/logo-white.svg";
-import { useState} from "react";
+import { useEffect, useState} from "react";
 import LanguageSelect from "../LangSelect/LangSelect";
 import MobileMenuButton from "../Buttons/MobileMenuButton";
 import { NavLink, useLocation } from "react-router-dom";
@@ -35,6 +35,10 @@ const MobileMenu = ({
     onClose();
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -46,7 +50,7 @@ const MobileMenu = ({
           variants={menuVariants}
         >
           <div className="mobile-menu__header">
-            <a href="/hero" className="mobile-link">
+            <a href="/" className="mobile-link">
               <img src={logoWhite} alt="logo" className="mobile-logo" />
             </a>
             <div className="mobile-menu__btns">
