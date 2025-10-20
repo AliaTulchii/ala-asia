@@ -4,6 +4,7 @@ import Home from "../../pages/Home/Home";
 import Services from "../../pages/Services/Services";
 import About from "../../pages/About/About";
 import Contact from "../../pages/Contact/Contact";
+import PrivacyPolicy from "../../pages/PrivacyPolicy/PrivacyPolicy";
 // import TransportType from "../../pages/TransportType/TransportType";
 // import Loads from "../../pages/Loads/Loads";
 // import About from "../../pages/About/About";
@@ -44,14 +45,14 @@ const AnimRoutes = () => {
             // </Stairs>
           }
         />
-        {/* <Route
+        <Route
           path="/policy"
           element={
-            <Stairs>
+            // <Stairs>
               <PrivacyPolicy />
-            </Stairs>
+            // </Stairs>
           }
-        /> */}
+        />
         {/* <Route
           path="*"
           element={
