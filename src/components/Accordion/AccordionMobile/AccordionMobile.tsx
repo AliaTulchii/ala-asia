@@ -41,8 +41,14 @@ const AccordionMobile: React.FC = () => {
             <p className="accordion-mobile__text">{item.text1}</p>
             <h3 className="accordion-mobile__subtitle">{item.subtitle}</h3>
             <p className="accordion-mobile__text">{item.text2}</p>
-            <p className="accordion-mobile__text accordion-mobile__text-last">{item.text3}</p>
-            <NavLink to={item.path} className="accordion-mobile__btn">
+            <p className="accordion-mobile__text accordion-mobile__text-last">
+              {item.text3}
+            </p>
+            <NavLink
+              to={item.path}
+              className="accordion-mobile__btn"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               {item.btn}
             </NavLink>
           </div>
