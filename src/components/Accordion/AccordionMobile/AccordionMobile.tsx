@@ -47,6 +47,7 @@ const AccordionMobile: React.FC = () => {
             <NavLink
               to={item.path}
               className="accordion-mobile__btn"
+              onClick={() => window.scrollTo(0, 0)}
             >
               {item.btn}
             </NavLink>
