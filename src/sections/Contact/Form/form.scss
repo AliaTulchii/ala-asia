@@ -3,11 +3,23 @@
 }
 
 .form__line{
-    position: absolute;
+
+    @media screen and (max-width:424px){
+        position: absolute;
     height: 1px;
     width: 100%;
-    top: 23.5%;
+    top: 20%;
     background-color: var(--content-primary);
+    }
+
+    @media screen and (min-width:425px) and (max-width: 968px){
+        position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 20%;
+    background-color: var(--content-primary);
+    }
+    
 }
 
 

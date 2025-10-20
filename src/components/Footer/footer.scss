@@ -58,7 +58,7 @@
   width: 246px;
   font-family: var(--font-delight);
 font-weight: 700;
-font-size: 28px;
+font-size: 27px;
 line-height: 100%;
 color: var(--white);
 
@@ -167,8 +167,12 @@ transition: all 0.3s ease-in-out;
 .footer__wrapper-second{
   display: flex;
 
-  @media screen and (max-width: 968px){
+  @media screen and (max-width: 424px){
     gap: 69px;
+  }
+
+  @media screen and (min-width: 425px) and (max-width: 968px){
+    gap: 96px;
   }
 }
 

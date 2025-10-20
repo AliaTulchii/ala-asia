@@ -44,12 +44,15 @@
   },
   "homeHero": {
     "title": "Import of equipment, raw materials, \nand construction materials \nto Kazakhstan",
+    "titleMob": "Import \nof equipment, raw materials, and construction materials to Kazakhstan",
     "text": "Direct contracts·Turnkey logistics· \nCertification.",
     "btn": "Request offer"
   },
   "delivery": {
     "title": "What we supply",
     "text": "Direct contracts with manufacturers in the EU, China, and the \nUAE. We organise selection, terms, delivery, and quality control \nthroughout Kazakhstan.",
+    "textMob": "Direct contracts with manufacturers in the EU, China, and the UAE. We organise selection, terms, delivery, and quality control throughout Kazakhstan.",
+
     "card1": {
       "title": "Building materials",
       "text": "Tiles, bricks, glass, roofing. Direct deliveries from warehouses and factories, customized to your specifications and budget."
@@ -73,6 +76,7 @@
   },
   "logistic": {
     "title": "Geography of supplies \nand logistics",
+    "titleMob": "Geography of supplies and logistics",
     "text": "Import, wholesale, and logistics of materials, equipment, and raw materials from Europe, \nChina, and the UAE—with guaranteed quality and transparent terms."
   },
   "accordion": {
@@ -139,6 +143,7 @@
     "raw": "Raw materials",
     "logistic": "Logistics",
     "message": "Your message",
+    "consent": "I consent to the processing of my personal data.",
     "btn": "Get a consultation"
   },
   "footer": {
@@ -425,7 +430,7 @@
         "title3": "Curtainsider trucks: ",
         "text4": "1–23 tons, volume 15–120 m³.",
         "title4": "Dangerous goods ",
-        "text5": "(ADR): approval and equipment according to standards.",
+        "text5": "(ADR): approval and equipment according to standards.",
         "title5": "Refrigerated trucks:",
         "text6": " maintaining a set temperature throughout the entire route.",
         "title6": "Quality of execution",

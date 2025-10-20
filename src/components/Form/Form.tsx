@@ -11,13 +11,16 @@ import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
 import './form.scss'
 import CustomSelect from "./CustomSelect";
+import { useRef, useState } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const initialValues = {
   name: "",
   phone: "",
   email: "",
   message: "",
-  topic: ""
+  topic: "",
+  consent1: false,
 };
 
 const validationSchema = Yup.object({
@@ -34,51 +37,92 @@ const validationSchema = Yup.object({
     .min(10, "There must be at least 10 characters")
     .required("Enter your message"),
   topic: Yup.string().required("Please choose a topic"),
+  consent1: Yup.boolean().oneOf([true])
 });
 
 const FormContact = () => {
-          const { t } = useTranslation("contactForm");
-  const handleSubmit = async (
+  const { t } = useTranslation("contactForm");
+  const captchaRef = useRef<HCaptcha>(null);
+  const [showCaptchaModal, setShowCaptchaModal] = useState(false);
+  const [formData, setFormData] = useState<typeof initialValues | null>(null);
+  const [resetFormFn, setResetFormFn] = useState<(() => void) | null>(null);
+
+  const handleRealSubmit = async (
     values: typeof initialValues,
-    { resetForm }: { resetForm: () => void }
+    resetForm: () => void,
+    token: string
   ) => {
     try {
+      const payload = {
+        access_key: "ab506acc-0964-4c4e-97be-9ce4afe03998",
+        name: values.name,
+        phone: values.phone,
+        email: values.email,
+        message: values.message,
+        hcaptcha_response: token,
+      };
+
+      console.log("Sending payload to API:", payload);
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          access_key: "da0a179",
-          ...values,
-        }),
+        body: JSON.stringify(payload),
       });
 
+      const responseData = await response.json();
+
       if (!response.ok) {
-        const errorData = await response.json();
-        console.error("API Error:", errorData);
-        throw new Error("Error sending the form");
+        console.error("API response not OK:", responseData);
+        throw new Error(responseData.message || "Error sending the form");
       }
 
-      const responseData = await response.json();
-      console.log("Form submission response:", responseData);
+      console.log("Form submission success:", responseData);
 
       toast.warn(
-        "Wiadomość została pomyślnie wysłana. Skontaktujemy się z Państwem tak szybko, jak to możliwe.",
+        "The message has been sent successfully. We will contact you as soon as possible.",
         {
           icon: <span>📨</span>,
-          position: "top-right",
+          position: "bottom-right",
           style: {
-            backgroundColor: "#0e41da",
+            backgroundColor: "#003380",
             color: "#fff",
-            fontFamily: "Inter",
+            fontFamily: "Arimo",
           },
         }
       );
+
       resetForm();
     } catch (error) {
-      console.error("Error sending the form:", error);
+      console.error("Form submission error:", error);
       toast.error("There was an error sending your message.");
+    }
+  };
+
+  const handleSubmit = (
+    values: typeof initialValues,
+    { resetForm }: { resetForm: () => void }
+  ) => {
+    setFormData(values);
+    setResetFormFn(() => resetForm);
+    setShowCaptchaModal(true);
+  };
+
+  const handleCaptchaChange = async (token: string | null) => {
+    if (token && formData && resetFormFn) {
+      await handleRealSubmit(formData, resetFormFn, token);
+      setShowCaptchaModal(false);
+    } else {
+      toast.error("Please verify that you're not a robot. ", {
+        icon: <span>🤖</span>,
+        style: {
+          backgroundColor: "#003380",
+          color: "#fff",
+          fontFamily: "Arimo",
+        },
+      });
     }
   };
 
@@ -253,6 +297,49 @@ const FormContact = () => {
                   )}
                 </ErrorMessage>
               </div>
+
+              <div className="checkbox__item">
+                <Field
+                  type="checkbox"
+                  name="consent1"
+                  id="consent1"
+                  className="checkbox"
+                />
+                <label
+                  className={`checkbox__label ${
+                    touched.consent1 && errors.consent1 ? "error-border" : ""
+                  }`}
+                  htmlFor="consent1"
+                >
+                  <p className="checkbox__text">{t("contactForm.consent")}</p>
+                </label>
+              </div>
+
+              {showCaptchaModal && (
+                <div className="captcha-modal">
+                  <div
+                    className="captcha-modal__overlay"
+                    onClick={() => setShowCaptchaModal(false)}
+                  />
+                  <div className="captcha-modal__content">
+                    <p className="captcha-modal__text">
+                      Please confirm you're not a robot 🤖
+                    </p>
+                    <HCaptcha
+                      sitekey="ab506acc-0964-4c4e-97be-9ce4afe03998"
+                      onVerify={handleCaptchaChange}
+                      onError={() =>
+                        toast.error("hCaptcha verification failed.")
+                      }
+                      onExpire={() =>
+                        toast.warning("hCaptcha expired. Please try again.")
+                      }
+                      ref={captchaRef}
+                      languageOverride="en"
+                    />
+                  </div>
+                </div>
+              )}
 
               <button type="submit" className="form__btn">
                 {t("contactForm.btn")}

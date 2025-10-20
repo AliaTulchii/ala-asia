@@ -2,7 +2,7 @@ import FormContact from "../../components/Form/Form";
 import { useTranslation } from "react-i18next";
 import "./contact-form.scss";
 import greeting from "/assets/images/home/contact/greeting-desc.webp";
-import greetingMob from "/assets/images/home/contact/greeting-mob.webp";
+import greetingMob from "/assets/images/home/contact/greeting.webp";
 
 interface ContactFormProps{
   className: string;

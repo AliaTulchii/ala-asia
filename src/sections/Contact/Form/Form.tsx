@@ -6,6 +6,7 @@ const Form = () => {
     const {t} = useTranslation("contact")
   return (
     <section className="form">
+      <div className="form__line" />
       <div className="form__container container">
         <h2 className="form__title">{t("contact.form.title")}</h2>
         <h2 className="form__title-mob">{t("contact.form.title")}</h2>

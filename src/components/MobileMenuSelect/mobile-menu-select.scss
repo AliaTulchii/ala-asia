@@ -6,6 +6,25 @@
     
     cursor: pointer;
 
+
+    &.active {
+      background-color: var(--white);
+
+      .mobile-menu__text{
+        color: var(--content-primary);
+        margin-left: 12px;
+      }
+  
+      .mobile-select__label {
+        color: var(--content-primary);
+      }
+  
+      .mobile-select__chevron {
+        color: var(--content-primary); // колір шеврона при відкритті
+      }
+      
+    }
+
     &__chevron {
         width: 20px;
         transition: transform 0.3s ease, color 0.3s ease;
@@ -44,14 +63,14 @@
     &__options {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 8px;
+      // gap: 8px;
+      // margin-bottom: 8px;
       border-top: 1px solid var(--content-primary);
       animation: fadeDown 0.3s ease forwards;
     }
   
     &__option {
-      padding-top: 12px;
+      padding-top: 16px;
       padding-left: 16px;
       
       transition: color 0.3s;
@@ -85,7 +104,7 @@ color: var(--content-primary);
   
 
   .mobile-select__option {
-    padding: 8px 12px;
+    padding: 16px 16px 0;
     cursor: pointer;
     color: var(--content-primary);
     &.active {

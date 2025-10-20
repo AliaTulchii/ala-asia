@@ -2,11 +2,15 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, NavLink } from "react-router-dom";
 import './supplies.scss'
 import { IMG1, IMG10, IMG10_MOB, IMG11, IMG11_MOB, IMG12, IMG12_MOB, IMG13, IMG14, IMG14_MOB, IMG15, IMG15_MOB, IMG16, IMG16_MOB, IMG1_MOB, IMG2, IMG2_MOB, IMG3, IMG3_MOB, IMG4, IMG4_MOB, IMG5, IMG5_MOB, IMG6, IMG6_MOB, IMG7, IMG7_MOB, IMG8, IMG8_MOB, IMG9, IMG9_MOB } from "./Supplies.Constants";
+import { useEffect, useRef } from "react";
 
 const Supplies = () => {
     const { t } = useTranslation("popUp,supplies");
     const { tab = "materials", subtab } = useParams();
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const subTabsRef = useRef<HTMLDivElement>(null);
 
     // Основні категорії
     const tabs = [
@@ -60,16 +64,49 @@ const Supplies = () => {
       ],
     };
 
-
     const activeSubTab =
-      subtab || (subTabs[tab] && subTabs[tab][0].id) || undefined;
+    subtab || (subTabs[tab] && subTabs[tab][0].id) || undefined;
+
+    const smoothLeftScroll = (
+      container: HTMLDivElement | null,
+      activeSelector: string
+    ) => {
+      if (!container) return;
+      const active = container.querySelector(
+        activeSelector
+      ) as HTMLElement | null;
+      if (!active) return;
+
+      requestAnimationFrame(() => {
+        // відстань до лівого краю контейнера з врахуванням паддінгу
+        const containerStyle = getComputedStyle(container);
+        const paddingLeft = parseInt(containerStyle.paddingLeft) || 0;
+
+        const scrollLeft = active.offsetLeft - paddingLeft - 24; // 24 це можна підкоригувати
+        container.scrollTo({
+          left: scrollLeft,
+          behavior: "smooth",
+        });
+      });
+    };
+
+    // 🔹 Викликаємо скрол активного табу
+    useEffect(() => {
+      smoothLeftScroll(tabsRef.current, ".supplies__tab.active");
+    }, [tab]);
+
+    // 🔹 Викликаємо скрол активного саб-таб
+    useEffect(() => {
+      smoothLeftScroll(subTabsRef.current, ".supplies__subtab.active");
+    }, [activeSubTab]);
+    
   return (
     <section className="supplies">
       {/* <div className="supplies__line" /> */}
       <div className="container">
         <h1 className="supplies__title">{t("supplies.title")}</h1>
         <p className="supplies__text">{t("supplies.text")}</p>
-        <div className="supplies__tabs">
+        <div className="supplies__tabs" ref={tabsRef}>
           {tabs.map((t) => (
             <button
               key={t.id}
@@ -86,7 +123,7 @@ const Supplies = () => {
           ))}
         </div>
 
-        <div className="supplies__subtabs ">
+        <div className="supplies__subtabs " ref={subTabsRef}>
           {subTabs[tab]?.map((s) => (
             <button
               key={s.id}
@@ -472,7 +509,7 @@ const Supplies = () => {
                 <source
                   media="(max-width: 968px)"
                   srcSet={`${IMG7_MOB} 1x, ${IMG7_MOB} 2x`}
-                  type="image/jpg"
+                  type="image/webp"
                 />
                 <source srcSet={`${IMG7} 1x, ${IMG7} 2x`} type="image/jpg" />
                 <img

@@ -12,6 +12,7 @@ interface CustomSelectProps {
   options: Option[];
   onSelect: (path: string) => void;
   classText: string;
+  classSelect: string;
 }
 
 const MobileMenuSelect = ({
@@ -19,6 +20,7 @@ const MobileMenuSelect = ({
   options,
   onSelect,
   classText,
+  classSelect
 }: CustomSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(label);
@@ -33,7 +35,7 @@ const MobileMenuSelect = ({
   };
 
   return (
-    <div className={`mobile-select ${isOpen ? "open" : ""}`}>
+    <div className={`mobile-select ${isOpen ? "open" : ""} ${classSelect}`}>
       <div className="mobile-select__label" onClick={toggleOpen}>
         <p className={classText}>{selected}</p>
         <svg
@@ -63,7 +65,10 @@ const MobileMenuSelect = ({
               className={`mobile-select__option ${
                 location.pathname === option.path ? "active" : ""
               }`}
-              onClick={() => handleSelect(option.path, option.text)}
+              onClick={() => {
+                handleSelect(option.path, option.text);
+                window.scrollTo(0, 0);
+              }}
             >
               {option.text}
             </NavLink>

@@ -53,7 +53,7 @@ letter-spacing: -0.01em;
 color: var(--content-primary);
 
 @media screen and (max-width: 968px){
-    
+    margin-bottom: 40px;
 font-size: 32px;
 }
 }
@@ -72,7 +72,7 @@ font-size: 32px;
     margin-right: 302px;
     @media screen and (max-width:968px){
         margin-right: auto;
-        margin-bottom: 40px;
+        margin-bottom: 48px;
     }
 }
 
@@ -80,16 +80,16 @@ font-size: 32px;
     margin-right: 124px;
     @media screen and (max-width:968px){
         margin-right: auto;
-        margin-bottom: 40px;
+        margin-bottom: 48px;
     }
 }
 
 .address__wrapper:not(:last-child){
     margin-bottom: 48px;
 
-    @media screen and (max-width: 968px){
-        margin-bottom: 40px;
-    }
+    // @media screen and (max-width: 968px){
+    //     margin-bottom: 40px;
+    // }
 }
 
 .address__subtitle{

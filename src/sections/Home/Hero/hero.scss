@@ -4,14 +4,25 @@
     overflow: visible;
     height: 150vh;
 
-    @media screen and (max-width: 969px){
-      height: 950px; // ❌ замість 115vh
+    @media screen and (max-width: 424px){
+      height: 950px; 
+    }
+
+    @media screen and (min-width:425px) and (max-width: 969px){
+      height: 1050px;
     }
   }
   
   .hero__container {
     position: relative;
     width: 100%;
+
+    @media screen and (max-width: 969px){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
 
@@ -24,6 +35,9 @@
     background: transparent;
 
     @media screen and (max-width: 969px){
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
       padding-top: 120px;
       padding-bottom: 0px;
     }

@@ -4,7 +4,7 @@ import logoWhite from "../../../public/assets/images/logo/logo-white.svg";
 import { useState} from "react";
 import LanguageSelect from "../LangSelect/LangSelect";
 import MobileMenuButton from "../Buttons/MobileMenuButton";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useMobileMenuItems } from "./MobileMenu.Constants";
 import MobileMenuSelect from "../MobileMenuSelect/MobileMenuSelect";
@@ -26,7 +26,9 @@ const MobileMenu = ({
 }) => {
   const [activeSection, setActiveSection] = useState("");
   const navItems = useMobileMenuItems();
-  const {t} = useTranslation("contact")
+  const { t } = useTranslation("contact")
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const handleLinkClick = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -61,7 +63,9 @@ const MobileMenu = ({
               <li key={index} className="mobile-menu__item">
                 {item.type === "select" ? (
                   <MobileMenuSelect
-                    
+                    classSelect={`${
+                      currentPath.startsWith("/services") ? "active" : ""
+                    }`}
                     classText="mobile-menu__text"
                     label={item.text}
                     options={item.options || []}
@@ -76,6 +80,7 @@ const MobileMenu = ({
                     onClick={() => {
                       handleLinkClick(item.path);
                       onClose();
+                      window.scrollTo(0, 0);
                     }}
                     className={`mobile-menu__link ${
                       activeSection === item.path ? "active" : ""

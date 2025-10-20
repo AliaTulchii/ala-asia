@@ -72,6 +72,7 @@ margin-bottom: 48px;
     /* базовий скрол для всіх, або в медіа: */
     overflow-x: auto;
     overflow-y: hidden;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; /* iOS плавний скрол */
     touch-action: pan-x; /* дозволяє горизонтальний жест */
@@ -130,6 +131,10 @@ margin-bottom: 48px;
 
     &.active{
         background-color: var(--tab-button-active);
+    }
+
+    @media screen and (max-width: 968px){
+        scroll-snap-align: center;
     }
 }
 
