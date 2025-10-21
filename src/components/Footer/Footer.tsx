@@ -74,7 +74,7 @@ const Footer = () => {
             </nav>
 
             <NavLink
-              to="/policy"
+              to="/privacy"
               className="footer__nav-link"
               onClick={() => window.scrollTo(0, 0)}
             >

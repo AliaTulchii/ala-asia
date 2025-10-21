@@ -634,6 +634,94 @@
     "title": "Write to us and we'll find a \nmanufacturer and logistics",
     "titleMob": "Write to us and we'll find a manufacturer and logistics"
   }
+},
+
+
+"privacy": {
+  "title": "PRIVACY POLICY",
+  "text": "Last updated: October 2025",
+  "item1": {
+    "id": "01",
+    "subtitle": "General Provisions",
+    "text": "This Privacy Policy (hereinafter referred to as the “Policy”) has been developed in accordance with the Law of the Republic of Kazakhstan “On Personal \nData and Their Protection” and the principles of the General Data Protection Regulation (GDPR). \nThe Policy defines the procedures for the collection, processing, and protection of personal data obtained by ALA Asia LLP (hereinafter — the \n“Company”) from individuals and legal entities during cooperation, communication, and use of the website kazimport.kz. \nThe Company ensures the confidentiality and security of personal data processing in compliance with the applicable laws of the Republic of Kazakhstan."
+  },
+  "item2":{
+    "id": "02",
+    "subtitle": "Purposes of Personal Data Processing",
+    "text":"The Company processes personal data for the following purposes:",
+    "text1": "Organizing and fulfilling import, logistics, and transportation services (including road, rail, and multimodal transportation);",
+    "text2": "Communication with clients and partners, providing commercial offers, consultations, and customer support;",
+    "text3":"Processing inquiries received through forms, emails, and phone calls;",
+    "text4":"Accounting, tax reporting, and compliance with legal obligations under Kazakh law;",
+    "text5": "Improving the quality of services, optimizing logistics and business processes."
+  },
+  "item3": {
+    "id":"03",
+    "subtitle": "Categories of Personal Data",
+    "text":"The Company may collect and process the following personal data:",
+    "text1":"Full name (for individuals);",
+    "text2": "Company name and position (for legal entities and entrepreneurs);",
+    "text3": "Contact details (phone number, email address);",
+    "text4": "Delivery or business address;",
+    "text5": "Technical data (IP address, browser type, time zone, language settings).",
+    "text6":"The Company does not collect sensitive personal data (e.g., health information, biometric data) unless required by law."
+  },
+  "item4": {
+    "id": "04",
+    "subtitle": "Legal Grounds for Processing",
+    "text": "Personal data processing is carried out on the following legal grounds:",
+    "text1":"Conclusion and execution of a contract with the data subject or their representative;",
+    "text2":"Obtaining consent from the data subject (through website forms or other means);",
+    "text3":"Compliance with the laws of the Republic of Kazakhstan."
+  },
+  "item5": {
+    "id": "05",
+    "subtitle": "Data Retention Period",
+    "text":"Personal data is retained for as long as necessary to fulfill the purposes for which it was collected or as required by law (e.g., for accounting purposes). After the retention period expires, the data is securely deleted or anonymized."
+  },
+  "item6":{
+    "id": "06",
+    "subtitle": "Transfer of Personal Data",
+    "text": "The Company may transfer personal data:",
+    "text1": "To logistics partners, carriers, and customs representatives for the purpose of fulfilling contracts;",
+    "text2":"To state authorities in cases required by law;",
+    "text3":"To third-party service providers (e.g., IT or accounting services) strictly within the limits of legal and contractual necessity.",
+    "text4": "All third parties receiving data from the Company are obliged to ensure confidentiality and data protection."
+  },
+  "item7":{
+    "id":"07",
+    "subtitle": "Rights of Data Subjects",
+    "text":"Data subjects have the right to:",
+    "text1": "Request information about the processing of their personal data;",
+    "text2": "Request correction, blocking, or deletion of data if it is inaccurate or unlawfully processed;",
+    "text3": "Withdraw consent to processing (if based on consent);",
+    "text4": "File a complaint to the authorized data protection authority of Kazakhstan.",
+    "text5":"Requests can be sent to:",
+    "text6": "AA@kazimport.kz",
+    "text7": "+7 (707) 104 09 02"
+  },
+  "item8":{
+    "id": "08",
+    "subtitle": "Data Protection Measures",
+    "text": "The Company applies necessary technical and organizational measures to protect personal data, including:",
+    "text1":"Secure storage and encryption of data;",
+    "text2": "Access control and staff training;",
+    "text3": "Use of secure communication channels (SSL);",
+    "text4": "Regular monitoring and auditing of IT systems."
+  },
+  "item9": {
+    "id": "09",
+    "subtitle": "Changes to the Policy",
+    "text": "The Company reserves the right to update this Privacy Policy. \nThe latest version is published on kazimport.kz and enters into force on the date of publication."
+  },
+  "item10": {
+    "id": "10",
+    "subtitle": "Contact Information",
+    "text": "ALA Asia LLP \n050034, Kazakhstan, Almaty, Almalinsky District, \nRaiymbek Avenue, Building 212/2",
+    "text1": "AA@kazimport.kz",
+    "text2": "+7 (707) 104 09 02",
+    "text3": "kazimport.kz"
+  }
 }
 
 }

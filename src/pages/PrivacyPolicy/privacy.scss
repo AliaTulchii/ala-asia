@@ -1,0 +1,96 @@
+.privacy{
+    padding-top: 168px;
+    padding-bottom: 160px;
+}
+
+.privacy__title{
+    margin-bottom: 24px;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 40px;
+line-height: 110%;
+text-transform: uppercase;
+text-align: center;
+color: var(--content-primary);
+
+
+@media screen and (max-width:968px){
+    font-size: 26px;
+}
+}
+
+.privacy__text{
+    font-family: var(--font-delight);
+font-weight: 400;
+font-size: 18px;
+color: var(--content-primary);
+
+
+&-main{
+    margin-bottom: 80px;
+text-align: center;
+
+@media screen and (max-width:968px){
+    margin-bottom: 56px;
+}
+}
+}
+
+
+
+.privacy__item{
+    margin-bottom: 40px;
+    display: flex;
+    // list-style: disc;
+    gap: 32px;
+}
+
+.privacy__number{
+    font-family: var(--font-geist);
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+text-transform: uppercase;
+text-align: center;
+color: rgba(18, 27, 96, 0.6);
+}
+
+.privacy__subtitle{
+    margin-bottom: 16px;
+    font-family: var(--font-delight);
+font-weight: 700;
+font-size: 32px;
+color: var(--content-primary);
+
+@media screen and (max-width: 968px){
+    font-size: 24px;
+}
+}
+
+
+.privacy__sublist{
+    list-style: disc;
+    color: var(--content-primary);
+    padding-left: 1.5rem;
+    display: block;
+}
+
+
+.privacy__subitem{
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    // padding-left: 1rem;
+}
+
+.privacy__subitem-contact{
+    padding-left: 0.5rem;
+    display: flex;
+    gap: 8px;
+}
+
+.privacy__icon{
+    fill: var(--content-primary) !important;
+    color: var(--content-primary) !important;
+    width: 10px;
+}

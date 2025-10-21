@@ -46,7 +46,7 @@ const AnimRoutes = () => {
           }
         />
         <Route
-          path="/policy"
+          path="/privacy"
           element={
             // <Stairs>
               <PrivacyPolicy />
