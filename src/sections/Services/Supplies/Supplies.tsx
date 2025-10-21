@@ -114,7 +114,9 @@ const Supplies = () => {
                 tab === t.id ? "active" : ""
               }`}
               onClick={() =>
-                navigate(`/services/${t.id}/${subTabs[t.id]?.[0]?.id}`)
+                navigate(`/services/${t.id}/${subTabs[t.id]?.[0]?.id}`, {
+                  replace: true,
+                })
               }
             >
               <p className="supplies__tab-text">{t.number}</p>
@@ -130,7 +132,9 @@ const Supplies = () => {
               className={`supplies__subtab supplies__subtab--${s.id} ${
                 activeSubTab === s.id ? "active" : ""
               }`}
-              onClick={() => navigate(`/services/${tab}/${s.id}`)}
+              onClick={
+                (() => navigate(`/services/${tab}/${s.id}`, { replace: true }))
+              }
             >
               {s.label}
             </button>
