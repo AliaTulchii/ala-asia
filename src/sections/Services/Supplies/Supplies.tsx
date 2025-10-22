@@ -1,71 +1,26 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, NavLink } from "react-router-dom";
 import './supplies.scss'
-import { IMG1, IMG10, IMG10_MOB, IMG11, IMG11_MOB, IMG12, IMG12_MOB, IMG13, IMG14, IMG14_MOB, IMG15, IMG15_MOB, IMG16, IMG16_MOB, IMG1_MOB, IMG2, IMG2_MOB, IMG3, IMG3_MOB, IMG4, IMG4_MOB, IMG5, IMG5_MOB, IMG6, IMG6_MOB, IMG7, IMG7_MOB, IMG8, IMG8_MOB, IMG9, IMG9_MOB } from "./Supplies.Constants";
+import { IMG1, IMG10, IMG10_MOB, IMG11, IMG11_MOB, IMG12, IMG12_MOB, IMG13, IMG14, IMG14_MOB, IMG15, IMG15_MOB, IMG16, IMG16_MOB, IMG1_MOB, IMG2, IMG2_MOB, IMG3, IMG3_MOB, IMG4, IMG4_MOB, IMG5, IMG5_MOB, IMG6, IMG6_MOB, IMG7, IMG7_MOB, IMG8, IMG8_MOB, IMG9, IMG9_MOB, useSuppliesSubTabs, useSuppliesTabs } from "./Supplies.Constants";
 import { useEffect, useRef } from "react";
 
 const Supplies = () => {
     const { t } = useTranslation("popUp,supplies");
     const { tab = "materials", subtab } = useParams();
-  const navigate = useNavigate();
-  
+  const navigate = useNavigate();  
   const tabsRef = useRef<HTMLDivElement>(null);
   const subTabsRef = useRef<HTMLDivElement>(null);
-
-    // Основні категорії
-    const tabs = [
-      {
-        id: "materials",
-        label: t("popUp.card1.title"),
-        number: t("supplies.tab1.id"),
-      },
-      {
-        id: "equipment",
-        label: t("popUp.card2.title"),
-        number: t("supplies.tab2.id"),
-      },
-      {
-        id: "raw",
-        label: t("popUp.card3.title"),
-        number: t("supplies.tab3.id"),
-      },
-      {
-        id: "logistics",
-        label: t("popUp.card4.title"),
-        number: t("supplies.tab4.id"),
-      },
-    ];
-
-    // Підкатегорії
-    const subTabs: Record<string, { id: string; label: string }[]> = {
-      materials: [
-        { id: "tiles", label: t("popUp.card1.text1") },
-        { id: "glass", label: t("popUp.card1.text2") },
-        { id: "roof", label: t("popUp.card1.text3") },
-        { id: "bricks", label: t("popUp.card1.text4") },
-      ],
-      equipment: [
-        { id: "metallurgy", label: t("popUp.card2.text1") },
-        { id: "energetics", label: t("popUp.card2.text2") },
-        { id: "automation", label: t("popUp.card2.text4") },
-        { id: "chemicals", label: t("popUp.card2.text3") },
-      ],
-      raw: [
-        { id: "food", label: t("popUp.card3.text1") },
-        { id: "paints", label: t("popUp.card3.text2") },
-        { id: "plastic", label: t("popUp.card3.text3") },
-        { id: "cosmetic", label: t("popUp.card3.text4") },
-      ],
-      logistics: [
-        { id: "railway", label: t("popUp.card4.text1") },
-        { id: "container", label: t("popUp.card4.text2") },
-        { id: "provision", label: t("popUp.card4.text3") },
-        { id: "transportation", label: t("popUp.card4.text4") },
-      ],
-    };
+    const tabs = useSuppliesTabs();
+  const subTabs = useSuppliesSubTabs();
 
     const activeSubTab =
     subtab || (subTabs[tab] && subTabs[tab][0].id) || undefined;
+  
+    useEffect(() => {
+      const scrollY = window.scrollY;
+      window.scrollTo({ top: scrollY });
+    }, [tab, subtab]);
+    
 
     const smoothLeftScroll = (
       container: HTMLDivElement | null,

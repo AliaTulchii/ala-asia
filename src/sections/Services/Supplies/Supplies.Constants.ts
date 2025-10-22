@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 export const IMG1 = "/assets/images/services/supplies/tiles.jpg"
 export const IMG2 = "/assets/images/services/supplies/glass.jpg";
 export const IMG3 = "/assets/images/services/supplies/roof.jpg";
@@ -33,13 +35,75 @@ export const IMG15_MOB = "/assets/images/services/supplies/provision-mob.webp";
 export const IMG16_MOB = "/assets/images/services/supplies/transportation-mob.webp";
 
 
+type SuppliesTabs = {
+  id: string;
+  label: string;
+  number: string;
+};
+
+export const useSuppliesTabs = (): SuppliesTabs[] => {
+  const { t } = useTranslation("popUp,supplies");
+
+  return [
+    {
+      id: "materials",
+      label: t("popUp.card1.title"),
+      number: t("supplies.tab1.id"),
+    },
+    {
+      id: "equipment",
+      label: t("popUp.card2.title"),
+      number: t("supplies.tab2.id"),
+    },
+    {
+      id: "raw",
+      label: t("popUp.card3.title"),
+      number: t("supplies.tab3.id"),
+    },
+    {
+      id: "logistics",
+      label: t("popUp.card4.title"),
+      number: t("supplies.tab4.id"),
+    },
+  ];
+};
 
 
+type SubTab = {
+  id: string;
+  label: string;
+};
 
+type SubTabs = Record<string, SubTab[]>;
 
+export const useSuppliesSubTabs = (): SubTabs => {
+  const { t } = useTranslation("popUp,supplies");
 
-
-
-
-
+  return {
+    materials: [
+      { id: "tiles", label: t("popUp.card1.text1") },
+      { id: "glass", label: t("popUp.card1.text2") },
+      { id: "roof", label: t("popUp.card1.text3") },
+      { id: "bricks", label: t("popUp.card1.text4") },
+    ],
+    equipment: [
+      { id: "metallurgy", label: t("popUp.card2.text1") },
+      { id: "energetics", label: t("popUp.card2.text2") },
+      { id: "automation", label: t("popUp.card2.text4") },
+      { id: "chemicals", label: t("popUp.card2.text3") },
+    ],
+    raw: [
+      { id: "food", label: t("popUp.card3.text1") },
+      { id: "paints", label: t("popUp.card3.text2") },
+      { id: "plastic", label: t("popUp.card3.text3") },
+      { id: "cosmetic", label: t("popUp.card3.text4") },
+    ],
+    logistics: [
+      { id: "railway", label: t("popUp.card4.text1") },
+      { id: "container", label: t("popUp.card4.text2") },
+      { id: "provision", label: t("popUp.card4.text3") },
+      { id: "transportation", label: t("popUp.card4.text4") },
+    ],
+  };
+};
 

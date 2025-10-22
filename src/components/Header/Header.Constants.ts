@@ -1,12 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-// import i18n from "i18next";
-
-// export const NAV_HOME = i18n.t("header.home");
-// export const NAV_SERICES = i18n.t("header.services");
-// export const NAV_ABOUT = i18n.t("header.about");
-// export const NAV_CONTACTS = i18n.t("header.contacts");
-
 type NavItem = {
   key: string;
   text: string;
