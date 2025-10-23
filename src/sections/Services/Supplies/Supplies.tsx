@@ -18,9 +18,15 @@ const Supplies = () => {
   
     useEffect(() => {
       const scrollY = window.scrollY;
-      window.scrollTo({ top: scrollY });
+
+      // Chrome/Firefox
+      window.scrollTo(0, scrollY);
+
+      // Safari fallback
+      requestAnimationFrame(() => {
+        window.scrollTo(0, scrollY);
+      });
     }, [tab, subtab]);
-    
 
     const smoothLeftScroll = (
       container: HTMLDivElement | null,
